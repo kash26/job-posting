@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8f9ff;
+  --foreground: #0b1c30;
+  --surface: #ffffff;
+  --surface-soft: #eff4ff;
+  --surface-muted: #e5eeff;
+  --surface-strong: #dce9ff;
+  --primary: #2563eb;
+  --primary-strong: #004ac6;
+  --primary-contrast: #ffffff;
+  --muted-foreground: #434655;
+  --outline: #c3c6d7;
+  --inverse-surface: #213145;
+  --inverse-foreground: #eaf1ff;
+  --shadow-soft: 0 4px 20px rgba(15, 23, 42, 0.05);
+  --shadow-strong: 0 20px 60px rgba(37, 99, 235, 0.12);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-soft: var(--surface-soft);
+  --color-surface-muted: var(--surface-muted);
+  --color-surface-strong: var(--surface-strong);
+  --color-primary: var(--primary);
+  --color-primary-strong: var(--primary-strong);
+  --color-primary-contrast: var(--primary-contrast);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-outline: var(--outline);
+  --color-inverse-surface: var(--inverse-surface);
+  --color-inverse-foreground: var(--inverse-foreground);
+  --font-sans: var(--font-hanken-grotesk);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-hanken-grotesk), sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.page-shell {
+  width: min(100% - 2rem, 1280px);
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .page-shell {
+    width: min(100% - 3rem, 1280px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-shell {
+    width: min(100% - 5rem, 1280px);
+  }
+}
+
+.hero-pattern {
+  background-image:
+    radial-gradient(
+      circle at top left,
+      rgba(37, 99, 235, 0.16),
+      transparent 36%
+    ),
+    linear-gradient(180deg, rgba(239, 244, 255, 0.8), rgba(248, 249, 255, 0));
+}
+
+.mesh-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232563eb' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.card-shadow {
+  box-shadow: var(--shadow-soft);
+}
+
+.glow-shadow {
+  box-shadow: var(--shadow-strong);
+}
+
+.force-white-on-primary {
+  color: #fff !important;
+}
+
+.force-white-on-primary * {
+  color: inherit;
+}

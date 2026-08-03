@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Talent RDC - Job Listings</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#004ac6",
+                        "primary-container": "#2563eb",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#eeefff",
+                        "secondary": "#565e74",
+                        "secondary-container": "#dae2fd",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#5c647a",
+                        "background": "#f8f9ff",
+                        "on-background": "#0b1c30",
+                        "surface": "#f8f9ff",
+                        "on-surface": "#0b1c30",
+                        "surface-variant": "#d3e4fe",
+                        "on-surface-variant": "#434655",
+                        "outline": "#737686",
+                        "outline-variant": "#c3c6d7",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#eff4ff",
+                        "surface-container": "#e5eeff",
+                        "surface-container-high": "#dce9ff",
+                        "surface-container-highest": "#d3e4fe",
+                        "inverse-surface": "#213145",
+                        "inverse-on-surface": "#eaf1ff",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "border-subtle": "#e2e8f0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "32px",
+                        "base": "8px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "container-max-width": "1200px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "body-sm": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "label-sm": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "label-md": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #f8f9ff;
+            color: #0b1c30;
+            -webkit-font-smoothing: antialiased;
+            font-family: 'Hanken Grotesk', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .geometric-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232563eb' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .custom-shadow {
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md min-h-screen flex flex-col">
+<!-- Top Navigation Bar -->
+<header class="bg-surface/80 backdrop-blur-md border-b border-outline-variant/50 fixed top-0 w-full z-50">
+<div class="flex justify-between items-center h-16 w-full px-margin-mobile max-w-container-max mx-auto">
+<h1 class="font-headline-md text-headline-md font-black text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">work</span>
+            Talent RDC
+        </h1>
+<div class="flex items-center gap-4">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2.5 right-2.5 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-high border border-outline-variant/30">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBegqMnz85nnTV3kaf4SnlhvLx5xN6Q292OI0SCRa7_2dAgpY2FrrPasuR8EkE1hohNSnOUECZkjKOhM2HQkeuK0HTH1-J5FRgL60OyyeB05o_NM-gq5qMYHoWKw6tdMGiNKOgVS7hLYQgS7GiDB0OENxDTLUhSyjDNGmhpruO5rD8w_d_tWdnA13-gcgb6nGCNf7dCFWNt-TuvNWtlL7VvFhCUZgf5ggdnvq7w3Zhhjt4mdxLoBv2jHw"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="mt-16 pb-24 px-margin-mobile flex flex-col gap-gutter max-w-container-max mx-auto w-full">
+<!-- Search & Filter Section -->
+<section class="pt-6 flex flex-col gap-4">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-lowest border border-outline-variant/30 rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all font-body-md custom-shadow" placeholder="Search jobs, skills, or companies" type="text"/>
+</div>
+<div class="flex gap-2 overflow-x-auto pb-2 -mx-margin-mobile px-margin-mobile no-scrollbar">
+<button class="flex-shrink-0 px-5 py-2.5 rounded-full border border-primary bg-primary text-on-primary font-label-md text-label-md shadow-lg shadow-primary/20">All Jobs</button>
+<button class="flex-shrink-0 px-5 py-2.5 rounded-full border border-outline-variant/50 bg-white text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-low transition-colors">Remote</button>
+<button class="flex-shrink-0 px-5 py-2.5 rounded-full border border-outline-variant/50 bg-white text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-low transition-colors">Engineering</button>
+<button class="flex-shrink-0 px-5 py-2.5 rounded-full border border-outline-variant/50 bg-white text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-low transition-colors">Marketing</button>
+<button class="flex-shrink-0 px-5 py-2.5 rounded-full border border-outline-variant/50 bg-white text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-low transition-colors">Design</button>
+</div>
+</section>
+<!-- Listings Section -->
+<section class="flex flex-col gap-6">
+<div class="flex justify-between items-center mb-1">
+<h2 class="font-headline-md text-headline-md text-on-surface">142 Jobs Found</h2>
+<button class="flex items-center gap-1 text-primary font-label-md">
+<span class="material-symbols-outlined text-[18px]">sort</span>
+                Sort
+            </button>
+</div>
+<!-- Job Card 1 -->
+<div class="bg-white p-6 rounded-2xl border border-outline-variant/50 custom-shadow flex flex-col gap-4 active:scale-[0.98] transition-all group geometric-pattern">
+<div class="flex justify-between items-start">
+<div class="flex gap-4">
+<div class="w-14 h-14 rounded-xl bg-surface-container-low flex items-center justify-center overflow-hidden border border-outline-variant/20 p-2">
+<img class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAl5BRHZ9cKMF1fox_yGAqwW3uA-Cxp-s-20BjYc_NVWCkSyxriLktKUtEggHgbd3WdsqVLLZillTTOBC8amwm75qpGVqYoHxKoMOnN4UvyYtAUC8QlMEtCOx-EIIrQAjtBYDynvLrU6YZ-jiR3h1JXIm-9WD05iNQa_EjBdxIHOkAd4Xhx1FDVtZ66Crw0IpTQGjIKlmn7n9N32WA48gItaNfoiGudFizD2cC7PYav_wiAcAfF9Sz7Q"/>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors leading-tight">Senior Product Designer</h3>
+<p class="text-on-surface-variant font-label-md text-label-md mt-1">Stratos Tech • Kinshasa, DRC</p>
+</div>
+</div>
+<button class="text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="bg-secondary-container/50 text-on-secondary-container px-3 py-1.5 rounded-lg text-label-sm font-bold">Full-time</span>
+<span class="bg-secondary-container/50 text-on-secondary-container px-3 py-1.5 rounded-lg text-label-sm font-bold">$45k - $60k</span>
+<span class="bg-secondary-container/50 text-on-secondary-container px-3 py-1.5 rounded-lg text-label-sm font-bold">Remote Friendly</span>
+</div>
+<div class="flex justify-between items-center pt-2 border-t border-outline-variant/20">
+<span class="text-on-surface-variant font-body-sm text-body-sm">Posted 2 hours ago</span>
+<button class="px-6 py-2.5 bg-primary text-on-primary font-label-md text-label-md rounded-xl shadow-lg shadow-primary/20 hover:bg-primary-container transition-all">Apply Now</button>
+</div>
+</div>
+<!-- Upgrade to Pro Card -->
+<div class="relative overflow-hidden bg-primary-container text-on-primary-container p-8 rounded-[32px] shadow-xl flex flex-col gap-4">
+<!-- Geometric Pattern Accent -->
+<div class="absolute inset-0 geometric-pattern opacity-10"></div>
+<div class="absolute -right-8 -top-8 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+<div class="relative z-10">
+<h3 class="font-headline-lg text-headline-lg-mobile font-black mb-2">Get noticed 2x faster!</h3>
+<p class="font-body-md text-body-md opacity-90 leading-relaxed mb-6">Upgrade to Talent RDC Pro to get featured placement on job listings and direct access to top-tier recruiters.</p>
+<button class="w-full bg-white text-primary font-bold py-4 rounded-xl hover:bg-opacity-95 transition-all flex items-center justify-center gap-2 shadow-lg">
+                    Upgrade to Pro
+                    <span class="material-symbols-outlined text-[20px]">bolt</span>
+</button>
+</div>
+</div>
+<!-- Job Card 2 -->
+<div class="bg-white p-6 rounded-2xl border border-outline-variant/50 custom-shadow flex flex-col gap-4 active:scale-[0.98] transition-all group geometric-pattern">
+<div class="flex justify-between items-start">
+<div class="flex gap-4">
+<div class="w-14 h-14 rounded-xl bg-surface-container-low flex items-center justify-center overflow-hidden border border-outline-variant/20 p-2">
+<img class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhvT8AL2RodGgGOQZcXb1B724aYniUai2QfJMG3KfMqJV39IFE0ykNIv6AxX-rn05ButvWuELHQQBnMVD_ry6ArG0_eGEs8kBzHMbR0Xj_R1QU1I5kIum72o6LW4j3IgPhOLRN_s02GNWpKvhqUf7c2JFhHPvhnNLofmHcOpzk4CSoEJvdc0WTFS6N3nKbEuqTXmOAWOIp3cxFSMV3Ff9sFQHXa2huF0THY7EPqBcHAMryarz7VEXPMw"/>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors leading-tight">Backend Engineer (Node.js)</h3>
+<p class="text-on-surface-variant font-label-md text-label-md mt-1">Swift Logistics • Lubumbashi, DRC</p>
+</div>
+</div>
+<button class="text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="bg-secondary-container/50 text-on-secondary-container px-3 py-1.5 rounded-lg text-label-sm font-bold">Contract</span>
+<span class="bg-secondary-container/50 text-on-secondary-container px-3 py-1.5 rounded-lg text-label-sm font-bold">$30/hr - $50/hr</span>
+</div>
+<div class="flex justify-between items-center pt-2 border-t border-outline-variant/20">
+<span class="text-on-surface-variant font-body-sm text-body-sm">Posted 5 hours ago</span>
+<button class="px-6 py-2.5 bg-primary text-on-primary font-label-md text-label-md rounded-xl shadow-lg shadow-primary/20 hover:bg-primary-container transition-all">Apply Now</button>
+</div>
+</div>
+<!-- Job Card 3 -->
+<div class="bg-white p-6 rounded-2xl border border-outline-variant/50 custom-shadow flex flex-col gap-4 active:scale-[0.98] transition-all group geometric-pattern">
+<div class="flex justify-between items-start">
+<div class="flex gap-4">
+<div class="w-14 h-14 rounded-xl bg-surface-container-low flex items-center justify-center overflow-hidden border border-outline-variant/20 p-2">
+<img class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAA9uP0JMGZYM6wcTF2tzxaGrvu77wGFK6potGWtS3kD2_gsmK3Sg7wxf468mW_jTVdVRYlr7r1vYR8HC4SKbRYBkuV-34eWsoRq-BlMp7TjRcdGT3qxeAcB-nw3z7irMtb81yafwRnA725gKYWlIm6bAvviElJCSZ7ckQquxwebTP3Zi1ta53hrGDY9wedzXbb_GBuB4l4oZQh7gHeBRvFVpCueIxxsbN4SbTaTobZKQFc8kLnfkHnog"/>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors leading-tight">Marketing Manager</h3>
+<p class="text-on-surface-variant font-label-md text-label-md mt-1">Apex Media • Goma, DRC</p>
+</div>
+</div>
+<button class="text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="bg-secondary-container/50 text-on-secondary-container px-3 py-1.5 rounded-lg text-label-sm font-bold">Full-time</span>
+<span class="bg-secondary-container/50 text-on-secondary-container px-3 py-1.5 rounded-lg text-label-sm font-bold">$35k - $50k</span>
+</div>
+<div class="flex justify-between items-center pt-2 border-t border-outline-variant/20">
+<span class="text-on-surface-variant font-body-sm text-body-sm">Posted Yesterday</span>
+<button class="px-6 py-2.5 bg-primary text-on-primary font-label-md text-label-md rounded-xl shadow-lg shadow-primary/20 hover:bg-primary-container transition-all">Apply Now</button>
+</div>
+</div>
+<!-- Pagination Section -->
+<div class="flex justify-center items-center gap-3 py-8">
+<button class="w-12 h-12 flex items-center justify-center rounded-xl border border-outline-variant/50 bg-white text-on-surface-variant disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center rounded-xl bg-primary text-on-primary font-bold shadow-lg shadow-primary/20">1</button>
+<button class="w-12 h-12 flex items-center justify-center rounded-xl border border-outline-variant/50 bg-white text-on-surface-variant font-bold">2</button>
+<button class="w-12 h-12 flex items-center justify-center rounded-xl border border-outline-variant/50 bg-white text-on-surface-variant font-bold">3</button>
+<button class="w-12 h-12 flex items-center justify-center rounded-xl border border-outline-variant/50 bg-white text-on-surface-variant">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-inverse-surface mt-auto border-t border-outline-variant/20 px-margin-mobile py-12 flex flex-col gap-8 geometric-pattern">
+<div class="max-w-container-max mx-auto w-full">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary text-[28px]" style="font-variation-settings: 'FILL' 1;">work</span>
+<h4 class="font-headline-md text-headline-md font-black text-white">Talent RDC</h4>
+</div>
+<div class="grid grid-cols-2 gap-y-6 gap-x-8">
+<a class="text-outline-variant font-label-sm text-label-sm hover:text-white transition-all" href="#">Privacy Policy</a>
+<a class="text-outline-variant font-label-sm text-label-sm hover:text-white transition-all" href="#">Terms of Service</a>
+<a class="text-outline-variant font-label-sm text-label-sm hover:text-white transition-all" href="#">Help Center</a>
+<a class="text-outline-variant font-label-sm text-label-sm hover:text-white transition-all" href="#">Cookie Settings</a>
+</div>
+<p class="text-outline-variant/60 font-body-sm text-label-sm mt-10">© 2024 Talent RDC Express. All rights reserved.</p>
+</div>
+</footer>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md border-t border-outline-variant/30 z-50 flex items-center justify-around h-20 px-4 md:hidden">
+<a class="flex flex-col items-center gap-1.5 text-secondary hover:text-primary transition-all opacity-70 hover:opacity-100" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[11px] font-bold">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1.5 text-primary transition-all" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">work</span>
+<span class="text-[11px] font-black">Jobs</span>
+</a>
+<a class="flex flex-col items-center gap-1.5 text-secondary hover:text-primary transition-all opacity-70 hover:opacity-100" href="#">
+<span class="material-symbols-outlined">description</span>
+<span class="text-[11px] font-bold">About</span>
+</a>
+<a class="flex flex-col items-center gap-1.5 text-secondary hover:text-primary transition-all opacity-70 hover:opacity-100" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="text-[11px] font-bold">Careers</span>
+</a>
+<a class="flex flex-col items-center gap-1.5 text-secondary hover:text-primary transition-all opacity-70 hover:opacity-100" href="#">
+<span class="material-symbols-outlined">mail</span>
+<span class="text-[11px] font-bold">Contact</span>
+</a>
+</nav>
+<!-- FAB -->
+<button class="fixed bottom-24 right-6 w-16 h-16 bg-primary text-on-primary rounded-2xl shadow-xl shadow-primary/30 flex items-center justify-center active:scale-90 transition-transform md:hidden z-40">
+<span class="material-symbols-outlined text-[32px]">add</span>
+</button>
+<script>
+    // Micro-interactions for chip filtering
+    const chips = document.querySelectorAll('.flex-shrink-0');
+    chips.forEach(chip => {
+        chip.addEventListener('click', () => {
+            chips.forEach(c => {
+                c.classList.remove('bg-primary', 'text-on-primary', 'border-primary', 'shadow-lg', 'shadow-primary/20');
+                c.classList.add('bg-white', 'text-on-surface-variant', 'border-outline-variant/50');
+            });
+            chip.classList.add('bg-primary', 'text-on-primary', 'border-primary', 'shadow-lg', 'shadow-primary/20');
+            chip.classList.remove('bg-white', 'text-on-surface-variant', 'border-outline-variant/50');
+        });
+    });
+
+    // Simple bookmark toggle effect
+    document.querySelectorAll('.material-symbols-outlined').forEach(icon => {
+        if (icon.innerText === 'bookmark') {
+            icon.parentElement.addEventListener('click', (e) => {
+                e.preventDefault();
+                const isFilled = icon.style.fontVariationSettings.includes("'FILL' 1");
+                icon.style.fontVariationSettings = isFilled ? "'FILL' 0" : "'FILL' 1";
+                icon.style.color = isFilled ? '#737686' : '#004ac6';
+            });
+        }
+    });
+</script>
+</body></html>

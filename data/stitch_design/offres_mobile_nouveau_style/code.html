@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Talent RDC - Job Listings</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed-variant": "#004b70",
+                      "tertiary-container": "#29658c",
+                      "surface-tint": "#006496",
+                      "text-heading": "#1A1A1A",
+                      "inverse-on-surface": "#f2f0f0",
+                      "outline-variant": "#c0c7d0",
+                      "surface-variant": "#e4e2e2",
+                      "on-tertiary-container": "#bce0ff",
+                      "surface-dim": "#dbdad9",
+                      "error": "#ba1a1a",
+                      "background-surface": "#F8FAFB",
+                      "primary-fixed": "#cce5ff",
+                      "on-primary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "secondary-fixed": "#dae4e9",
+                      "on-secondary-fixed": "#141d21",
+                      "on-tertiary-fixed": "#001e30",
+                      "on-surface-variant": "#40484f",
+                      "tertiary-fixed-dim": "#96ccf9",
+                      "on-primary-fixed": "#001e31",
+                      "success-accent": "#28A745",
+                      "primary-container": "#006699",
+                      "primary": "#004d75",
+                      "secondary-container": "#dae4e9",
+                      "on-primary-fixed-variant": "#004b72",
+                      "surface-container-high": "#e9e8e7",
+                      "inverse-primary": "#90cdff",
+                      "background": "#fbf9f8",
+                      "outline": "#707880",
+                      "surface-bright": "#fbf9f8",
+                      "on-error-container": "#93000a",
+                      "tertiary": "#004d73",
+                      "on-secondary-container": "#5c666a",
+                      "error-container": "#ffdad6",
+                      "surface-container": "#efeded",
+                      "border-subtle": "#E1E8ED",
+                      "on-primary-container": "#bfe0ff",
+                      "surface": "#fbf9f8",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-fixed-variant": "#3f484c",
+                      "tertiary-fixed": "#cae6ff",
+                      "secondary": "#566064",
+                      "surface-container-low": "#f5f3f3",
+                      "surface-container-highest": "#e4e2e2",
+                      "inverse-surface": "#303031",
+                      "on-background": "#1b1c1c",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-fixed-dim": "#bec8cd",
+                      "primary-fixed-dim": "#90cdff",
+                      "on-surface": "#1b1c1c"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "32px",
+                      "base": "8px",
+                      "margin-mobile": "16px",
+                      "gutter": "24px",
+                      "container-max-width": "1200px"
+              },
+              "fontFamily": {
+                      "headline-xl": ["Hanken Grotesk"],
+                      "headline-lg": ["Hanken Grotesk"],
+                      "body-sm": ["Inter"],
+                      "headline-lg-mobile": ["Hanken Grotesk"],
+                      "label-sm": ["Inter"],
+                      "body-md": ["Inter"],
+                      "label-md": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "headline-md": ["Hanken Grotesk"]
+              },
+              "fontSize": {
+                      "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            background-color: #F8FAFB;
+            color: #1b1c1c;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .custom-shadow {
+            box-shadow: 0 4px 10px rgba(0, 77, 117, 0.05);
+        }
+        .active-chip {
+            background-color: #004d75;
+            color: #ffffff;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-body-md min-h-screen flex flex-col">
+<!-- Top Navigation Bar -->
+<header class="bg-surface border-b border-border-subtle fixed top-0 w-full z-50">
+<div class="flex justify-between items-center h-16 w-full px-margin-mobile">
+<h1 class="font-headline-md text-headline-md font-bold text-primary">Talent RDC</h1>
+<div class="flex items-center gap-4">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a young female professional named Freya Katherina, smiling warmly in a bright, modern corporate office environment with soft morning light. The aesthetic is clean, high-trust, and professional, utilizing a soft-focus background to emphasize her clarity and friendliness. She has dark hair and wears a stylish blue blazer that complements the brand's primary color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBegqMnz85nnTV3kaf4SnlhvLx5xN6Q292OI0SCRa7_2dAgpY2FrrPasuR8EkE1hohNSnOUECZkjKOhM2HQkeuK0HTH1-J5FRgL60OyyeB05o_NM-gq5qMYHoWKw6tdMGiNKOgVS7hLYQgS7GiDB0OENxDTLUhSyjDNGmhpruO5rD8w_d_tWdnA13-gcgb6nGCNf7dCFWNt-TuvNWtlL7VvFhCUZgf5ggdnvq7w3Zhhjt4mdxLoBv2jHw"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="mt-16 pb-24 px-margin-mobile flex flex-col gap-gutter">
+<!-- Search & Filter Section -->
+<section class="pt-6 flex flex-col gap-4">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-12 pr-4 py-3 bg-surface-container-lowest border border-border-subtle rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all font-body-md" placeholder="Search jobs, skills, or companies" type="text"/>
+</div>
+<div class="flex gap-2 overflow-x-auto pb-2 -mx-margin-mobile px-margin-mobile scrollbar-hide no-scrollbar">
+<button class="flex-shrink-0 px-4 py-2 rounded-full border border-primary bg-primary text-on-primary font-label-md text-label-md">All Jobs</button>
+<button class="flex-shrink-0 px-4 py-2 rounded-full border border-border-subtle bg-surface text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-low transition-colors">Remote</button>
+<button class="flex-shrink-0 px-4 py-2 rounded-full border border-border-subtle bg-surface text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-low transition-colors">Engineering</button>
+<button class="flex-shrink-0 px-4 py-2 rounded-full border border-border-subtle bg-surface text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-low transition-colors">Marketing</button>
+<button class="flex-shrink-0 px-4 py-2 rounded-full border border-border-subtle bg-surface text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-low transition-colors">Design</button>
+</div>
+</section>
+<!-- Listings Section -->
+<section class="flex flex-col gap-4">
+<div class="flex justify-between items-center mb-1">
+<h2 class="font-headline-md text-headline-md text-text-heading">142 Jobs Found</h2>
+<button class="flex items-center gap-1 text-primary font-label-md">
+<span class="material-symbols-outlined text-[18px]">sort</span>
+                    Sort
+                </button>
+</div>
+<!-- Job Card 1 -->
+<div class="bg-surface-container-lowest p-5 rounded-xl border border-border-subtle custom-shadow flex flex-col gap-4 active:scale-[0.98] transition-transform">
+<div class="flex justify-between items-start">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-contain p-2" data-alt="A minimalist tech company logo featuring a sleek, abstract geometric shape in deep navy blue on a clean white background. The logo embodies a modern, innovative, and high-functioning corporate identity, typical of a leading SaaS platform. The design is sharp, using professional line-weights and a sophisticated aesthetic that suggests reliability and institutional strength." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAl5BRHZ9cKMF1fox_yGAqwW3uA-Cxp-s-20BjYc_NVWCkSyxriLktKUtEggHgbd3WdsqVLLZillTTOBC8amwm75qpGVqYoHxKoMOnN4UvyYtAUC8QlMEtCOx-EIIrQAjtBYDynvLrU6YZ-jiR3h1JXIm-9WD05iNQa_EjBdxIHOkAd4Xhx1FDVtZ66Crw0IpTQGjIKlmn7n9N32WA48gItaNfoiGudFizD2cC7PYav_wiAcAfF9Sz7Q"/>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary leading-tight">Senior Product Designer</h3>
+<p class="text-on-surface-variant font-body-sm text-body-sm mt-1">Stratos Tech • Kinshasa, DRC</p>
+</div>
+</div>
+<button class="text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-md text-label-sm font-label-sm">Full-time</span>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-md text-label-sm font-label-sm">$45k - $60k</span>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-md text-label-sm font-label-sm">Remote Friendly</span>
+</div>
+<div class="flex justify-between items-center pt-2">
+<span class="text-on-surface-variant font-body-sm text-body-sm">Posted 2 hours ago</span>
+<button class="px-5 py-2 bg-primary text-on-primary font-label-md text-label-md rounded-lg shadow-sm">Apply Now</button>
+</div>
+</div>
+<!-- Upgrade to Pro Card (Asymmetric Layout Hint) -->
+<div class="relative overflow-hidden bg-primary-container text-on-primary-container p-6 rounded-xl custom-shadow flex flex-col gap-4">
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-on-primary-container/10 rounded-full blur-2xl"></div>
+<div class="relative z-10">
+<h3 class="font-headline-md text-headline-md font-bold mb-2">Get noticed 2x faster!</h3>
+<p class="font-body-sm text-body-sm opacity-90 leading-relaxed mb-4">Upgrade to Talent RDC Pro to get featured placement on job listings and direct access to top-tier recruiters.</p>
+<button class="w-full bg-white text-primary font-bold py-3 rounded-lg hover:bg-opacity-90 transition-all flex items-center justify-center gap-2">
+                        Upgrade to Pro
+                        <span class="material-symbols-outlined text-[18px]">bolt</span>
+</button>
+</div>
+</div>
+<!-- Job Card 2 -->
+<div class="bg-surface-container-lowest p-5 rounded-xl border border-border-subtle custom-shadow flex flex-col gap-4 active:scale-[0.98] transition-transform">
+<div class="flex justify-between items-start">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-contain p-2" data-alt="A clean and modern corporate logo for a logistics and supply chain company. The logo uses bold, italicized typography and a dynamic arrow-like icon in a vibrant shade of cerulean blue. The style is professional, energetic, and corporate, emphasizing movement and institutional reliability. High-contrast white background with professional spacing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhvT8AL2RodGgGOQZcXb1B724aYniUai2QfJMG3KfMqJV39IFE0ykNIv6AxX-rn05ButvWuELHQQBnMVD_ry6ArG0_eGEs8kBzHMbR0Xj_R1QU1I5kIum72o6LW4j3IgPhOLRN_s02GNWpKvhqUf7c2JFhHPvhnNLofmHcOpzk4CSoEJvdc0WTFS6N3nKbEuqTXmOAWOIp3cxFSMV3Ff9sFQHXa2huF0THY7EPqBcHAMryarz7VEXPMw"/>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary leading-tight">Backend Engineer (Node.js)</h3>
+<p class="text-on-surface-variant font-body-sm text-body-sm mt-1">Swift Logistics • Lubumbashi, DRC</p>
+</div>
+</div>
+<button class="text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-md text-label-sm font-label-sm">Contract</span>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-md text-label-sm font-label-sm">$30/hr - $50/hr</span>
+</div>
+<div class="flex justify-between items-center pt-2">
+<span class="text-on-surface-variant font-body-sm text-body-sm">Posted 5 hours ago</span>
+<button class="px-5 py-2 bg-primary text-on-primary font-label-md text-label-md rounded-lg shadow-sm">Apply Now</button>
+</div>
+</div>
+<!-- Job Card 3 -->
+<div class="bg-surface-container-lowest p-5 rounded-xl border border-border-subtle custom-shadow flex flex-col gap-4 active:scale-[0.98] transition-transform">
+<div class="flex justify-between items-start">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-contain p-2" data-alt="A minimalist architectural studio logo featuring clean, thin lines and sophisticated typography in a charcoal grey and slate blue color scheme. The visual style is modern, upscale, and organized, representing clarity and professional momentum. The logo is set against a very light grey surface, maintaining a professional and high-trust recruitment ecosystem aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAA9uP0JMGZYM6wcTF2tzxaGrvu77wGFK6potGWtS3kD2_gsmK3Sg7wxf468mW_jTVdVRYlr7r1vYR8HC4SKbRYBkuV-34eWsoRq-BlMp7TjRcdGT3qxeAcB-nw3z7irMtb81yafwRnA725gKYWlIm6bAvviElJCSZ7ckQquxwebTP3Zi1ta53hrGDY9wedzXbb_GBuB4l4oZQh7gHeBRvFVpCueIxxsbN4SbTaTobZKQFc8kLnfkHnog"/>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary leading-tight">Marketing Manager</h3>
+<p class="text-on-surface-variant font-body-sm text-body-sm mt-1">Apex Media • Goma, DRC</p>
+</div>
+</div>
+<button class="text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-md text-label-sm font-label-sm">Full-time</span>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-md text-label-sm font-label-sm">$35k - $50k</span>
+</div>
+<div class="flex justify-between items-center pt-2">
+<span class="text-on-surface-variant font-body-sm text-body-sm">Posted Yesterday</span>
+<button class="px-5 py-2 bg-primary text-on-primary font-label-md text-label-md rounded-lg shadow-sm">Apply Now</button>
+</div>
+</div>
+<!-- Pagination Section -->
+<div class="flex justify-center items-center gap-3 py-8">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-border-subtle bg-surface text-on-surface-variant disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-on-primary font-bold">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-border-subtle bg-surface text-on-surface-variant font-medium">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-border-subtle bg-surface text-on-surface-variant font-medium">3</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-border-subtle bg-surface text-on-surface-variant">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Footer (Mobile Simple) -->
+<footer class="bg-surface-container mt-auto border-t border-border-subtle px-margin-mobile py-8 flex flex-col gap-6">
+<h4 class="font-headline-md text-headline-md font-black text-primary">Talent RDC</h4>
+<div class="grid grid-cols-2 gap-4">
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-all underline" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-all underline" href="#">Terms of Service</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-all underline" href="#">Help Center</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-all underline" href="#">Cookies</a>
+</div>
+<p class="text-on-surface-variant font-body-sm text-body-sm mt-4 opacity-80">© 2024 Talent RDC Express. All rights reserved.</p>
+</footer>
+<!-- Bottom Navigation Bar (Active: Jobs) -->
+<nav class="fixed bottom-0 left-0 right-0 bg-surface border-t border-border-subtle z-50 flex items-center justify-around h-16 px-4 md:hidden">
+<a class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-primary transition-all opacity-80 hover:opacity-100" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary font-bold transition-all opacity-100" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">work</span>
+<span class="text-[10px] font-bold">Jobs</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-primary transition-all opacity-80 hover:opacity-100" href="#">
+<span class="material-symbols-outlined">description</span>
+<span class="text-[10px] font-medium">About</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-primary transition-all opacity-80 hover:opacity-100" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="text-[10px] font-medium">Careers</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-primary transition-all opacity-80 hover:opacity-100" href="#">
+<span class="material-symbols-outlined">mail</span>
+<span class="text-[10px] font-medium">Contact</span>
+</a>
+</nav>
+<!-- FAB (Contextual for Job Page) -->
+<button class="fixed bottom-20 right-6 w-14 h-14 bg-primary text-on-primary rounded-full shadow-lg flex items-center justify-center active:scale-90 transition-transform md:hidden z-40">
+<span class="material-symbols-outlined">add</span>
+</button>
+<script>
+        // Micro-interactions for chip filtering
+        const chips = document.querySelectorAll('.flex-shrink-0');
+        chips.forEach(chip => {
+            chip.addEventListener('click', () => {
+                chips.forEach(c => {
+                    c.classList.remove('bg-primary', 'text-on-primary', 'border-primary');
+                    c.classList.add('bg-surface', 'text-on-surface-variant', 'border-border-subtle');
+                });
+                chip.classList.add('bg-primary', 'text-on-primary', 'border-primary');
+                chip.classList.remove('bg-surface', 'text-on-surface-variant', 'border-border-subtle');
+            });
+        });
+
+        // Simple bookmark toggle effect
+        document.querySelectorAll('.material-symbols-outlined').forEach(icon => {
+            if (icon.innerText === 'bookmark') {
+                icon.parentElement.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const isFilled = icon.style.fontVariationSettings.includes("'FILL' 1");
+                    icon.style.fontVariationSettings = isFilled ? "'FILL' 0" : "'FILL' 1";
+                    icon.style.color = isFilled ? '#707880' : '#004d75';
+                });
+            }
+        });
+    </script>
+</body></html>

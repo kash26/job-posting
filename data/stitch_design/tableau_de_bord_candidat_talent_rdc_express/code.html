@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Candidate Profile | Talent RDC Express</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary": "#ffffff",
+                    "secondary-fixed": "#dae2fd",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "on-surface": "#0b1c30",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "tertiary-fixed-dim": "#c4c7c9",
+                    "inverse-on-surface": "#eaf1ff",
+                    "tertiary-container": "#6b6e70",
+                    "tertiary": "#525657",
+                    "surface-dim": "#cbdbf5",
+                    "on-tertiary-container": "#eff1f3",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed": "#191c1e",
+                    "surface-bright": "#f8f9ff",
+                    "on-secondary-fixed": "#131b2e",
+                    "secondary-container": "#dae2fd",
+                    "secondary": "#565e74",
+                    "surface-variant": "#d3e4fe",
+                    "on-primary-container": "#eeefff",
+                    "primary": "#004ac6",
+                    "primary-container": "#2563eb",
+                    "primary-fixed": "#dbe1ff",
+                    "on-secondary-container": "#5c647a",
+                    "on-primary-fixed": "#00174b",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "inverse-surface": "#213145",
+                    "outline": "#737686",
+                    "tertiary-fixed": "#e0e3e5",
+                    "on-error": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-surface-variant": "#434655",
+                    "error": "#ba1a1a",
+                    "surface-container-low": "#eff4ff",
+                    "inverse-primary": "#b4c5ff",
+                    "on-tertiary-fixed-variant": "#444749",
+                    "background": "#f8f9ff",
+                    "outline-variant": "#c3c6d7",
+                    "surface-container": "#e5eeff",
+                    "surface-tint": "#0053db",
+                    "surface-container-high": "#dce9ff",
+                    "on-background": "#0b1c30",
+                    "surface": "#f8f9ff",
+                    "surface-container-highest": "#d3e4fe",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "margin-mobile": "16px",
+                    "base": "8px",
+                    "margin-desktop": "40px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Hanken Grotesk"],
+                    "label-sm": ["Hanken Grotesk"],
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "label-md": ["Hanken Grotesk"],
+                    "body-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.5);
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+        }
+        .pattern-bg {
+            background-color: #f8f9ff;
+            background-image: radial-gradient(#004ac6 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+            background-opacity: 0.03;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .active-dot {
+            position: relative;
+        }
+        .active-dot::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: #004ac6;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed pattern-bg min-h-screen">
+<!-- TopNavBar (Authenticated State) -->
+<header class="bg-surface/80 dark:bg-inverse-surface/80 backdrop-blur-md border-b border-outline-variant/30 dark:border-outline/20 sticky top-0 z-50 shadow-sm">
+<div class="flex justify-between items-center px-margin-desktop h-20 w-full max-w-container-max mx-auto">
+<div class="flex items-center gap-12">
+<a class="font-display-lg text-headline-md font-black tracking-tight text-primary dark:text-primary-fixed" href="#">Talent RDC Express</a>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors" href="#">Jobs</a>
+<a class="font-body-md text-body-md text-primary dark:text-primary-fixed font-bold border-b-2 border-primary pb-1" href="#">Profile</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors" href="#">About</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary p-2 hover:bg-primary/5 rounded-lg transition-all" data-icon="search">search</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary p-2 hover:bg-primary/5 rounded-lg transition-all relative" data-icon="notifications">
+                    notifications
+                    <span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full border-2 border-surface"></span>
+</button>
+<div class="flex items-center gap-3 pl-4 border-l border-outline-variant/50">
+<div class="text-right hidden sm:block">
+<p class="font-label-md text-label-md text-on-surface leading-none">Freya Katherina</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Enterprise Account</p>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-primary-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional close-up portrait of a young executive woman named Freya Katherina, with a confident smile, wearing a sleek navy blazer. The background is a soft, out-of-focus modern office setting with warm daylight. The lighting is high-end corporate style, clean and vibrant, matching a professional SaaS networking aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrIcQ11HoEeeol20Dqc1aWGMIlKSI35rB9IF8ag4mnYO7a9UYp543zsKTYTFs6SeEd53PCR868MiB0Y2G8xG2CWe32eyW8I1mI3w3bgG226IjchpTn_gJ75VrV66Fxeoe7GQacIiS06e_9aJ3rFEAq8cld6M7IdJfHFskHrXIqZO0BO5NyZVi_VMLY52o-25_q2dohWGUIxo4a1JlIz6eTSxTEkyM6My5QUKHUh1l32zH4r_w78wszWA"/>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin-desktop py-12">
+<!-- Hero Section / Profile Header -->
+<div class="glass-card rounded-xl p-base md:p-8 mb-gutter relative overflow-hidden">
+<!-- Background Accent -->
+<div class="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
+<svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<path d="M44.7,-76.4C58.1,-69.2,69.2,-58.1,76.4,-44.7C83.7,-31.3,87,-15.7,86.2,-0.5C85.3,14.7,80.3,29.3,71.7,41.9C63.1,54.5,50.8,65,37.1,71.2C23.4,77.5,8.2,79.5,-6.6,77.3C-21.4,75.1,-35.8,68.7,-48.6,59.3C-61.4,49.9,-72.6,37.5,-78.9,23C-85.2,8.6,-86.7,-7.8,-82.1,-22.7C-77.5,-37.6,-66.8,-51,-53.4,-58.2C-40,-65.4,-23.9,-66.4,-8.1,-75C7.7,-83.6,23.3,-99.8,31.3,-93.6C39.3,-87.4,31.3,-83.6,44.7,-76.4Z" fill="#004ac6" transform="translate(100 100)"></path>
+</svg>
+</div>
+<div class="flex flex-col md:flex-row gap-8 items-start relative z-10">
+<div class="w-32 h-32 md:w-40 md:h-40 rounded-2xl border-4 border-white shadow-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="A professional profile headshot of Freya Katherina, a product designer, looking directly at the camera with a friendly and capable expression. She has medium-length dark hair and is wearing professional attire. The photo is crisp, high-resolution, and set against a neutral, brightly lit studio background suitable for a premium career platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByvghXhoydMZCqJ_-6_UYRkb1ZpX0sXqN5DNyQw9cp84lyv-sk6IrrCTxY4PWNp_TjUvT9wDN-DbYsk8kIgaBnPUfgiFY8m0AfiYEVPmJI-E0osrqsoysPpqtbS9BJq1WdN3XagmjjH95Xh_DJsX7cJdYMJF0FQ_t_A7uog-W2KzGeEizzpK2hlyLoY8RXVMUypcwxSEXclpbTH2hlxjZIRboEX0Ok-SrSvNhzLWijHT-OVaV-C3uPgA"/>
+</div>
+<div class="flex-grow">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+<div>
+<h1 class="font-display-lg text-headline-lg text-on-surface">Freya Katherina <span class="text-primary text-2xl">★</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Encompassed diverse roles in product design, each contributing to growth and expertise in the field.</p>
+</div>
+<div class="flex gap-3">
+<button class="bg-primary hover:bg-primary-container text-on-primary px-6 py-2.5 rounded-lg font-label-md transition-all active:scale-95">Edit Profile</button>
+<button class="border border-outline hover:bg-surface-variant/20 text-on-surface px-4 py-2.5 rounded-lg transition-all"><span class="material-symbols-outlined">more_horiz</span></button>
+</div>
+</div>
+<div class="flex flex-wrap gap-6 items-center">
+<div class="flex items-center gap-2 text-secondary font-label-md">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.3 Trusted</span>
+</div>
+<div class="flex items-center gap-2 text-secondary font-label-md">
+<span class="material-symbols-outlined text-primary">groups</span>
+<span>23 Applicants</span>
+</div>
+<div class="flex items-center gap-2 text-secondary font-label-md">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span>Company Verified</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Dashboard Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Column: Main Content -->
+<div class="lg:col-span-8 space-y-gutter">
+<!-- Stats Row (Bento Style) -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+<div class="glass-card p-6 rounded-xl hover:shadow-md transition-shadow">
+<p class="font-label-sm text-on-surface-variant uppercase tracking-wider">Applied</p>
+<p class="font-display-lg text-headline-lg text-primary">124</p>
+</div>
+<div class="glass-card p-6 rounded-xl hover:shadow-md transition-shadow">
+<p class="font-label-sm text-on-surface-variant uppercase tracking-wider">Interviews</p>
+<p class="font-display-lg text-headline-lg text-secondary">18</p>
+</div>
+<div class="glass-card p-6 rounded-xl hover:shadow-md transition-shadow">
+<p class="font-label-sm text-on-surface-variant uppercase tracking-wider">Offers</p>
+<p class="font-display-lg text-headline-lg text-error">3</p>
+</div>
+<div class="glass-card p-6 rounded-xl hover:shadow-md transition-shadow">
+<p class="font-label-sm text-on-surface-variant uppercase tracking-wider">Profile Hits</p>
+<p class="font-display-lg text-headline-lg text-primary">2.4k</p>
+</div>
+</div>
+<!-- Bio / Profile Description -->
+<section class="glass-card p-8 rounded-xl">
+<h2 class="font-display-lg text-headline-md mb-4 text-on-surface">About Profile</h2>
+<p class="font-body-md text-on-surface-variant leading-relaxed">
+                        I am a dynamic and results-driven professional with a passion for design innovation and a proven track record of success in the field of product design. With extensive experience as a Lead Product Designer, Senior Interaction Designer, and Product Designer, I have honed my skills in crafting intuitive, aesthetically pleasing, and highly functional digital experiences.
+                    </p>
+</section>
+<!-- Experience Timeline -->
+<section class="glass-card p-8 rounded-xl">
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-display-lg text-headline-md text-on-surface">Work Experience</h2>
+<button class="text-primary font-label-md hover:underline flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">add</span> Add New
+                        </button>
+</div>
+<div class="space-y-8 relative before:content-[''] before:absolute before:left-[19px] before:top-2 before:bottom-2 before:w-0.5 before:bg-outline-variant/30">
+<!-- Job 1 -->
+<div class="relative pl-12">
+<div class="absolute left-0 top-1 w-10 h-10 bg-primary-container rounded-lg flex items-center justify-center text-white z-10">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">work</span>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
+<div>
+<h3 class="font-headline-md text-on-surface">Lead Product Designer at Airbnb</h3>
+<p class="font-label-md text-on-surface-variant mb-4">Full-time • Jan 2021 - Present (3 yrs 5 mos)</p>
+<p class="font-body-md text-on-surface-variant">Throughout my career, I have excelled in roles as a Lead Product Designer. I possess a strong ability to conceptualize and lead the development of cutting-edge products. I have a proven history of collaborating closely with cross-functional teams to deliver exceptional user experiences while maintaining a keen eye for detail.</p>
+</div>
+<span class="shrink-0 px-3 py-1 bg-surface-container-high rounded-full font-label-sm text-primary flex items-center gap-1 self-start">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">verified</span> Verified
+                                </span>
+</div>
+</div>
+<!-- Job 2 -->
+<div class="relative pl-12">
+<div class="absolute left-0 top-1 w-10 h-10 bg-secondary-container rounded-lg flex items-center justify-center text-on-secondary-container z-10">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">branding_watermark</span>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
+<div>
+<h3 class="font-headline-md text-on-surface">Senior Interaction Designer at Afterpay</h3>
+<p class="font-label-md text-on-surface-variant mb-4">Contract • Jun 2018 - Dec 2020 (2 yrs 7 mos)</p>
+<p class="font-body-md text-on-surface-variant">My experience as a Senior Interaction Designer has allowed me to refine my skills in crafting intuitive and engaging user interfaces. I have a deep understanding of user behavior and interaction patterns, enabling me to create designs that seamlessly guide users through digital experiences.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Education Section -->
+<section class="glass-card p-8 rounded-xl">
+<h2 class="font-display-lg text-headline-md mb-8 text-on-surface">Education</h2>
+<div class="flex gap-6">
+<div class="w-14 h-14 bg-surface-container rounded-xl flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-3xl">school</span>
+</div>
+<div>
+<h3 class="font-headline-md text-on-surface">University of Pennsylvania <span class="text-primary text-xl">★</span></h3>
+<p class="font-body-md text-on-surface-variant">Bachelor Degree of Computer Science • Jun 2016 - Jul 2021</p>
+<p class="font-body-md text-on-surface-variant mt-2 italic">I am a proud graduate of the University of Pennsylvania, where I obtained a rigorous and comprehensive education in design. The academic environment at UPenn provided me with the foundation necessary to excel in the field of product design.</p>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Sidebar -->
+<aside class="lg:col-span-4 space-y-gutter">
+<!-- People you may know -->
+<section class="glass-card p-6 rounded-xl">
+<div class="flex items-center justify-between mb-6">
+<h2 class="font-label-md text-on-surface uppercase tracking-wider">Network Insights</h2>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer">more_horiz</span>
+</div>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="A portrait of Christoper Nolan, a tech professional with short blonde hair and glasses, wearing a casual grey shirt. He is smiling warmly in a bright modern office with natural light. High-quality professional headshot style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWzfg-0S3GYC39YzZeSZrfRtJ5vA6ER_s6RYIXbqf8nAyr1ddsYuY4xEOYdG_ujcZf0NME49Gl5rwU03LyQOm-c7XJ6r1UNWOZYR_GRrUf84SXgbotPOQ-m0JyVPQIRzKGY4VfQpUvyeYurNmXTCjzb-Z5LbulKKQpquAiP3Xjei1wBaUL8hjfto3pvnziG2TUyCR4RXOOyotStaDhqNk-G5A1oSjagV6jZkGr2ETkFWvlPd1WEqAu6Q"/>
+<div class="flex-grow">
+<p class="font-label-md text-on-surface">Christoper Nolan <span class="text-primary text-[10px] bg-primary-fixed px-1 rounded">PREMIUM</span></p>
+<p class="text-label-sm text-on-surface-variant">Ally Van, Jenifer Chan and 23 more mutual connections</p>
+</div>
+<button class="material-symbols-outlined text-outline">bookmark</button>
+</div>
+<div class="flex items-center gap-4">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="A portrait of Jessica Milla, a young professional woman with long brown hair, wearing a white blouse. She looks professional and friendly. The lighting is soft and flattering, set in a clean minimalist background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_lQg-GwJoF-bEJjNQvGmx0jeUIO1zAjUwecqv7jgNg9Mq0qjI5DXkSDZUZSuBiL3UERpS7GxIuTscR5K4MsasKCy9tYDiNBqr-UvnMJJEid1BycQE3WlGDW_rkShZhq7YCRse2uYPRmbcSMTffCBBk2heJ5vJeRUIvg_KjID6JSLTiDcJXBY0W7627mEWOTJRBX2Et1zx7bI8kQ3YlnDKKrHxKeQ8u9CKCvkFIFF_2e6EBSHVu04NwA"/>
+<div class="flex-grow">
+<p class="font-label-md text-on-surface">Jessica Milla</p>
+<p class="text-label-sm text-on-surface-variant">Ally Van, Jenifer Chan and 23 more mutual connections</p>
+</div>
+<button class="material-symbols-outlined text-outline">bookmark</button>
+</div>
+<div class="flex items-center gap-4">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="A portrait of Cecilia Vangeline, an executive woman with elegant style and dark hair tied back. She is in a professional setting with soft blue and white background tones. Professional career networking portrait." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAAbiFRmKKRI5RyoeD9rEE5dEEIwzbquLIplk38cseCZs6u2DnUwr2vj158rV2RCzwUvJOWIcnH1vY_6Bxq2zCVE6cdhZStO8QY2PQwrkPlkEMmIRUbDJEIq5tpIL0oAzTz6SUlamPBdeqp_2eJosi2nIT3gnOeb6lmbjUJcSOtiy0HjXlRNVFSEi9yabzwqL1hia0MHjZWwuU4EnrVKkWQ7MF2HGtVhQjFPJPtPvq369J6iMvDvpyyQ"/>
+<div class="flex-grow">
+<p class="font-label-md text-on-surface">Cecilia Vangeline</p>
+<p class="text-label-sm text-on-surface-variant">Ally Van, Jenifer Chan and 23 more mutual connections</p>
+</div>
+<button class="material-symbols-outlined text-outline">bookmark</button>
+</div>
+</div>
+<button class="w-full mt-6 text-primary font-label-md hover:bg-primary/5 py-2 rounded-lg transition-colors">See more people</button>
+</section>
+<!-- Job Suggestions -->
+<section class="glass-card p-6 rounded-xl">
+<div class="flex items-center justify-between mb-6">
+<h2 class="font-label-md text-on-surface uppercase tracking-wider">Recommended Jobs</h2>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer">more_horiz</span>
+</div>
+<div class="space-y-4">
+<div class="p-4 bg-surface-container-low rounded-lg border border-outline-variant/30 hover:border-primary/50 transition-all cursor-pointer group">
+<div class="flex gap-4 items-start mb-2">
+<div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center p-2 shadow-sm shrink-0">
+<span class="material-symbols-outlined text-red-500">circle</span>
+</div>
+<div class="flex-grow">
+<h4 class="font-label-md text-on-surface group-hover:text-primary transition-colors">Product Designer <span class="material-symbols-outlined text-primary text-xs" style="font-variation-settings: 'FILL' 1;">verified</span></h4>
+<p class="text-label-sm text-on-surface-variant">Airbnb • 23 Applicants</p>
+</div>
+</div>
+<div class="flex items-center gap-1 text-label-sm text-secondary">
+<span class="material-symbols-outlined text-xs text-primary" style="font-variation-settings: 'FILL' 1;">star</span> 4.3 Company Ratings
+                            </div>
+</div>
+<div class="p-4 bg-surface-container-low rounded-lg border border-outline-variant/30 hover:border-primary/50 transition-all cursor-pointer group">
+<div class="flex gap-4 items-start mb-2">
+<div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center p-2 shadow-sm shrink-0">
+<span class="material-symbols-outlined text-blue-600">change_history</span>
+</div>
+<div class="flex-grow">
+<h4 class="font-label-md text-on-surface group-hover:text-primary transition-colors">Interactions Designer <span class="material-symbols-outlined text-primary text-xs" style="font-variation-settings: 'FILL' 1;">verified</span></h4>
+<p class="text-label-sm text-on-surface-variant">Amplitude • 12 Applicants</p>
+</div>
+</div>
+<div class="flex items-center gap-1 text-label-sm text-secondary">
+<span class="material-symbols-outlined text-xs text-primary" style="font-variation-settings: 'FILL' 1;">star</span> 4.2 Company Ratings
+                            </div>
+</div>
+<div class="p-4 bg-surface-container-low rounded-lg border border-outline-variant/30 hover:border-primary/50 transition-all cursor-pointer group">
+<div class="flex gap-4 items-start mb-2">
+<div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center p-2 shadow-sm shrink-0">
+<span class="material-symbols-outlined text-red-600">square</span>
+</div>
+<div class="flex-grow">
+<h4 class="font-label-md text-on-surface group-hover:text-primary transition-colors">UX Designer <span class="material-symbols-outlined text-primary text-xs" style="font-variation-settings: 'FILL' 1;">verified</span></h4>
+<p class="text-label-sm text-on-surface-variant">Adobe Corp • 50 Applicants</p>
+</div>
+</div>
+<div class="flex items-center gap-1 text-label-sm text-secondary">
+<span class="material-symbols-outlined text-xs text-primary" style="font-variation-settings: 'FILL' 1;">star</span> 4.6 Company Ratings
+                            </div>
+</div>
+</div>
+<button class="w-full mt-6 text-primary font-label-md hover:bg-primary/5 py-2 rounded-lg transition-colors">See all jobs</button>
+</section>
+<!-- Profile Ad/Callout -->
+<div class="bg-primary p-8 rounded-xl text-on-primary relative overflow-hidden group">
+<div class="absolute inset-0 opacity-10 group-hover:scale-110 transition-transform duration-700 pointer-events-none" style="background-image: radial-gradient(circle at 20% 30%, white 1px, transparent 1px); background-size: 20px 20px;"></div>
+<div class="flex -space-x-4 mb-6 relative z-10">
+<img class="w-12 h-12 rounded-full border-4 border-primary" data-alt="A small circular avatar of a woman with black hair in a professional style, isolated for a UI profile cluster." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlMzUFoC8-p_X_h4_LaUZkZsP5sWimQGrUcpZC-B5pO26kzt1Op_uW4K5Co0OROP6qmhQDek0YVXfLqfsNObu3m4frPcitBVaByt5ZEC4arz_W7B7azBS1SmXORT-ohSFrbHei686dOp4xLopR7UjU1SoTtjyhFy-vc7UBJk5pcs0QgjHqIdoCb_Rl2YswQNPZ9zx3Hu-FlqLjw7sNq7T2cJbpnGHBONHHHDDj8grUdNLv2dOq6bYD4w"/>
+<img class="w-12 h-12 rounded-full border-4 border-primary" data-alt="A small circular avatar of a man with blonde hair and a professional look, isolated for a UI profile cluster." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGZyJxD0WTIopVCa7wObqA9f0-fWlTW4-mzyRLmwBgsbLTCOOZAUAj6xeckJtlUEgnd0QV6DVwRoiPo5vOrWTYLD6meJTwpzYQBJz1AwimozNXtfRHNmPVOde3xHdFuGotmZjbLfF40x9lqjifBKzygiTGHT6GCCDOzLU4Vp489Bh7u0cTCFmQWUMS5wQs6Qm1G9k3lTHpcs7hlfOQNA1eUbrDomKnae1IaNkzokdLhFHbM7S47L0v5Q"/>
+</div>
+<h3 class="font-headline-md mb-2 relative z-10">Job Overview Customizable Profile</h3>
+<p class="text-body-md opacity-90 mb-6 relative z-10">Mekari is Indonesia's no. 1 SaaS company. Our mission is to empower businesses and professionals.</p>
+<button class="bg-white text-primary px-6 py-2 rounded-lg font-label-md hover:bg-primary-fixed transition-colors active:scale-95 relative z-10">Upgrade Now</button>
+</div>
+</aside>
+</div>
+</main>
+<!-- Robust Footer -->
+<footer class="bg-inverse-surface dark:bg-surface-container-lowest mt-24">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-16 max-w-container-max mx-auto text-on-primary-container">
+<div class="space-y-6">
+<div class="font-display-lg text-headline-md font-extrabold text-on-primary">Talent RDC Express</div>
+<p class="font-body-md text-tertiary-fixed max-w-xs">The premier platform for connecting high-growth SaaS companies with world-class product talent.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-outline/30 flex items-center justify-center hover:bg-primary/20 transition-all" href="#"><span class="material-symbols-outlined text-on-primary">alternate_email</span></a>
+<a class="w-10 h-10 rounded-full border border-outline/30 flex items-center justify-center hover:bg-primary/20 transition-all" href="#"><span class="material-symbols-outlined text-on-primary">share</span></a>
+<a class="w-10 h-10 rounded-full border border-outline/30 flex items-center justify-center hover:bg-primary/20 transition-all" href="#"><span class="material-symbols-outlined text-on-primary">public</span></a>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-primary-fixed font-bold">Company</h4>
+<nav class="flex flex-col gap-3">
+<a class="font-body-md text-tertiary-fixed hover:text-on-primary transition-colors" href="#">About Us</a>
+<a class="font-body-md text-tertiary-fixed hover:text-on-primary transition-colors" href="#">Careers</a>
+<a class="font-body-md text-tertiary-fixed hover:text-on-primary transition-colors" href="#">Contact</a>
+<a class="font-body-md text-tertiary-fixed hover:text-on-primary transition-colors" href="#">Press Kit</a>
+</nav>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-primary-fixed font-bold">Resources</h4>
+<nav class="flex flex-col gap-3">
+<a class="font-body-md text-tertiary-fixed hover:text-on-primary transition-colors" href="#">Job Board</a>
+<a class="font-body-md text-tertiary-fixed hover:text-on-primary transition-colors" href="#">Pricing</a>
+<a class="font-body-md text-tertiary-fixed hover:text-on-primary transition-colors" href="#">Partners</a>
+<a class="font-body-md text-tertiary-fixed hover:text-on-primary transition-colors" href="#">Case Studies</a>
+</nav>
+</div>
+<div class="space-y-6">
+<h4 class="font-label-md text-primary-fixed font-bold">Subscribe</h4>
+<p class="font-body-md text-tertiary-fixed">Get the latest career opportunities in your inbox.</p>
+<div class="flex bg-surface/10 rounded-lg p-1 border border-outline/20">
+<input class="bg-transparent border-none focus:ring-0 text-white placeholder:text-tertiary-fixed-dim flex-grow px-3" placeholder="email@company.com" type="email"/>
+<button class="bg-primary text-white w-10 h-10 rounded-lg flex items-center justify-center hover:bg-primary-container transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<div class="border-t border-outline/10 px-margin-desktop py-8 max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-tertiary-fixed opacity-70">© 2024 Talent RDC Express. All rights reserved.</p>
+<div class="flex gap-8">
+<a class="font-body-md text-tertiary-fixed opacity-70 hover:opacity-100 transition-opacity" href="#">Privacy Policy</a>
+<a class="font-body-md text-tertiary-fixed opacity-70 hover:opacity-100 transition-opacity" href="#">Terms of Service</a>
+<a class="font-body-md text-tertiary-fixed opacity-70 hover:opacity-100 transition-opacity" href="#">Cookie Policy</a>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions and subtle effects
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-4px)';
+                card.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body></html>

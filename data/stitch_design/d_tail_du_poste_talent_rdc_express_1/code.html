@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Job Detail | Talent RDC Express</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary": "#ffffff",
+                    "secondary-fixed": "#dae2fd",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "on-surface": "#0b1c30",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "tertiary-fixed-dim": "#c4c7c9",
+                    "inverse-on-surface": "#eaf1ff",
+                    "tertiary-container": "#6b6e70",
+                    "tertiary": "#525657",
+                    "surface-dim": "#cbdbf5",
+                    "on-tertiary-container": "#eff1f3",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed": "#191c1e",
+                    "surface-bright": "#f8f9ff",
+                    "on-secondary-fixed": "#131b2e",
+                    "secondary-container": "#dae2fd",
+                    "secondary": "#565e74",
+                    "surface-variant": "#d3e4fe",
+                    "on-primary-container": "#eeefff",
+                    "primary": "#004ac6",
+                    "primary-container": "#2563eb",
+                    "primary-fixed": "#dbe1ff",
+                    "on-secondary-container": "#5c647a",
+                    "on-primary-fixed": "#00174b",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "inverse-surface": "#213145",
+                    "outline": "#737686",
+                    "tertiary-fixed": "#e0e3e5",
+                    "on-error": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-surface-variant": "#434655",
+                    "error": "#ba1a1a",
+                    "surface-container-low": "#eff4ff",
+                    "inverse-primary": "#b4c5ff",
+                    "on-tertiary-fixed-variant": "#444749",
+                    "background": "#f8f9ff",
+                    "outline-variant": "#c3c6d7",
+                    "surface-container": "#e5eeff",
+                    "surface-tint": "#0053db",
+                    "surface-container-high": "#dce9ff",
+                    "on-background": "#0b1c30",
+                    "surface": "#f8f9ff",
+                    "surface-container-highest": "#d3e4fe",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "margin-mobile": "16px",
+                    "base": "8px",
+                    "margin-desktop": "40px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Hanken Grotesk"],
+                    "label-sm": ["Hanken Grotesk"],
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "label-md": ["Hanken Grotesk"],
+                    "body-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-pattern {
+            background-color: #004ac6;
+            background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.1) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md min-h-screen">
+<!-- Top Navigation Bar (Authenticated State) -->
+<header class="bg-surface/80 backdrop-blur-md sticky top-0 z-50 border-b border-outline-variant/30 shadow-sm h-20">
+<div class="flex justify-between items-center px-margin-desktop h-full w-full max-w-container-max mx-auto">
+<div class="flex items-center gap-12">
+<a class="font-display-lg text-headline-md font-black tracking-tight text-primary" href="#">Talent RDC Express</a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-body-md text-primary font-bold border-b-2 border-primary pb-1" href="#">Jobs</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">About</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Careers</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center bg-surface-container px-4 py-2 rounded-full border border-outline-variant/30">
+<span class="material-symbols-outlined text-outline mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48" placeholder="Search jobs..." type="text"/>
+</div>
+<button class="relative p-2 rounded-full hover:bg-primary/5 transition-all active:scale-95">
+<span class="material-symbols-outlined text-on-surface-variant">notifications</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<div class="flex items-center gap-3 pl-4 border-l border-outline-variant/30">
+<div class="text-right hidden sm:block">
+<p class="font-label-md text-on-surface leading-none">Freya Katherina</p>
+<p class="text-[10px] text-outline-variant">Product Designer</p>
+</div>
+<img alt="Freya Katherina" class="w-10 h-10 rounded-full object-cover border-2 border-primary-container" data-alt="Professional headshot of a female product designer with a friendly smile, soft studio lighting, high-end professional aesthetic, vibrant and modern background tones of soft blue." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBilpRCRm6d0-qiunFN4lDJI4m5_jSvWi_q5X1kYrE9BSGrZjqareImboALYh4k1Z53eKeXqcrxKgH2xjFkIQ8XPEhxiDyo6hdF8u1JBAzJKAdWueKhY145oKrD3XqbqLY5hBnn2t0qK8ai_dzdNA_d3FG33Gn8zcMl_WgwS_N06cQCdH2X5q0_GfzW2Jev1weG1xuVSz0DC9HjeonxlXixEk81wMJsWY4cPAQQovuYMDen_f9Mk3YB6A"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section / Context Header -->
+<div class="w-full bento-pattern py-12 relative overflow-hidden">
+<div class="absolute inset-0 opacity-20">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 100 100">
+<polygon fill="white" opacity="0.1" points="0,0 100,0 100,20 0,80"></polygon>
+<polygon fill="white" opacity="0.05" points="0,100 100,100 100,80 0,20"></polygon>
+</svg>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
+<nav class="flex mb-4 text-primary-fixed opacity-80 gap-2 items-center font-label-md">
+<a class="hover:underline" href="#">Explore Jobs</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span>Design</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-white">Product Designer</span>
+</nav>
+<div class="flex flex-col md:flex-row justify-between items-end gap-6">
+<div class="flex items-start gap-6">
+<div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center shadow-lg transform rotate-3 transition-transform hover:rotate-0">
+<span class="material-symbols-outlined text-[40px] text-primary" style="font-variation-settings: 'FILL' 1;">widgets</span>
+</div>
+<div>
+<h1 class="font-display-lg text-white mb-2">Senior Product Designer <span class="text-primary-fixed-dim">+</span></h1>
+<div class="flex flex-wrap gap-4 text-primary-fixed">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">business</span> Adobe Corp.</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">location_on</span> San Francisco, CA</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">schedule</span> Full-time</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">verified</span> Company Verified</span>
+</div>
+</div>
+</div>
+<div class="flex gap-4">
+<button class="px-8 py-3 bg-white text-primary font-bold rounded-xl hover:bg-primary-fixed transition-colors shadow-lg active:scale-95">Apply Now</button>
+<button class="p-3 bg-white/10 backdrop-blur-md text-white border border-white/20 rounded-xl hover:bg-white/20 transition-colors">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Content Area -->
+<main class="max-w-container-max mx-auto px-margin-desktop py-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Column: Job Details -->
+<div class="lg:col-span-8 space-y-8">
+<!-- Overview Card -->
+<section class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/30 shadow-sm">
+<h2 class="font-headline-md text-on-surface mb-6 flex items-center gap-2">
+                        Job Overview <span class="text-primary">+</span>
+</h2>
+<p class="text-on-surface-variant leading-relaxed mb-6">
+                        Adobe is seeking a passionate Senior Product Designer to join our Creative Cloud team. You will be responsible for defining the user experience of next-generation design tools, working closely with researchers, product managers, and engineers to craft elegant solutions for millions of creative professionals.
+                    </p>
+<p class="text-on-surface-variant leading-relaxed">
+                        To reach millions, we need more people like you: entrepreneurs, builders, and owners inside the company who are eager to grow at scale. Join us to empower more businesses and creatives with technology that feels magical yet intuitive.
+                    </p>
+</section>
+<!-- Responsibilities & Requirements -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<section class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/30 shadow-sm">
+<h3 class="font-headline-md text-on-surface mb-6">What You Will Do</h3>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface-variant">Design and iterate intuitive digital products that delight our users globally.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface-variant">Collaborate with cross-functional teams to define sitemaps and user flows.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface-variant">Uncover valuable insights through user research to inform design decisions.</span>
+</li>
+</ul>
+</section>
+<section class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/30 shadow-sm">
+<h3 class="font-headline-md text-on-surface mb-6">Requirements</h3>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface-variant">5+ years of experience in UX/UI design for complex SaaS products.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface-variant">Strong portfolio showcasing end-to-end product design process.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface-variant">Expertise in Figma, Adobe XD, and interactive prototyping tools.</span>
+</li>
+</ul>
+</section>
+</div>
+<!-- About Company -->
+<section class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/30 shadow-sm">
+<div class="flex justify-between items-center mb-6">
+<h2 class="font-headline-md text-on-surface">About Adobe</h2>
+<button class="text-primary font-bold hover:underline flex items-center gap-1">Follow <span class="material-symbols-outlined text-[18px]">add</span></button>
+</div>
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<img alt="Adobe Office" class="w-full md:w-64 h-40 object-cover rounded-xl" data-alt="A modern, high-tech office interior with glass walls, minimalist furniture, and large windows looking out to a city skyline. The lighting is soft and professional, emphasizing a high-end corporate atmosphere with clean lines and a vibrant but professional color palette of blues and grays." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQo7EVVj_R1VFQqAHx4mP7iyPMBRxd_6BOKvm8cXGUKm1kG5RQwkWTkFFcAz3gxee3lq6ue4KvPulUY_V1EB6wnnRGQUOZ5gJPFEQzNJ2iZotu-OqBBIAyF-pCbsazo8keHFYXmDL3mXWIh53LvlXyxrc-1LuK5Eq-t4tSzji07ucMrid_BsQjKy-1hVLaXp0uplr_YGXwV4mZ8a4rGxtg2lvmWhqzOJwoHwytuK5I7bPBdaHIXuC4pQ"/>
+<div>
+<p class="text-on-surface-variant leading-relaxed mb-4">
+                                Adobe is an exciting new digital venture. Our proud purpose is to build a technology platform that will help make business possible for restaurant owners, hotel owners, and independent retailers.
+                            </p>
+<p class="text-on-surface-variant leading-relaxed">
+                                Adobe PRO brings together the best talent across multi-nationals to transform the digital creative landscape through innovation and empathy.
+                            </p>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Sidebar Statistics -->
+<aside class="lg:col-span-4 space-y-8">
+<!-- Stats Bento Card -->
+<div class="bg-primary text-white rounded-xl p-8 shadow-lg overflow-hidden relative">
+<div class="relative z-10">
+<h3 class="font-headline-md mb-6">Job Statistics</h3>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
+<p class="text-primary-fixed text-label-sm uppercase mb-1">Applicants</p>
+<p class="text-headline-md font-bold">142</p>
+</div>
+<div class="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
+<p class="text-primary-fixed text-label-sm uppercase mb-1">Views</p>
+<p class="text-headline-md font-bold">1.2k</p>
+</div>
+<div class="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
+<p class="text-primary-fixed text-label-sm uppercase mb-1">Avg Salary</p>
+<p class="text-headline-md font-bold">$140k</p>
+</div>
+<div class="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
+<p class="text-primary-fixed text-label-sm uppercase mb-1">Posted</p>
+<p class="text-headline-md font-bold">2d ago</p>
+</div>
+</div>
+<button class="w-full mt-6 py-3 bg-white text-primary font-bold rounded-xl hover:bg-primary-fixed transition-transform active:scale-95">Send Profile Express</button>
+</div>
+<!-- Decorative Element -->
+<div class="absolute -bottom-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+</div>
+<!-- Similar Jobs -->
+<div class="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant/30 shadow-sm">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-label-md text-on-surface uppercase tracking-wider">Similar Openings</h3>
+<span class="material-symbols-outlined text-outline cursor-pointer">more_horiz</span>
+</div>
+<div class="space-y-6">
+<div class="flex items-center gap-4 group cursor-pointer">
+<div class="w-12 h-12 bg-secondary-container rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary">draw</span>
+</div>
+<div class="flex-1">
+<h4 class="font-label-md text-on-surface group-hover:text-primary transition-colors">UI/UX Designer</h4>
+<p class="text-label-sm text-outline">Airbnb • 23 Applicants</p>
+</div>
+<div class="text-right">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-label-sm font-bold">4.8</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 group cursor-pointer">
+<div class="w-12 h-12 bg-secondary-container rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary">token</span>
+</div>
+<div class="flex-1">
+<h4 class="font-label-md text-on-surface group-hover:text-primary transition-colors">Visual Designer</h4>
+<p class="text-label-sm text-outline">Figma • 56 Applicants</p>
+</div>
+<div class="text-right">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-label-sm font-bold">4.9</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 group cursor-pointer">
+<div class="w-12 h-12 bg-secondary-container rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary">animation</span>
+</div>
+<div class="flex-1">
+<h4 class="font-label-md text-on-surface group-hover:text-primary transition-colors">Interaction Lead</h4>
+<p class="text-label-sm text-outline">Amplitude • 12 Applicants</p>
+</div>
+<div class="text-right">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-label-sm font-bold">4.6</span>
+</div>
+</div>
+</div>
+</div>
+<a class="block text-center mt-8 text-primary font-bold text-label-md hover:underline transition-all" href="#">See more openings</a>
+</div>
+<!-- Professional Tip -->
+<div class="bg-surface-container rounded-xl p-6 border border-primary/10 relative overflow-hidden group">
+<div class="relative z-10">
+<div class="flex gap-2 items-center mb-3">
+<img alt="Coach" class="w-8 h-8 rounded-full border-2 border-white shadow-sm" data-alt="Portrait of a diverse corporate leader looking confident in a modern office, professional lighting, soft background blur, clean and high-end executive style with a warm and approachable aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACYBgSj2FfWaFh5isFUQ66C-tHU50KUINuDfjOZR6-xdIc-6cbNmzGR6lY8Vr2ZRIu_FZoBW_cp3tW62ZZ0s6W_UV6O1V0x2ugBOKZeV-Ta1Div9D5i5ifNGDm7cfkyOKb6rR2_87w-YLtphWLjPwOlj6OBX9hUip6qiThbGn8Jnht3C7iGtBhUWlT0jCWeqiikckHH837SyjkK_doP2gljYinUWN863czorYXp3HZyIJwDIi_v-Tpqw"/>
+<div class="bg-primary/10 px-2 py-1 rounded text-[10px] font-bold text-primary">EXPERT TIP</div>
+</div>
+<p class="text-label-md text-on-surface mb-2 font-bold">Job Overview Customizable Profile</p>
+<p class="text-label-sm text-on-surface-variant">Mekari is Indonesia's no. 1 Software-as-a-Service (SaaS) company. Use our professional builder to highlight relevant skills for this role.</p>
+</div>
+<div class="absolute top-0 right-0 p-2 opacity-5 transform group-hover:scale-125 transition-transform">
+<span class="material-symbols-outlined text-[120px]">psychology_alt</span>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Robust Footer -->
+<footer class="bg-inverse-surface text-on-primary-fixed py-16 mt-12 rounded-t-[40px] shadow-lg">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-16">
+<div class="space-y-6">
+<h2 class="font-display-lg text-headline-md font-extrabold text-on-primary">Talent RDC Express</h2>
+<p class="font-body-md text-tertiary-fixed max-w-xs">
+                        Empowering the next generation of creative talent through meaningful connections and world-class job opportunities.
+                    </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors" href="#"><span class="material-symbols-outlined text-white">share</span></a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors" href="#"><span class="material-symbols-outlined text-white">public</span></a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors" href="#"><span class="material-symbols-outlined text-white">groups</span></a>
+</div>
+</div>
+<div>
+<h3 class="font-label-md text-on-primary uppercase mb-6">Company</h3>
+<ul class="space-y-4 font-body-md text-tertiary-fixed">
+<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Our Team</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-label-md text-on-primary uppercase mb-6">Support</h3>
+<ul class="space-y-4 font-body-md text-tertiary-fixed">
+<li><a class="hover:text-primary transition-colors" href="#">Help Center</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Resources</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-label-md text-on-primary uppercase mb-6">Join Our Newsletter</h3>
+<p class="font-body-md text-tertiary-fixed mb-4">Stay updated with the latest job trends and insights.</p>
+<div class="flex gap-2">
+<input class="bg-white/10 border border-white/20 rounded-xl px-4 py-2 text-white focus:ring-primary w-full outline-none" placeholder="Email address" type="email"/>
+<button class="bg-primary p-3 rounded-xl hover:bg-primary-container transition-transform active:scale-95">
+<span class="material-symbols-outlined text-white">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-tertiary-fixed text-sm">
+<p>© 2024 Talent RDC Express. All rights reserved.</p>
+<div class="flex gap-8">
+<a class="hover:text-on-primary transition-colors" href="#">Cookie Settings</a>
+<a class="hover:text-on-primary transition-colors" href="#">Legal Disclaimer</a>
+<a class="hover:text-on-primary transition-colors" href="#">Sitemap</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Smooth scaling interaction for job list items
+        document.querySelectorAll('.group').forEach(item => {
+            item.addEventListener('mousedown', () => {
+                item.style.transform = 'scale(0.98)';
+            });
+            item.addEventListener('mouseup', () => {
+                item.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body></html>

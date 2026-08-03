@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Talent RDC - Find Your Dream Job</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#bce0ff",
+                        "inverse-on-surface": "#f2f0f0",
+                        "on-surface": "#1b1c1c",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#bfe0ff",
+                        "on-secondary-container": "#5c666a",
+                        "on-tertiary-fixed-variant": "#004b70",
+                        "background-surface": "#F8FAFB",
+                        "on-primary-fixed-variant": "#004b72",
+                        "secondary-fixed": "#dae4e9",
+                        "on-secondary-fixed-variant": "#3f484c",
+                        "secondary-fixed-dim": "#bec8cd",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#141d21",
+                        "on-background": "#1b1c1c",
+                        "tertiary-container": "#29658c",
+                        "surface-bright": "#fbf9f8",
+                        "tertiary": "#004d73",
+                        "success-accent": "#28A745",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#e4e2e2",
+                        "border-subtle": "#E1E8ED",
+                        "surface-dim": "#dbdad9",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#006699",
+                        "inverse-primary": "#90cdff",
+                        "primary-fixed-dim": "#90cdff",
+                        "surface-container-low": "#f5f3f3",
+                        "surface-tint": "#006496",
+                        "outline-variant": "#c0c7d0",
+                        "surface": "#fbf9f8",
+                        "on-primary-fixed": "#001e31",
+                        "surface-variant": "#e4e2e2",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#96ccf9",
+                        "tertiary-fixed": "#cae6ff",
+                        "primary-fixed": "#cce5ff",
+                        "primary": "#004d75",
+                        "surface-container-high": "#e9e8e7",
+                        "error": "#ba1a1a",
+                        "secondary-container": "#dae4e9",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#efeded",
+                        "secondary": "#566064",
+                        "outline": "#707880",
+                        "inverse-surface": "#303031",
+                        "background": "#fbf9f8",
+                        "on-surface-variant": "#40484f",
+                        "on-tertiary-fixed": "#001e30",
+                        "text-heading": "#1A1A1A"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "base": "8px",
+                        "margin-desktop": "32px",
+                        "container-max-width": "1200px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Hanken Grotesk"],
+                        "label-md": ["Inter"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "body-sm": ["Inter"],
+                        "headline-xl": ["Hanken Grotesk"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar (Mobile Specialized) -->
+<header class="bg-surface sticky top-0 z-50 border-b border-border-subtle h-16 w-full px-margin-mobile flex justify-between items-center">
+<div class="flex items-center gap-2">
+<img class="w-8 h-8 object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLvwlJhwRkGHzhVlNCFt1nDiBxa-8_9CT-NIeMH_2CzX4JedgntDd8mLK3WYML-PjB2zPN9fqotFy7mx1LA7zvB27KLqjHNu_PaSJ3lDbQUGthQHwMzYweGmTONxLdvKEp7vLAmPPeSML3TpSgmkwWDSY_iPnuae_J_Vf32p_ZA7RCRBCtBjX4Plsxq8JwQH2w0UMfRYl58YeeXXFUv8wNbwA-SI9wzvZcf6Fzq3vsf8bIDZUldJHGZrUMbu"/>
+<span class="font-headline-md text-headline-md font-bold text-primary">Talent RDC</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container-low p-2 rounded-full transition-colors">search</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container-low p-2 rounded-full transition-colors">notifications</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-border-subtle">
+<img class="w-full h-full object-cover" data-alt="Close-up headshot of Freya Katherina, a young professional woman with a friendly expression, set against a clean, blurred office background. The lighting is soft and natural, emphasizing a high-trust, professional recruitment atmosphere. The image style is polished and modern, fitting a corporate light-mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaYnBGNHWEDrSY1YWE-buDiNtRAYGioevIUkRadrLqK-GfMoZocK7M4W9GqAH8rUkNQbaOCAYG_PLIzn9rHT26Al7W1wFdJOJuMAab4pG98IW4K33NacpIqJzq6bbuQndqxEUxMozPaYOvmebYEakCiaWmDFO77cZU8K4pmNbjhhQWUIPofzVQuWu15wUAEP1IeGNrNKUCtZygktwetmOzilABegfDiYf4LUN-vdFbOuTx_swOQPM7Mw"/>
+</div>
+</div>
+</header>
+<main class="w-full">
+<!-- Hero Section -->
+<section class="bg-primary px-margin-mobile pt-10 pb-12 relative overflow-hidden">
+<!-- Decorative Elements -->
+<div class="absolute right-0 top-0 w-32 h-32 bg-primary-container opacity-20 -mr-10 -mt-10 rounded-full"></div>
+<div class="absolute left-0 bottom-0 w-48 h-12 bg-white opacity-10 rotate-45 -ml-10 mb-5"></div>
+<div class="relative z-10 space-y-4">
+<h1 class="text-white font-headline-lg-mobile text-headline-lg-mobile">Find your dream job</h1>
+<p class="text-on-primary-container font-body-sm text-body-sm max-w-[280px]">Looking for jobs? Browse our latest job opening to view</p>
+<!-- Mobile Search Card -->
+<div class="mt-8 bg-white p-4 rounded-xl shadow-lg space-y-3">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-body-sm">search</span>
+<input class="w-full pl-10 pr-4 py-3 bg-background-surface border border-border-subtle rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none text-body-md" placeholder="Search jobs..." type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="flex items-center justify-between px-3 py-2 border border-border-subtle rounded-lg text-on-surface-variant bg-white">
+<span class="text-label-sm">Berlin</span>
+<span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+<button class="flex items-center justify-between px-3 py-2 border border-border-subtle rounded-lg text-on-surface-variant bg-white">
+<span class="text-label-sm">Intern</span>
+<span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+</div>
+<button class="w-full bg-primary-container text-white py-3 rounded-lg font-label-md active:scale-95 transition-transform">Apply Now</button>
+</div>
+</div>
+</section>
+<!-- Featured Categories (Horizontal Scroll) -->
+<section class="py-8 px-margin-mobile overflow-hidden">
+<h2 class="font-headline-md text-headline-md mb-4">Job Categories</h2>
+<div class="flex gap-4 overflow-x-auto hide-scrollbar pb-2">
+<!-- Category 1 -->
+<div class="flex-shrink-0 w-40 bg-white p-4 rounded-xl shadow-sm border border-border-subtle flex flex-col items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">palette</span>
+</div>
+<span class="font-label-md text-center">Design</span>
+</div>
+<!-- Category 2 -->
+<div class="flex-shrink-0 w-40 bg-white p-4 rounded-xl shadow-sm border border-border-subtle flex flex-col items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">code</span>
+</div>
+<span class="font-label-md text-center">Development</span>
+</div>
+<!-- Category 3 -->
+<div class="flex-shrink-0 w-40 bg-white p-4 rounded-xl shadow-sm border border-border-subtle flex flex-col items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">trending_up</span>
+</div>
+<span class="font-label-md text-center">Marketing</span>
+</div>
+<!-- Category 4 -->
+<div class="flex-shrink-0 w-40 bg-white p-4 rounded-xl shadow-sm border border-border-subtle flex flex-col items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">monitoring</span>
+</div>
+<span class="font-label-md text-center">Management</span>
+</div>
+</div>
+</section>
+<!-- Recent Job Openings -->
+<section class="py-4 px-margin-mobile pb-24">
+<div class="flex justify-between items-center mb-6">
+<h2 class="font-headline-md text-headline-md">Recent Jobs</h2>
+<button class="text-primary font-label-sm">View All</button>
+</div>
+<div class="space-y-4">
+<!-- Job Card 1 -->
+<div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-primary space-y-4">
+<div class="flex justify-between items-start">
+<div class="flex gap-3">
+<div class="w-12 h-12 rounded-lg bg-red-100 flex items-center justify-center text-red-600">
+<span class="material-symbols-outlined">mobile_share_stack</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md">Product Designer</h3>
+<p class="text-body-sm text-on-surface-variant">Adobe • Full-time</p>
+</div>
+</div>
+<button class="material-symbols-outlined text-outline">bookmark</button>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-secondary-container text-primary text-label-sm rounded-full">Remote</span>
+<span class="px-3 py-1 bg-secondary-container text-primary text-label-sm rounded-full">$120k - $150k</span>
+</div>
+</div>
+<!-- Job Card 2 -->
+<div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-blue-500 space-y-4">
+<div class="flex justify-between items-start">
+<div class="flex gap-3">
+<div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600">
+<span class="material-symbols-outlined">brand_family</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md">Interactions Designer</h3>
+<p class="text-body-sm text-on-surface-variant">Amplitude • Remote</p>
+</div>
+</div>
+<button class="material-symbols-outlined text-outline">bookmark</button>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-secondary-container text-primary text-label-sm rounded-full">Senior</span>
+<span class="px-3 py-1 bg-secondary-container text-primary text-label-sm rounded-full">$140k - $180k</span>
+</div>
+</div>
+<!-- Job Card 3 -->
+<div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-green-500 space-y-4">
+<div class="flex justify-between items-start">
+<div class="flex gap-3">
+<div class="w-12 h-12 rounded-lg bg-green-100 flex items-center justify-center text-green-600">
+<span class="material-symbols-outlined">house</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md">Lead UX Researcher</h3>
+<p class="text-body-sm text-on-surface-variant">Airbnb • San Francisco</p>
+</div>
+</div>
+<button class="material-symbols-outlined text-outline" style="font-variation-settings: 'FILL' 1;">bookmark</button>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-secondary-container text-primary text-label-sm rounded-full">Lead</span>
+<span class="px-3 py-1 bg-secondary-container text-primary text-label-sm rounded-full">$200k+</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Mandate) -->
+<nav class="fixed bottom-0 left-0 right-0 h-16 bg-surface shadow-[0_-4px_12px_rgba(0,77,117,0.08)] flex items-center justify-around px-4 z-50 md:hidden">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-label-sm font-bold">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined">work</span>
+<span class="text-label-sm">Jobs</span>
+</button>
+<div class="relative -top-6">
+<button class="w-14 h-14 bg-primary text-white rounded-full shadow-lg flex items-center justify-center active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[32px]">add</span>
+</button>
+</div>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined">chat</span>
+<span class="text-label-sm">Chat</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined">person</span>
+<span class="text-label-sm">Profile</span>
+</button>
+</nav>
+<!-- Footer -->
+<footer class="bg-surface-container py-10 px-margin-mobile space-y-8 mb-16">
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-2">
+<img class="w-8 h-8 object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLvwlJhwRkGHzhVlNCFt1nDiBxa-8_9CT-NIeMH_2CzX4JedgntDd8mLK3WYML-PjB2zPN9fqotFy7mx1LA7zvB27KLqjHNu_PaSJ3lDbQUGthQHwMzYweGmTONxLdvKEp7vLAmPPeSML3TpSgmkwWDSY_iPnuae_J_Vf32p_ZA7RCRBCtBjX4Plsxq8JwQH2w0UMfRYl58YeeXXFUv8wNbwA-SI9wzvZcf6Fzq3vsf8bIDZUldJHGZrUMbu"/>
+<span class="font-headline-md text-headline-md font-black text-primary">Talent RDC</span>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<ul class="space-y-3">
+<li><a class="text-on-surface-variant text-body-sm hover:text-primary transition-colors" href="#">About Company</a></li>
+<li><a class="text-on-surface-variant text-body-sm hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant text-body-sm hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+</ul>
+<ul class="space-y-3">
+<li><a class="text-on-surface-variant text-body-sm hover:text-primary transition-colors" href="#">Help Center</a></li>
+<li><a class="text-on-surface-variant text-body-sm hover:text-primary transition-colors" href="#">Cookies</a></li>
+<li><a class="text-on-surface-variant text-body-sm hover:text-primary transition-colors" href="#">Careers</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-border-subtle pt-6">
+<p class="text-on-surface-variant text-body-sm text-center">© 2024 Talent RDC Express. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Micro-interactions and scroll effects
+        document.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+
+        // Simple animation for job cards on load
+        window.addEventListener('load', () => {
+            const cards = document.querySelectorAll('.bg-white.rounded-xl');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'all 0.5s ease-out';
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+    </script>
+</body></html>

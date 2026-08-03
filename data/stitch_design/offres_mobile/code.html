@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Talent RDC - Mobile Job Search</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-container": "#bce0ff",
+            "inverse-on-surface": "#f2f0f0",
+            "on-surface": "#1b1c1c",
+            "on-error": "#ffffff",
+            "on-primary-container": "#bfe0ff",
+            "on-secondary-container": "#5c666a",
+            "on-tertiary-fixed-variant": "#004b70",
+            "background-surface": "#F8FAFB",
+            "on-primary-fixed-variant": "#004b72",
+            "secondary-fixed": "#dae4e9",
+            "on-secondary-fixed-variant": "#3f484c",
+            "secondary-fixed-dim": "#bec8cd",
+            "on-primary": "#ffffff",
+            "on-secondary-fixed": "#141d21",
+            "on-background": "#1b1c1c",
+            "tertiary-container": "#29658c",
+            "surface-bright": "#fbf9f8",
+            "tertiary": "#004d73",
+            "success-accent": "#28A745",
+            "on-tertiary": "#ffffff",
+            "surface-container-highest": "#e4e2e2",
+            "border-subtle": "#E1E8ED",
+            "surface-dim": "#dbdad9",
+            "surface-container-lowest": "#ffffff",
+            "primary-container": "#006699",
+            "inverse-primary": "#90cdff",
+            "primary-fixed-dim": "#90cdff",
+            "surface-container-low": "#f5f3f3",
+            "surface-tint": "#006496",
+            "outline-variant": "#c0c7d0",
+            "surface": "#fbf9f8",
+            "on-primary-fixed": "#001e31",
+            "surface-variant": "#e4e2e2",
+            "error-container": "#ffdad6",
+            "tertiary-fixed-dim": "#96ccf9",
+            "tertiary-fixed": "#cae6ff",
+            "primary-fixed": "#cce5ff",
+            "primary": "#004d75",
+            "surface-container-high": "#e9e8e7",
+            "error": "#ba1a1a",
+            "secondary-container": "#dae4e9",
+            "on-error-container": "#93000a",
+            "on-secondary": "#ffffff",
+            "surface-container": "#efeded",
+            "secondary": "#566064",
+            "outline": "#707880",
+            "inverse-surface": "#303031",
+            "background": "#fbf9f8",
+            "on-surface-variant": "#40484f",
+            "on-tertiary-fixed": "#001e30",
+            "text-heading": "#1A1A1A"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter": "24px",
+            "base": "8px",
+            "margin-desktop": "32px",
+            "container-max-width": "1200px",
+            "margin-mobile": "16px"
+          },
+          "fontFamily": {
+            "headline-md": ["Hanken Grotesk"],
+            "label-md": ["Inter"],
+            "headline-lg": ["Hanken Grotesk"],
+            "body-sm": ["Inter"],
+            "headline-xl": ["Hanken Grotesk"],
+            "body-md": ["Inter"],
+            "label-sm": ["Inter"],
+            "body-lg": ["Inter"],
+            "headline-lg-mobile": ["Hanken Grotesk"]
+          },
+          "fontSize": {
+            "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+            "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+            "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+            "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+            "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+            "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+            "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      vertical-align: middle;
+    }
+    
+    .shadow-soft {
+      box-shadow: 0 4px 10px rgba(0, 77, 117, 0.05);
+    }
+
+    .shadow-hover {
+      box-shadow: 0 8px 16px rgba(0, 77, 117, 0.1);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #E1E8ED;
+      border-radius: 10px;
+    }
+
+    /* Filter Drawer Animation */
+    #filter-drawer {
+      transition: transform 0.3s ease-out;
+    }
+    .drawer-open #filter-drawer {
+      transform: translateY(0);
+    }
+    .drawer-closed #filter-drawer {
+      transform: translateY(100%);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-surface font-body-md text-on-surface">
+<!-- Mobile Top Bar (Sticky) -->
+<header class="sticky top-0 z-40 bg-surface shadow-soft border-b border-border-subtle">
+<div class="flex flex-col px-margin-mobile py-base">
+<div class="flex justify-between items-center h-12 mb-2">
+<span class="font-headline-md text-headline-md font-bold text-primary">Talent RDC</span>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant">notifications</span>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A close-up professional headshot of Freya Katherina, a confident female executive with a friendly expression. She has neatly styled hair and is wearing a sleek navy blue blazer. The background is a blurred modern office environment with soft morning light, echoing a high-trust corporate atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0HrtuOo7NTvpbCa40TkxClblgYUI5R4-VkP6fSJNejG4owcV8YuegTUmEf1t-515j-LhhB190xMw3Lu0lwUfbP7lBzva-U8KAaoaQ1R9W9Ntse6EOq0rDOEu3PsnFUcQINSiY2iDPbHSZ3suxdvlsHnK0B0deJ2RIGYY9DZW3WVlUiUz_AfIJh4Ebx9HZlCCFy2se_7yl0HwiBb7YmzVoI_kf2XXo81Dmx3oPQWZkR1YtOlabMhmZ_w"/>
+</div>
+</div>
+</div>
+<!-- Search Input Container -->
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span>
+<input class="w-full h-11 pl-10 pr-12 rounded-lg border-border-subtle bg-surface-container-lowest focus:ring-primary focus:border-primary text-body-sm" placeholder="Search jobs, companies..." type="text"/>
+<button class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center bg-primary-container text-on-primary-container rounded-md" id="open-filter">
+<span class="material-symbols-outlined text-lg">tune</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="pb-24 pt-4 px-margin-mobile max-w-md mx-auto">
+<!-- Header Summary -->
+<div class="mb-6">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-text-heading mb-1">UI/UX Designer</h1>
+<p class="text-body-sm text-on-surface-variant">28 active job postings found</p>
+</div>
+<!-- Job Cards List -->
+<div class="space-y-4">
+<!-- Job Card 1 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-soft border border-border-subtle hover:shadow-hover transition-shadow active:scale-[0.98]">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary font-bold">
+<span class="material-symbols-outlined text-2xl">rocket_launch</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md leading-tight">Senior Product Designer</h3>
+<p class="text-body-sm text-on-surface-variant">Google • London, UK</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer">bookmark</span>
+</div>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-3 py-1 rounded bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm">Full-time</span>
+<span class="px-3 py-1 rounded bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm">$120k - $160k</span>
+<span class="px-3 py-1 rounded bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm">Remote Friendly</span>
+</div>
+<div class="flex justify-between items-center pt-3 border-t border-border-subtle">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-success-accent text-sm" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="text-label-sm text-on-surface-variant">4.9 Trusted</span>
+</div>
+<p class="text-label-sm text-on-surface-variant">12 Applicants</p>
+</div>
+</div>
+<!-- Job Card 2 (Active Style) -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-hover border-2 border-primary ring-4 ring-primary/5 transition-all">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-2xl">brand_awareness</span>
+</div>
+<div>
+<div class="flex items-center gap-1">
+<h3 class="font-headline-md text-headline-md leading-tight">Lead UX Researcher</h3>
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<p class="text-body-sm text-on-surface-variant">Spotify • Stockholm, SE</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</div>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-3 py-1 rounded bg-primary-container/10 text-primary font-label-sm text-label-sm border border-primary/20">Contract</span>
+<span class="px-3 py-1 rounded bg-primary-container/10 text-primary font-label-sm text-label-sm border border-primary/20">Expert Level</span>
+</div>
+<div class="flex justify-between items-center pt-3 border-t border-border-subtle">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-success-accent text-sm" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="text-label-sm text-on-surface-variant">5.0 Trusted</span>
+</div>
+<p class="text-label-sm text-primary font-bold">24 Applicants</p>
+</div>
+</div>
+<!-- Job Card 3 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-soft border border-border-subtle">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-error/10 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-2xl">palette</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md leading-tight">Visual Designer</h3>
+<p class="text-body-sm text-on-surface-variant">Adobe • San Francisco, CA</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">bookmark</span>
+</div>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-3 py-1 rounded bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm">Hybrid</span>
+<span class="px-3 py-1 rounded bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm">$90k - $130k</span>
+</div>
+<div class="flex justify-between items-center pt-3 border-t border-border-subtle">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-success-accent text-sm" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="text-label-sm text-on-surface-variant">4.7 Trusted</span>
+</div>
+<p class="text-label-sm text-on-surface-variant">45 Applicants</p>
+</div>
+</div>
+<!-- Job Card 4 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-soft border border-border-subtle">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-2xl">dashboard</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md leading-tight">UI Intern</h3>
+<p class="text-body-sm text-on-surface-variant">Slack • Remote</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">bookmark</span>
+</div>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-3 py-1 rounded bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm">Internship</span>
+<span class="px-3 py-1 rounded bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm">Entry Level</span>
+</div>
+<div class="flex justify-between items-center pt-3 border-t border-border-subtle">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-success-accent text-sm" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="text-label-sm text-on-surface-variant">4.8 Trusted</span>
+</div>
+<p class="text-label-sm text-on-surface-variant">156 Applicants</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Filter Drawer Overlay -->
+<div class="fixed inset-0 bg-on-surface/50 z-50 transition-opacity duration-300 opacity-0 pointer-events-none" id="filter-overlay">
+<div class="absolute bottom-0 left-0 right-0 bg-surface rounded-t-3xl p-6 shadow-2xl translate-y-full" id="filter-drawer">
+<div class="w-12 h-1.5 bg-outline-variant/30 rounded-full mx-auto mb-6"></div>
+<div class="flex justify-between items-center mb-6">
+<h2 class="font-headline-md text-headline-md">Filter Jobs</h2>
+<button class="p-2 rounded-full hover:bg-surface-container-high transition-colors" id="close-filter">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="space-y-6 max-h-[530px] overflow-y-auto">
+<!-- Location -->
+<div>
+<label class="font-label-md text-label-md mb-3 block">Location</label>
+<div class="flex items-center border border-border-subtle rounded-lg px-3 bg-surface-container-lowest h-11">
+<span class="material-symbols-outlined text-on-surface-variant mr-2">location_on</span>
+<input class="border-none bg-transparent focus:ring-0 text-body-sm w-full" type="text" value="Berlin, Germany"/>
+</div>
+</div>
+<!-- Job Type Tags -->
+<div>
+<label class="font-label-md text-label-md mb-3 block">Job Type</label>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 rounded-full border-2 border-primary bg-primary/5 text-primary font-label-sm text-label-sm">Full-time</button>
+<button class="px-4 py-2 rounded-full border border-border-subtle text-on-surface-variant font-label-sm text-label-sm">Part-time</button>
+<button class="px-4 py-2 rounded-full border border-border-subtle text-on-surface-variant font-label-sm text-label-sm">Contract</button>
+<button class="px-4 py-2 rounded-full border border-border-subtle text-on-surface-variant font-label-sm text-label-sm">Internship</button>
+</div>
+</div>
+<!-- Experience Level -->
+<div>
+<label class="font-label-md text-label-md mb-3 block">Experience Level</label>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer">
+<input checked="" class="w-5 h-5 rounded border-outline text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-body-md">Senior (5+ years)</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer">
+<input class="w-5 h-5 rounded border-outline text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-body-md">Mid-Level (2-5 years)</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer">
+<input class="w-5 h-5 rounded border-outline text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-body-md">Junior (0-2 years)</span>
+</label>
+</div>
+</div>
+<!-- Salary Range -->
+<div>
+<label class="font-label-md text-label-md mb-3 block">Salary Range</label>
+<input class="w-full accent-primary h-2 bg-surface-container-high rounded-lg cursor-pointer" type="range"/>
+<div class="flex justify-between mt-2 text-label-sm text-on-surface-variant">
+<span>$40k</span>
+<span>$200k+</span>
+</div>
+</div>
+</div>
+<div class="flex gap-4 mt-8">
+<button class="flex-1 h-12 rounded-lg border border-border-subtle text-on-surface-variant font-label-md text-label-md">Reset All</button>
+<button class="flex-1 h-12 rounded-lg bg-primary text-white font-label-md text-label-md shadow-lg shadow-primary/20">Apply Filters</button>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 bg-surface border-t border-border-subtle px-margin-mobile py-2 z-40 md:hidden shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
+<div class="flex justify-between items-center max-w-md mx-auto">
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-[10px] font-label-sm">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined">work</span>
+<span class="text-[10px] font-label-sm">Jobs</span>
+</div>
+<!-- Center Action -->
+<div class="relative -top-6">
+<button class="w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center shadow-lg shadow-primary/30 ring-4 ring-background-surface active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</div>
+<div class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="text-[10px] font-label-sm">Messages</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-label-sm">Profile</span>
+</div>
+</div>
+</nav>
+<script>
+    const openBtn = document.getElementById('open-filter');
+    const closeBtn = document.getElementById('close-filter');
+    const overlay = document.getElementById('filter-overlay');
+    const drawer = document.getElementById('filter-drawer');
+
+    function toggleDrawer(isOpen) {
+      if (isOpen) {
+        document.body.classList.add('overflow-hidden');
+        overlay.classList.remove('pointer-events-none');
+        overlay.classList.add('opacity-100');
+        drawer.classList.remove('translate-y-full');
+      } else {
+        document.body.classList.remove('overflow-hidden');
+        overlay.classList.add('pointer-events-none');
+        overlay.classList.remove('opacity-100');
+        drawer.classList.add('translate-y-full');
+      }
+    }
+
+    openBtn.addEventListener('click', () => toggleDrawer(true));
+    closeBtn.addEventListener('click', () => toggleDrawer(false));
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) toggleDrawer(false);
+    });
+
+    // Simple interaction feedback for cards
+    document.querySelectorAll('.job-card').forEach(card => {
+      card.addEventListener('click', () => {
+        // Mock navigation to details
+        console.log('Navigate to job details');
+      });
+    });
+  </script>
+</body></html>

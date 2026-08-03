@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Talent RDC Express | Mobile Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#dae2fd",
+                    "on-tertiary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "error-container": "#ffdad6",
+                    "surface-bright": "#f8f9ff",
+                    "secondary-fixed": "#dae2fd",
+                    "surface": "#f8f9ff",
+                    "on-tertiary-container": "#eff1f3",
+                    "on-surface": "#0b1c30",
+                    "error": "#ba1a1a",
+                    "surface-variant": "#d3e4fe",
+                    "secondary": "#565e74",
+                    "surface-container-high": "#dce9ff",
+                    "inverse-on-surface": "#eaf1ff",
+                    "surface-container-low": "#eff4ff",
+                    "on-tertiary-fixed-variant": "#444749",
+                    "primary-container": "#2563eb",
+                    "on-surface-variant": "#434655",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "tertiary-container": "#6b6e70",
+                    "surface-container": "#e5eeff",
+                    "inverse-primary": "#b4c5ff",
+                    "surface-dim": "#cbdbf5",
+                    "primary-fixed": "#dbe1ff",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "tertiary": "#525657",
+                    "outline-variant": "#c3c6d7",
+                    "primary": "#004ac6",
+                    "tertiary-fixed-dim": "#c4c7c9",
+                    "on-primary-container": "#eeefff",
+                    "on-secondary-fixed": "#131b2e",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed": "#e0e3e5",
+                    "outline": "#737686",
+                    "on-primary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-background": "#0b1c30",
+                    "inverse-surface": "#213145",
+                    "on-tertiary-fixed": "#191c1e",
+                    "surface-tint": "#0053db",
+                    "background": "#f8f9ff",
+                    "on-secondary-container": "#5c647a",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "on-primary-fixed": "#00174b",
+                    "surface-container-highest": "#d3e4fe",
+                    "on-primary-fixed-variant": "#003ea8"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "margin-desktop": "40px",
+                    "gutter": "24px",
+                    "base": "8px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "body-md": ["Hanken Grotesk"],
+                    "label-sm": ["Hanken Grotesk"],
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "display-lg": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "label-md": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Hanken Grotesk', sans-serif; }
+        .bg-pattern {
+            background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.15) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="bg-surface border-b border-outline-variant shadow-sm docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-margin-mobile h-16">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional studio portrait of a young Central African professional woman smiling warmly. She has short styled hair and is wearing a sleek navy blazer. The background is a soft, out-of-focus modern office interior with warm wooden tones and natural light, reflecting a high-end corporate networking aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrPSLJ7y5WUHyslzq58LcjRSj1YYRpTTUAwLaCYynZVXA8DbFG4sWINgjBQsyO7zk5KD3KXDxIpEVDoqwo0XUq0ljPfv7buSwXMDNCcGdNDaQw25pz2RVVVxWODjcWk-RxFcOZ8T6iakf63arLTRDMNLJfS04ExekUvMLK-h7q5XXDb_5VUdFqolVBQ3KhvPCvkEccEi-Bm3hSwN5-xs8hvq2vt9BtmNBYwqTVlMQLDyPMJEdM5FWfpw"/>
+</div>
+<h1 class="text-headline-md font-headline-md font-bold text-primary">Talent RDC Express</h1>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-variant transition-colors opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-primary" data-icon="notifications">notifications</span>
+</button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="bg-primary-container relative overflow-hidden pt-8 pb-12 px-margin-mobile">
+<div class="absolute inset-0 bg-pattern opacity-40"></div>
+<div class="relative z-10 flex flex-col gap-6">
+<h2 class="text-headline-lg-mobile font-headline-lg-mobile text-on-primary-container leading-tight">
+                    Your Next Great Career Move Starts Here
+                </h2>
+<div class="flex flex-col gap-3">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+<input class="w-full h-14 pl-12 pr-4 bg-surface rounded-xl border-none focus:ring-2 focus:ring-on-primary-container font-body-md text-on-surface shadow-lg" placeholder="Job title, skills..." type="text"/>
+</div>
+<button class="w-full h-14 bg-on-background text-on-primary font-label-md rounded-xl shadow-xl active:scale-95 transition-transform">
+                        Search Jobs
+                    </button>
+</div>
+<div class="flex gap-4 overflow-x-auto no-scrollbar py-2">
+<span class="px-4 py-1.5 bg-white/10 text-white rounded-full text-label-sm border border-white/20 whitespace-nowrap">Remote</span>
+<span class="px-4 py-1.5 bg-white/10 text-white rounded-full text-label-sm border border-white/20 whitespace-nowrap">Full-time</span>
+<span class="px-4 py-1.5 bg-white/10 text-white rounded-full text-label-sm border border-white/20 whitespace-nowrap">Entry Level</span>
+<span class="px-4 py-1.5 bg-white/10 text-white rounded-full text-label-sm border border-white/20 whitespace-nowrap">Design</span>
+</div>
+</div>
+</section>
+<!-- Categories Section -->
+<section class="px-margin-mobile py-10">
+<div class="flex justify-between items-end mb-6">
+<h3 class="text-headline-md font-headline-md text-on-surface">Browse by Sector</h3>
+<button class="text-primary font-label-md">View all</button>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<!-- Technology -->
+<div class="glass-card p-5 rounded-xl flex flex-col gap-3 group active:scale-95 transition-all">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="computer" data-weight="fill" style="font-variation-settings: 'FILL' 1;">computer</span>
+</div>
+<div>
+<p class="font-label-md text-on-surface">Technology</p>
+<p class="text-label-sm text-outline">1.2k+ open roles</p>
+</div>
+</div>
+<!-- Finance -->
+<div class="glass-card p-5 rounded-xl flex flex-col gap-3 group active:scale-95 transition-all">
+<div class="w-12 h-12 rounded-lg bg-[#10B981]/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[#10B981]" data-icon="payments" data-weight="fill" style="font-variation-settings: 'FILL' 1;">payments</span>
+</div>
+<div>
+<p class="font-label-md text-on-surface">Finance</p>
+<p class="text-label-sm text-outline">840 roles</p>
+</div>
+</div>
+<!-- Healthcare -->
+<div class="glass-card p-5 rounded-xl flex flex-col gap-3 group active:scale-95 transition-all">
+<div class="w-12 h-12 rounded-lg bg-[#EF4444]/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[#EF4444]" data-icon="medical_services" data-weight="fill" style="font-variation-settings: 'FILL' 1;">medical_services</span>
+</div>
+<div>
+<p class="font-label-md text-on-surface">Healthcare</p>
+<p class="text-label-sm text-outline">620 roles</p>
+</div>
+</div>
+<!-- Engineering -->
+<div class="glass-card p-5 rounded-xl flex flex-col gap-3 group active:scale-95 transition-all">
+<div class="w-12 h-12 rounded-lg bg-[#F59E0B]/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[#F59E0B]" data-icon="engineering" data-weight="fill" style="font-variation-settings: 'FILL' 1;">engineering</span>
+</div>
+<div>
+<p class="font-label-md text-on-surface">Engineering</p>
+<p class="text-label-sm text-outline">430 roles</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Opportunities -->
+<section class="bg-surface-container-low py-10 px-margin-mobile">
+<div class="flex justify-between items-end mb-6">
+<h3 class="text-headline-md font-headline-md text-on-surface">Featured Jobs</h3>
+<button class="text-primary font-label-md">See newest</button>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Job Card 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-5 shadow-sm">
+<div class="flex items-start justify-between mb-4">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface flex items-center justify-center overflow-hidden border border-outline-variant">
+<img class="w-10 h-10 object-contain" data-alt="A clean, minimalist logo for a fictional tech company named 'DataStream'. The logo features a sleek, abstract blue 'D' made of interconnected geometric data points. Set against a crisp white background, the image evokes a professional, high-growth SaaS corporate identity with vibrant blue accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaUwjjSJGz0RVHrF6Yy1i9kQJQiWWoMTSvrouGBRMPW3RG1g6huji4xpP5r1JbFzYle8uSYODQpgDvMIiIjs3tJoLSZVYUo9xNFrXR6T7S9CVNtgmKws_ekxYEFEXIJjepEBu7YYzVyHkI0ko5Y0ByUaTT4F16btUBWt7KD58f5vtPghnLTjoOsTSK8yVG5a15vRfCxqGXp15NHSCP3hTf5JMvMVyA7xY-Fe7TN80KKjKKDhElnSICsQ"/>
+</div>
+<div>
+<h4 class="font-label-md text-on-surface">Senior Data Analyst</h4>
+<p class="text-label-sm text-outline">DataStream Tech • Kinshasa</p>
+</div>
+</div>
+<button class="text-outline hover:text-primary">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+<div class="flex gap-2 mb-5">
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded text-label-sm">$45k - $65k / yr</span>
+<span class="px-3 py-1 bg-surface-variant text-on-surface-variant rounded text-label-sm">Hybrid</span>
+</div>
+<button class="w-full py-3 bg-primary text-on-primary font-label-md rounded-lg active:scale-95 transition-transform">
+                        Quick Apply
+                    </button>
+</div>
+<!-- Job Card 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-5 shadow-sm">
+<div class="flex items-start justify-between mb-4">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface flex items-center justify-center overflow-hidden border border-outline-variant">
+<img class="w-10 h-10 object-contain" data-alt="A modern corporate logo for 'HealthLink' showcasing a stylized medical cross integrated with a digital link symbol. The color palette uses a professional teal and white scheme. The design is minimalist and represents a secure, innovative healthcare networking platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNC-zHqrcVPovA8jdRW618S23FYnIj1llEYVufqKLXmWTZV9R22uN38q26w9GrDEq9Ji1Qz8G4M-jk6SeJHZJlX6Zc74pzzDkRqW3lfVhMB9WsHX3WVC2mezf8031TM9442XgRRGq794KmVZ3MAvdX3hPwh-WX0K94RWzOJCpwIp4_cCiuN441VyYcdU4nZbY6wwvXhQPVyvi0-fr58pa5EZtThJKESurfvhampLspOlllWVsOCcW1qw"/>
+</div>
+<div>
+<h4 class="font-label-md text-on-surface">Medical Director</h4>
+<p class="text-label-sm text-outline">HealthLink RDC • Lubumbashi</p>
+</div>
+</div>
+<button class="text-outline hover:text-primary">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+<div class="flex gap-2 mb-5">
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded text-label-sm">$80k - $110k / yr</span>
+<span class="px-3 py-1 bg-surface-variant text-on-surface-variant rounded text-label-sm">On-site</span>
+</div>
+<button class="w-full py-3 bg-primary text-on-primary font-label-md rounded-lg active:scale-95 transition-transform">
+                        Quick Apply
+                    </button>
+</div>
+</div>
+</section>
+<!-- Community Section -->
+<section class="mx-margin-mobile my-8">
+<div class="bg-on-background rounded-2xl p-8 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl"></div>
+<div class="relative z-10">
+<h3 class="text-headline-md font-headline-md text-on-primary mb-3">Join the Community</h3>
+<p class="text-body-md text-outline-variant mb-6">Get weekly job alerts, career tips, and networking invites delivered to your inbox.</p>
+<form class="flex flex-col gap-3">
+<input class="h-12 w-full rounded-lg bg-white/10 border border-white/20 px-4 text-white placeholder:text-outline-variant focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Enter your email" type="email"/>
+<button class="h-12 w-full bg-primary text-on-primary font-label-md rounded-lg shadow-lg active:scale-95 transition-all">
+                            Subscribe Now
+                        </button>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer Info -->
+<footer class="px-margin-mobile pt-8 pb-12 bg-on-background text-outline-variant mt-10">
+<div class="flex flex-col gap-6">
+<div>
+<h2 class="text-headline-md font-bold text-primary mb-2">Talent RDC Express</h2>
+<p class="text-body-md">Empowering the next generation of professional talent across the Democratic Republic of Congo.</p>
+</div>
+<div class="flex gap-6">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10" href="#">
+<span class="material-symbols-outlined text-white" data-icon="share">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10" href="#">
+<span class="material-symbols-outlined text-white" data-icon="groups">groups</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10" href="#">
+<span class="material-symbols-outlined text-white" data-icon="link">link</span>
+</a>
+</div>
+<div class="border-t border-white/10 pt-6">
+<p class="text-label-sm">© 2024 Talent RDC Express. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-2 bg-surface border-t border-outline-variant rounded-t-xl shadow-[0_-4px_20px_rgba(15,23,42,0.05)]">
+<!-- Home (Active) -->
+<a class="flex flex-col items-center justify-center text-primary bg-secondary-container rounded-full px-4 py-1 scale-95 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home" data-weight="fill" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-label-sm font-label-sm mt-0.5">Home</span>
+</a>
+<!-- Jobs -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="work">work</span>
+<span class="text-label-sm font-label-sm mt-0.5">Jobs</span>
+</a>
+<!-- Messages -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="#">
+<div class="relative">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+<span class="absolute -top-1 -right-1 w-2.5 h-2.5 bg-error rounded-full border-2 border-surface"></span>
+</div>
+<span class="text-label-sm font-label-sm mt-0.5">Messages</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-label-sm font-label-sm mt-0.5">Profile</span>
+</a>
+</nav>
+<script>
+        // Simple micro-interaction for cards
+        document.querySelectorAll('.glass-card, .bg-surface-container-lowest').forEach(card => {
+            card.addEventListener('touchstart', () => {
+                card.classList.add('opacity-80');
+            });
+            card.addEventListener('touchend', () => {
+                card.classList.remove('opacity-80');
+            });
+        });
+    </script>
+</body></html>

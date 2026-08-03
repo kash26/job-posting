@@ -1,0 +1,4 @@
+.DS_Store
+.project-runtime/
+.vscode/
+frontend/.git.backup/

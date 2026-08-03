@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Talent RDC - Mobile Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#2563eb",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#2563eb",
+                        "on-primary-container": "#eeefff",
+                        "secondary": "#565e74",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#dae2fd",
+                        "on-secondary-container": "#5c647a",
+                        "background": "#f8f9ff",
+                        "on-background": "#0b1c30",
+                        "surface": "#f8f9ff",
+                        "on-surface": "#0b1c30",
+                        "surface-variant": "#d3e4fe",
+                        "on-surface-variant": "#434655",
+                        "outline": "#737686",
+                        "outline-variant": "#c3c6d7",
+                        "surface-container-low": "#eff4ff",
+                        "surface-container": "#e5eeff",
+                        "surface-container-high": "#dce9ff",
+                        "surface-container-highest": "#d3e4fe",
+                        "surface-container-lowest": "#ffffff",
+                        "text-heading": "#0b1c30",
+                        "border-subtle": "#e5e7eb",
+                        "success-accent": "#28A745",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.5rem",
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "32px",
+                        "base": "8px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "container-max-width": "1200px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "body-sm": ["Hanken Grotesk", "Inter"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "label-sm": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk", "Inter"],
+                        "label-md": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .geometric-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232563eb' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-color: #f8f9ff;
+        }
+        .smooth-scroll {
+            -webkit-overflow-scrolling: touch;
+        }
+        .card-shadow {
+            box-shadow: 0px 4px 20px rgba(15, 23, 42, 0.05);
+        }
+        .button-bounce:active {
+            transform: scale(0.96);
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-surface overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-outline-variant/30">
+<div class="flex justify-between items-center h-16 w-full px-margin-mobile">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">work</span>
+<span class="font-headline-md text-headline-md font-extrabold text-primary tracking-tight">Talent RDC</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container-low transition-colors duration-200 p-2 rounded-full">search</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container-low transition-colors duration-200 p-2 rounded-full">notifications</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant/50 ml-1">
+<img class="w-full h-full object-cover" data-alt="A professional close-up headshot of a woman with a confident smile, wearing corporate attire." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUeQsPX9NtGgATbHp6JthZAhnhe3syslewrKWwJK9rLJ6JikyqSqnwJNtSfaz4dyCQcZB41ilQIMG9C8iZvwdtE781Zox2pbyBbOjykHEPnpi8RelCpVA73XcTzhn54W1HB_rFMC9Fq7gOsDHV9g38E-xU3TY_ssQ7eWllEm3gnR05O25u7waGBrdHngkbOp0jPLY_281Z50gcE6xTebT8pK0q4Y8WR6gfaQkwnd8X-_WnON2Ajq0FlA"/>
+</div>
+</div>
+</div>
+</header>
+<main class="pt-16 pb-24">
+<!-- Hero Section -->
+<section class="geometric-pattern relative overflow-hidden py-12 px-margin-mobile border-b border-outline-variant/20">
+<div class="relative z-10">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 bg-primary/10 text-primary rounded-full font-label-md text-[13px] mb-4">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+                    Empowering Talent
+                </span>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile mb-4 leading-tight text-on-surface">Your Next Great <span class="text-primary italic">Career Move</span> Starts Here</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 opacity-90">Access exclusive opportunities from top Congolese companies and global organizations.</p>
+<!-- Mobile Search Bar -->
+<div class="bg-white rounded-2xl p-3 shadow-xl border border-outline-variant/30 flex flex-col gap-2">
+<div class="flex items-center gap-2 px-3 py-2.5 bg-surface-container-low rounded-xl border border-transparent focus-within:border-primary transition-all">
+<span class="material-symbols-outlined text-outline">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-on-surface w-full font-body-sm" placeholder="Job title, skills..." type="text"/>
+</div>
+<button class="w-full py-3.5 bg-primary text-on-primary font-label-md text-label-md rounded-xl button-bounce transition-all shadow-lg shadow-primary/20">Search Jobs</button>
+</div>
+</div>
+<!-- Abstract decorative element -->
+<div class="absolute -bottom-10 -right-10 w-48 h-48 bg-primary/10 rounded-full blur-3xl opacity-50"></div>
+</section>
+<!-- Category Grid Section -->
+<section class="py-10 px-margin-mobile">
+<div class="flex justify-between items-center mb-6">
+<h2 class="font-headline-md text-headline-md text-on-surface">Explore Categories</h2>
+<button class="text-primary font-label-md text-label-md flex items-center">See All <span class="material-symbols-outlined text-[18px] ml-1">arrow_forward</span></button>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<!-- Category Card 1 -->
+<div class="bg-surface-container-low p-5 rounded-2xl border border-outline-variant/20 card-shadow flex flex-col items-center text-center transition-all button-bounce hover:bg-white">
+<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-3 text-primary">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-bold">Finance &amp; Banking</span>
+</div>
+<!-- Category Card 2 -->
+<div class="bg-surface-container-low p-5 rounded-2xl border border-outline-variant/20 card-shadow flex flex-col items-center text-center transition-all button-bounce hover:bg-white">
+<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-3 text-primary">
+<span class="material-symbols-outlined">developer_mode</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-bold">Technology</span>
+</div>
+<!-- Category Card 3 -->
+<div class="bg-surface-container-low p-5 rounded-2xl border border-outline-variant/20 card-shadow flex flex-col items-center text-center transition-all button-bounce hover:bg-white">
+<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-3 text-primary">
+<span class="material-symbols-outlined">health_and_safety</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-bold">Healthcare</span>
+</div>
+<!-- Category Card 4 -->
+<div class="bg-surface-container-low p-5 rounded-2xl border border-outline-variant/20 card-shadow flex flex-col items-center text-center transition-all button-bounce hover:bg-white">
+<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-3 text-primary">
+<span class="material-symbols-outlined">engineering</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-bold">Engineering</span>
+</div>
+</div>
+</section>
+<!-- Featured Jobs Section -->
+<section class="py-6 px-margin-mobile bg-white border-y border-outline-variant/20">
+<div class="mb-8">
+<h2 class="font-headline-md text-headline-md text-on-surface">Featured Opportunities</h2>
+<p class="font-body-sm text-on-surface-variant mt-1">Curated roles from our premier partner companies.</p>
+</div>
+<div class="flex flex-col gap-5">
+<!-- Job Card 1 -->
+<div class="bg-white rounded-2xl p-5 border border-outline-variant/50 card-shadow relative group">
+<div class="flex justify-between items-start mb-5">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-low flex items-center justify-center border border-outline-variant/20 p-2">
+<span class="material-symbols-outlined text-primary text-3xl">corporate_fare</span>
+</div>
+<button class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">bookmark</button>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1 group-hover:text-primary transition-colors">Senior Data Analyst</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-5">Trust Capital Group • Kinshasa</p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-3 py-1 bg-surface-variant/50 text-on-surface-variant font-label-sm text-label-sm rounded-lg">Full-time</span>
+<span class="px-3 py-1 bg-surface-variant/50 text-on-surface-variant font-label-sm text-label-sm rounded-lg">$2k - $3.5k</span>
+</div>
+<button class="w-full py-2.5 bg-primary text-on-primary rounded-xl font-label-md text-label-md button-bounce transition-all shadow-sm hover:shadow-md">Quick Apply</button>
+</div>
+<!-- Job Card 2 -->
+<div class="bg-white rounded-2xl p-5 border border-outline-variant/50 card-shadow relative group">
+<div class="flex justify-between items-start mb-5">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-low flex items-center justify-center border border-outline-variant/20 p-2">
+<span class="material-symbols-outlined text-primary text-3xl">cloud_done</span>
+</div>
+<button class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">bookmark</button>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1 group-hover:text-primary transition-colors">Cloud Solutions Architect</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-5">SkyNet Systems • Remote</p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-3 py-1 bg-surface-variant/50 text-on-surface-variant font-label-sm text-label-sm rounded-lg">Contract</span>
+<span class="px-3 py-1 bg-surface-variant/50 text-on-surface-variant font-label-sm text-label-sm rounded-lg">Immediate Start</span>
+</div>
+<button class="w-full py-2.5 bg-primary text-on-primary rounded-xl font-label-md text-label-md button-bounce transition-all shadow-sm hover:shadow-md">Quick Apply</button>
+</div>
+<!-- Job Card 3 -->
+<div class="bg-white rounded-2xl p-5 border border-outline-variant/50 card-shadow relative group">
+<div class="flex justify-between items-start mb-5">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-low flex items-center justify-center border border-outline-variant/20 p-2">
+<span class="material-symbols-outlined text-primary text-3xl">diversity_3</span>
+</div>
+<button class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">bookmark</button>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1 group-hover:text-primary transition-colors">HR Operations Lead</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-5">Mining Corp SA • Lubumbashi</p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-3 py-1 bg-surface-variant/50 text-on-surface-variant font-label-sm text-label-sm rounded-lg">Full-time</span>
+</div>
+<button class="w-full py-2.5 bg-primary text-on-primary rounded-xl font-label-md text-label-md button-bounce transition-all shadow-sm hover:shadow-md">Quick Apply</button>
+</div>
+</div>
+<button class="w-full mt-8 py-4 border-2 border-primary text-primary font-label-md text-label-md rounded-2xl button-bounce transition-colors font-bold">Browse 1,240+ Jobs</button>
+</section>
+<!-- Newsletter Section -->
+<section class="mt-12 mx-margin-mobile bg-on-background rounded-[32px] p-8 text-white mb-8 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/20 blur-3xl rounded-full"></div>
+<h2 class="font-display-lg text-headline-md mb-2 relative z-10">Join the Community</h2>
+<p class="font-body-sm text-body-sm mb-6 text-outline-variant relative z-10">Get weekly career advice and top job picks directly in your inbox.</p>
+<div class="flex gap-2 relative z-10">
+<input class="flex-1 bg-white/5 border border-white/10 rounded-xl font-body-sm text-white placeholder:text-outline focus:ring-0 focus:border-primary" placeholder="Email address" type="email"/>
+<button class="bg-primary text-on-primary w-12 h-12 flex items-center justify-center rounded-xl material-symbols-outlined shadow-lg shadow-primary/20 button-bounce">send</button>
+</div>
+</section>
+</main>
+<!-- Footer / Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-t border-outline-variant/30 h-20 px-margin-mobile flex justify-between items-center shadow-[0_-4px_20px_rgba(15,23,42,0.08)]">
+<a class="flex flex-col items-center gap-1 text-primary font-bold" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">work</span>
+<span class="text-[10px]">Jobs</span>
+</a>
+<div class="relative -top-6">
+<button class="w-14 h-14 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-lg shadow-primary/40 active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-3xl font-bold">add</span>
+</button>
+</div>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="text-[10px]">Messages</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px]">Profile</span>
+</a>
+</nav>
+<script>
+        // Hover/Touch micro-interactions for cards and buttons
+        document.querySelectorAll('.button-bounce').forEach(el => {
+            el.addEventListener('touchstart', () => el.classList.add('scale-[0.96]'));
+            el.addEventListener('touchend', () => el.classList.remove('scale-[0.96]'));
+        });
+    </script>
+</body></html>

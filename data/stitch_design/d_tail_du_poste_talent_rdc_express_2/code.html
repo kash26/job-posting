@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Job Details | Talent RDC</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "on-tertiary-container": "#bce0ff",
+                  "inverse-on-surface": "#f2f0f0",
+                  "on-surface": "#1b1c1c",
+                  "on-error": "#ffffff",
+                  "on-primary-container": "#bfe0ff",
+                  "on-secondary-container": "#5c666a",
+                  "on-tertiary-fixed-variant": "#004b70",
+                  "background-surface": "#F8FAFB",
+                  "on-primary-fixed-variant": "#004b72",
+                  "secondary-fixed": "#dae4e9",
+                  "on-secondary-fixed-variant": "#3f484c",
+                  "secondary-fixed-dim": "#bec8cd",
+                  "on-primary": "#ffffff",
+                  "on-secondary-fixed": "#141d21",
+                  "on-background": "#1b1c1c",
+                  "tertiary-container": "#29658c",
+                  "surface-bright": "#fbf9f8",
+                  "tertiary": "#004d73",
+                  "success-accent": "#28A745",
+                  "on-tertiary": "#ffffff",
+                  "surface-container-highest": "#e4e2e2",
+                  "border-subtle": "#E1E8ED",
+                  "surface-dim": "#dbdad9",
+                  "surface-container-lowest": "#ffffff",
+                  "primary-container": "#006699",
+                  "inverse-primary": "#90cdff",
+                  "primary-fixed-dim": "#90cdff",
+                  "surface-container-low": "#f5f3f3",
+                  "surface-tint": "#006496",
+                  "outline-variant": "#c0c7d0",
+                  "surface": "#fbf9f8",
+                  "on-primary-fixed": "#001e31",
+                  "surface-variant": "#e4e2e2",
+                  "error-container": "#ffdad6",
+                  "tertiary-fixed-dim": "#96ccf9",
+                  "tertiary-fixed": "#cae6ff",
+                  "primary-fixed": "#cce5ff",
+                  "primary": "#004d75",
+                  "surface-container-high": "#e9e8e7",
+                  "error": "#ba1a1a",
+                  "secondary-container": "#dae4e9",
+                  "on-error-container": "#93000a",
+                  "on-secondary": "#ffffff",
+                  "surface-container": "#efeded",
+                  "secondary": "#566064",
+                  "outline": "#707880",
+                  "inverse-surface": "#303031",
+                  "background": "#fbf9f8",
+                  "on-surface-variant": "#40484f",
+                  "on-tertiary-fixed": "#001e30",
+                  "text-heading": "#1A1A1A"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.25rem",
+                  "lg": "0.5rem",
+                  "xl": "0.75rem",
+                  "full": "9999px"
+          },
+          "spacing": {
+                  "gutter": "24px",
+                  "base": "8px",
+                  "margin-desktop": "32px",
+                  "container-max-width": "1200px",
+                  "margin-mobile": "16px"
+          },
+          "fontFamily": {
+                  "headline-md": ["Hanken Grotesk"],
+                  "label-md": ["Inter"],
+                  "headline-lg": ["Hanken Grotesk"],
+                  "body-sm": ["Inter"],
+                  "headline-xl": ["Hanken Grotesk"],
+                  "body-md": ["Inter"],
+                  "label-sm": ["Inter"],
+                  "body-lg": ["Inter"],
+                  "headline-lg-mobile": ["Hanken Grotesk"]
+          },
+          "fontSize": {
+                  "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                  "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                  "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                  "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                  "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                  "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                  "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                  "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                  "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .custom-shadow {
+      box-shadow: 0 4px 10px rgba(0, 77, 117, 0.05);
+    }
+    .hover-shadow:hover {
+      box-shadow: 0 8px 20px rgba(0, 77, 117, 0.1);
+    }
+  </style>
+</head>
+<body class="bg-background-surface text-on-surface font-body-md selection:bg-primary/20">
+<!-- TopNavBar Section -->
+<header class="bg-surface sticky top-0 z-50 border-b border-border-subtle">
+<div class="flex justify-between items-center h-16 w-full px-margin-desktop max-w-container-max-width mx-auto">
+<!-- Brand Logo -->
+<div class="font-headline-md text-headline-md font-bold text-primary">
+        Talent RDC
+      </div>
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden md:flex items-center gap-base">
+<a class="px-4 py-2 font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors duration-200" href="#">Home</a>
+<a class="px-4 py-2 font-label-md text-label-md text-primary font-bold border-b-2 border-primary" href="#">Jobs</a>
+<a class="px-4 py-2 font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors duration-200" href="#">About</a>
+<a class="px-4 py-2 font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors duration-200" href="#">Careers</a>
+<a class="px-4 py-2 font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors duration-200" href="#">Contact</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">search</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">notifications</button>
+<div class="h-8 w-8 rounded-full bg-surface-container overflow-hidden border border-border-subtle">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a female executive with dark hair, Freya Katherina, wearing a sharp corporate blazer. The lighting is soft and studio-quality, emphasizing a high-trust professional vibe. The background is a clean, minimal office interior with neutral tones and a slight bokeh effect." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASnKT27rqmvrK9VuCc2mJbi-cmgdU1EBqXIlWJS-X-zrIOGAGBSIjiyI5u7yN9NAoIJ_xvSIWS0n6ejNEIZc1zzoMtwAiDFcvpwKsufrkWwWUG_4I3fZObHoIqDjxOWqKluce3unOOG0dZl1oRJ4GfM2y-1BAg-sHlTD6oDN_dWEGVNq50rukvXdS0SMuOvnRjRNshSNNrcc443Uq9abV9l5-ww6B_QAA1GV_0ikmwmTY0vCvVGK_mJA"/>
+</div>
+<button class="hidden lg:block bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md transition-transform scale-95 active:scale-90">
+          Post a Job
+        </button>
+</div>
+</div>
+</header>
+<main class="max-w-container-max-width mx-auto px-margin-desktop py-12">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-2 mb-8 text-on-surface-variant font-label-sm">
+<a class="hover:text-primary" href="#">Home</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<a class="hover:text-primary" href="#">Jobs</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-primary font-semibold">Product Designer</span>
+</nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Main Content Column (8 Cols) -->
+<section class="lg:col-span-8 space-y-gutter">
+<!-- Job Header Card -->
+<div class="bg-surface-container-lowest p-gutter rounded-xl custom-shadow">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+<div class="flex items-start gap-4">
+<div class="w-16 h-16 rounded-xl bg-primary-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-on-primary-container text-4xl" style="font-variation-settings: 'FILL' 1;">widgets</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h1 class="font-headline-lg text-headline-lg text-text-heading">Product Designer</h1>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-2 mt-1">
+<span class="font-body-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-base">domain</span> Sitemap Analytics
+                  </span>
+<span class="font-body-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-base">location_on</span> Berlin, Germany
+                  </span>
+<span class="font-body-md text-success-accent font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-base">payments</span> $80k - $120k / yr
+                  </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex-1 md:flex-none px-8 py-3 bg-primary text-on-primary rounded-lg font-headline-md hover:opacity-90 transition-all hover:translate-y-[-1px]">Apply Now</button>
+<button class="p-3 border border-border-subtle rounded-lg text-on-surface-variant hover:border-primary hover:text-primary transition-all">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Details Content -->
+<div class="bg-surface-container-lowest p-gutter rounded-xl custom-shadow space-y-8">
+<!-- Job Overview -->
+<article>
+<h2 class="font-headline-md text-headline-md text-text-heading mb-4 flex items-center gap-2">
+              Job Overview <span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">stars</span>
+</h2>
+<div class="font-body-md text-on-surface-variant leading-relaxed space-y-4">
+<p>Mekari is Indonesia's no. 1 Software-as-a-Service (SaaS) company. Our mission is to empower businesses and professionals to progress effortlessly. Our products have been used by tens of thousands of businesses in Indonesia.</p>
+<p>To reach millions, we need more people like you: entrepreneurs, builders, owners inside the company who are eager to grow at scale. Join us to empower more businesses with technology.</p>
+</div>
+</article>
+<!-- Responsibilities -->
+<article>
+<h2 class="font-headline-md text-headline-md text-text-heading mb-4 flex items-center gap-2">
+              What You Will Do <span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">stars</span>
+</h2>
+<ul class="space-y-4">
+<li class="flex items-start gap-3 group">
+<div class="mt-1 w-5 h-5 rounded-full bg-success-accent/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-success-accent text-sm" style="font-variation-settings: 'wght' 700;">check</span>
+</div>
+<p class="font-body-md text-on-surface-variant">Design and iterate intuitive digital products that delight our users through deep user research and data analysis.</p>
+</li>
+<li class="flex items-start gap-3 group">
+<div class="mt-1 w-5 h-5 rounded-full bg-success-accent/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-success-accent text-sm" style="font-variation-settings: 'wght' 700;">check</span>
+</div>
+<p class="font-body-md text-on-surface-variant">Collaborate closely with product managers and engineers to define and execute the design strategy for core product features.</p>
+</li>
+<li class="flex items-start gap-3 group">
+<div class="mt-1 w-5 h-5 rounded-full bg-success-accent/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-success-accent text-sm" style="font-variation-settings: 'wght' 700;">check</span>
+</div>
+<p class="font-body-md text-on-surface-variant">Maintain and evolve our design system to ensure visual consistency and high-quality implementation across all platforms.</p>
+</li>
+</ul>
+</article>
+<!-- Requirements -->
+<article>
+<h2 class="font-headline-md text-headline-md text-text-heading mb-4">Requirements</h2>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1.5 bg-secondary-container text-primary rounded-full font-label-sm">3+ Years Experience</span>
+<span class="px-4 py-1.5 bg-secondary-container text-primary rounded-full font-label-sm">Figma Master</span>
+<span class="px-4 py-1.5 bg-secondary-container text-primary rounded-full font-label-sm">UI/UX Design</span>
+<span class="px-4 py-1.5 bg-secondary-container text-primary rounded-full font-label-sm">Systems Thinking</span>
+<span class="px-4 py-1.5 bg-secondary-container text-primary rounded-full font-label-sm">Communication</span>
+</div>
+</article>
+<hr class="border-border-subtle"/>
+<!-- About Company Section -->
+<article>
+<div class="flex items-center justify-between mb-4">
+<h2 class="font-headline-md text-headline-md text-text-heading flex items-center gap-2">
+                About Twitter <span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">stars</span>
+</h2>
+<button class="px-4 py-1.5 border border-primary text-primary rounded-lg font-label-md hover:bg-primary hover:text-on-primary transition-all">Follow</button>
+</div>
+<p class="font-body-md text-on-surface-variant leading-relaxed">
+              Makro PRO is an exciting new digital venture by the iconic Makro. Our proud purpose is to build a technology platform that will help make business possible for restaurant owners, hotels, and independent retailers, and open the door for sellers. Makro PRO brings together the best talent across multi-nationals to transform.
+            </p>
+</article>
+</div>
+</section>
+<!-- Sidebar Column (4 Cols) -->
+<aside class="lg:col-span-4 space-y-gutter">
+<!-- Quick Facts Sidebar -->
+<div class="bg-surface-container-lowest p-gutter rounded-xl custom-shadow space-y-6">
+<h3 class="font-headline-md text-headline-md text-text-heading">Job Summary</h3>
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary">calendar_today</span>
+<span class="font-body-sm">Date Posted</span>
+</div>
+<span class="font-body-sm font-semibold">2 days ago</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary">group</span>
+<span class="font-body-sm">Applicants</span>
+</div>
+<span class="font-body-sm font-semibold">23 Applicants</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<span class="font-body-sm">Job Type</span>
+</div>
+<span class="px-3 py-1 bg-secondary-container text-primary rounded font-label-sm">Full-time</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary">work</span>
+<span class="font-body-sm">Experience</span>
+</div>
+<span class="font-body-sm font-semibold">3 - 5 Years</span>
+</div>
+</div>
+<div class="pt-6 border-t border-border-subtle">
+<button class="w-full py-3 border-2 border-primary text-primary rounded-lg font-headline-md hover:bg-primary/5 transition-colors">
+              Refer a Friend
+            </button>
+</div>
+</div>
+<!-- Map/Location Card -->
+<div class="bg-surface-container-lowest p-gutter rounded-xl custom-shadow overflow-hidden">
+<h3 class="font-headline-md text-headline-md text-text-heading mb-4">Location</h3>
+<div class="relative h-48 w-full rounded-lg overflow-hidden bg-surface-container mb-4">
+<img class="w-full h-full object-cover" data-location="Berlin" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3TDx2qHdLidgt5NDY6TrfvtR3Py5_yiR_dk9REvXXVphLH2LErSMHgTmDk69YG0ba2075YJsol4v2GQO-33f6pSxqMhi7RAxAnclF-HkTUy5Ol0QjBhKP_XDH6na7flOXFAJ5uxrjnpp-mPXCYVE3HrhSGkYooiqBzZRszv8ZkipdwxcwVYC-wzwubV0sSRInowqlDjbYCYYlB_X6kPCb8ITRGGTkIJKntgwC83dGcP4eXb5I86dwhQ"/>
+<div class="absolute inset-0 bg-black/5"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+</div>
+<p class="font-body-sm text-on-surface-variant">Invalidenstraße 117, 10115 Berlin, Germany</p>
+</div>
+<!-- Related Jobs List -->
+<div class="space-y-4">
+<h3 class="font-headline-md text-headline-md text-text-heading">Similar Jobs</h3>
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-border-subtle hover-shadow transition-all cursor-pointer">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded bg-red-100 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-red-600">brand_awareness</span>
+</div>
+<div>
+<h4 class="font-label-md text-text-heading">Senior UI Designer</h4>
+<p class="text-[12px] text-on-surface-variant">Adobe • San Francisco</p>
+<div class="mt-2 flex items-center gap-2">
+<span class="text-[12px] font-semibold text-primary">$110k - $140k</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-border-subtle hover-shadow transition-all cursor-pointer">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded bg-blue-100 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-blue-600">group_work</span>
+</div>
+<div>
+<h4 class="font-label-md text-text-heading">Interaction Designer</h4>
+<p class="text-[12px] text-on-surface-variant">Amplitude • Remote</p>
+<div class="mt-2 flex items-center gap-2">
+<span class="text-[12px] font-semibold text-primary">$95k - $120k</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer Section -->
+<footer class="bg-surface-container mt-20">
+<div class="flex flex-col md:flex-row justify-between items-center py-base px-margin-desktop max-w-container-max-width mx-auto">
+<div class="flex flex-col md:flex-row items-center gap-6">
+<span class="font-headline-md text-headline-md font-black text-primary">Talent RDC</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">© 2024 Talent RDC Express. All rights reserved.</p>
+</div>
+<div class="flex items-center gap-6 mt-4 md:mt-0">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Terms of Service</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Help Center</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary underline transition-all" href="#">Cookies</a>
+</div>
+</div>
+</footer>
+<script>
+    // Simple micro-interaction for buttons
+    document.querySelectorAll('button').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        let ripple = document.createElement('span');
+        ripple.classList.add('ripple');
+        this.appendChild(ripple);
+        let x = e.clientX - e.target.offsetLeft;
+        let y = e.clientY - e.target.offsetTop;
+        ripple.style.left = `${x}px`;
+        ripple.style.top = `${y}px`;
+        setTimeout(() => { ripple.remove(); }, 600);
+      });
+    });
+  </script>
+</body></html>

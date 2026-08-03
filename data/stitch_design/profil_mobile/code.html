@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Talent RDC - Candidate Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#bce0ff",
+                    "inverse-on-surface": "#f2f0f0",
+                    "on-surface": "#1b1c1c",
+                    "on-error": "#ffffff",
+                    "on-primary-container": "#bfe0ff",
+                    "on-secondary-container": "#5c666a",
+                    "on-tertiary-fixed-variant": "#004b70",
+                    "background-surface": "#F8FAFB",
+                    "on-primary-fixed-variant": "#004b72",
+                    "secondary-fixed": "#dae4e9",
+                    "on-secondary-fixed-variant": "#3f484c",
+                    "secondary-fixed-dim": "#bec8cd",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed": "#141d21",
+                    "on-background": "#1b1c1c",
+                    "tertiary-container": "#29658c",
+                    "surface-bright": "#fbf9f8",
+                    "tertiary": "#004d73",
+                    "success-accent": "#28A745",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-highest": "#e4e2e2",
+                    "border-subtle": "#E1E8ED",
+                    "surface-dim": "#dbdad9",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-container": "#006699",
+                    "inverse-primary": "#90cdff",
+                    "primary-fixed-dim": "#90cdff",
+                    "surface-container-low": "#f5f3f3",
+                    "surface-tint": "#006496",
+                    "outline-variant": "#c0c7d0",
+                    "surface": "#fbf9f8",
+                    "on-primary-fixed": "#001e31",
+                    "surface-variant": "#e4e2e2",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#96ccf9",
+                    "tertiary-fixed": "#cae6ff",
+                    "primary-fixed": "#cce5ff",
+                    "primary": "#004d75",
+                    "surface-container-high": "#e9e8e7",
+                    "error": "#ba1a1a",
+                    "secondary-container": "#dae4e9",
+                    "on-error-container": "#93000a",
+                    "on-secondary": "#ffffff",
+                    "surface-container": "#efeded",
+                    "secondary": "#566064",
+                    "outline": "#707880",
+                    "inverse-surface": "#303031",
+                    "background": "#fbf9f8",
+                    "on-surface-variant": "#40484f",
+                    "on-tertiary-fixed": "#001e30",
+                    "text-heading": "#1A1A1A"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "base": "8px",
+                    "margin-desktop": "32px",
+                    "container-max-width": "1200px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Hanken Grotesk"],
+                    "label-md": ["Inter"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "body-sm": ["Inter"],
+                    "headline-xl": ["Hanken Grotesk"],
+                    "body-md": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-lg-mobile": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        @media (max-width: 768px) {
+            .bento-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background-surface text-on-surface font-body-md antialiased">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface border-b border-border-subtle h-16">
+<nav class="flex justify-between items-center h-full px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto">
+<div class="flex items-center gap-8">
+<span class="font-headline-md text-headline-md font-bold text-primary">Talent RDC</span>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Jobs</a>
+<a class="text-primary font-bold border-b-2 border-primary font-label-md text-label-md" href="#">Profile</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Careers</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-surface-container-low rounded-full transition-all">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="p-2 hover:bg-surface-container-low rounded-full transition-all relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-border-subtle">
+<img class="w-full h-full object-cover" data-alt="Close-up professional headshot of Freya Katherina, a confident woman with a friendly expression, styled in a corporate yet modern look. Soft natural lighting enhances her professional demeanor against a blurred office background, maintaining the blue and white professional theme of the Talent RDC platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaT_Ky8Zfu_UEqyhc6CMMe9qR_-8kmztKWjXOkTCeLx43OUzvjwJrcebVrkZxgTvDx0HjQAHUx9B4PgERqkKVMSOJMweJr9qo1JdiHu8y-hiQRJIQ2jABUCU30Fj_3ZrHc5PCB3oaoAnowmJDvQQOmkfFTh-HQEip5R3cgIol6KfcPP-VSWipW7LK9IYV-oQP6CtWbLbGH5U4kLtF5u2XBIhgq_1Mr2ziYjXem8jWTczoqjCfwAtDOWg"/>
+</div>
+<button class="hidden md:block bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md text-label-md hover:opacity-90 active:scale-95 transition-all">Post a Job</button>
+</div>
+</nav>
+</header>
+<main class="mt-16 pb-24 md:pb-8 max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<!-- Mobile Header / Banner Area -->
+<section class="mt-6 md:mt-10">
+<div class="relative h-32 md:h-48 rounded-xl overflow-hidden bg-primary-container">
+
+<div class="absolute inset-0 bg-gradient-to-r from-primary/60 to-transparent"></div>
+</div>
+<div class="relative -mt-12 px-4 md:px-8 flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div class="flex flex-col md:flex-row gap-4 md:items-end">
+<div class="w-24 h-24 md:w-32 md:h-32 rounded-2xl border-4 border-surface overflow-hidden shadow-lg bg-surface">
+<img class="w-full h-full object-cover" data-alt="High-resolution professional avatar of Freya Katherina, showing a smiling face with soft lighting. The image captures her approachability and professional expertise, perfectly centered within the frame. Background is clean and neutral, emphasizing her professional identity for the recruitment platform Talent RDC." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAChCRF15u87fgA9pGXB-dnQWiRGOV_kBo6Dh-9jQKBEDoMdvOmvM80Q9w_YUSLiMiNDRKaKs5fEgRC17v4FxFDK-6mBQQaaA5MQwdtf_a817z4LNCh7XLcrXmqqd5p8vPiRwhIqlqBvhD9QQnfeP4lgDPjREuYI3Czjuthn4sTsw1y5SlXrtbFImByojF0ag81aCu4QSWID0-GGzT4G1Z0EnvXQAGwwHmqnuD0h00Z2m6nZc_Mr_gutw"/>
+</div>
+<div class="pb-2">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Freya Katherina <span class="text-primary material-symbols-outlined align-middle text-xl fill-icon" style="font-variation-settings: 'FILL' 1;">verified</span></h1>
+<p class="text-on-surface-variant font-body-md text-body-md">Senior Product Designer at Amazon</p>
+<div class="flex items-center gap-3 mt-2">
+<span class="flex items-center gap-1 text-label-sm text-body-sm bg-secondary-container px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-sm fill-icon" style="font-variation-settings: 'FILL' 1; color: #EAB308;">star</span> 4.9 Trusted
+                            </span>
+<span class="text-on-surface-variant text-label-sm">23 Applicants</span>
+</div>
+</div>
+</div>
+<div class="flex gap-2 pb-2">
+<button class="flex-1 md:flex-none px-6 py-2 bg-primary text-on-primary rounded-lg font-label-md text-label-md shadow-md active:scale-95 transition-all">Change Profile</button>
+<button class="p-2 border border-border-subtle rounded-lg hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Bento Layout Content -->
+<div class="mt-8 grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Left Column: Main Info -->
+<div class="md:col-span-8 space-y-gutter">
+<!-- Profile Summary -->
+<section class="bg-surface border border-border-subtle rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-4">
+<h2 class="font-headline-md text-headline-md">Profile</h2>
+<button class="text-primary flex items-center gap-1 font-label-sm">
+<span class="material-symbols-outlined text-sm">edit</span> Edit
+                        </button>
+</div>
+<p class="text-on-surface-variant font-body-md leading-relaxed">
+                        I am a dynamic and results-driven professional with a passion for design innovation and a proven track record of success in the field of product design. With extensive experience as a Lead Product Designer, Senior Interaction Designer, and Product Designer, I have honed my skills in creating user-centered, aesthetically pleasing, and highly functional digital experiences.
+                    </p>
+</section>
+<!-- Experience -->
+<section class="bg-surface border border-border-subtle rounded-xl p-6 shadow-sm">
+<div class="flex items-center justify-between mb-6">
+<h2 class="font-headline-md text-headline-md">Experience</h2>
+<button class="w-8 h-8 flex items-center justify-center bg-secondary-container rounded-full text-primary hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+<div class="space-y-8">
+<!-- Experience Item 1 -->
+<div class="flex gap-4 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex-shrink-0 flex items-center justify-center p-2 group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl">corporate_fare</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-label-md text-headline-md text-on-surface">Lead Product Designer <span class="font-normal text-on-surface-variant">at Airbnb</span></h3>
+<p class="text-label-sm text-on-surface-variant mt-1">Full-time • 2021 - Present</p>
+</div>
+<span class="text-success-accent flex items-center gap-1 text-label-sm font-semibold">
+<span class="material-symbols-outlined text-sm fill-icon" style="font-variation-settings: 'FILL' 1;">verified</span> Company Verified
+                                    </span>
+</div>
+<p class="text-body-sm text-on-surface-variant mt-3 line-clamp-2 md:line-clamp-none">
+                                    Throughout my career, I have excelled in roles as a Lead Product Designer. I possess a strong ability to conceptualize and lead the development of cutting-edge products, ensuring they align with business goals while providing exceptional user experiences.
+                                </p>
+</div>
+</div>
+<!-- Experience Item 2 -->
+<div class="flex gap-4 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex-shrink-0 flex items-center justify-center p-2 group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl">apartment</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-label-md text-headline-md text-on-surface">Senior Interaction Designer <span class="font-normal text-on-surface-variant">at Afterpay</span></h3>
+<p class="text-label-sm text-on-surface-variant mt-1">Contract • 2019 - 2021</p>
+</div>
+<span class="text-success-accent flex items-center gap-1 text-label-sm font-semibold">
+<span class="material-symbols-outlined text-sm fill-icon" style="font-variation-settings: 'FILL' 1;">verified</span> Company Verified
+                                    </span>
+</div>
+<p class="text-body-sm text-on-surface-variant mt-3 line-clamp-2">
+                                    My experience as a Senior Interaction Designer has allowed me to refine my skills in crafting intuitive and engaging user interfaces. I have a deep understanding of user behavior and interaction patterns, enabling me to create designs that seamlessly guide users.
+                                </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Education -->
+<section class="bg-surface border border-border-subtle rounded-xl p-6 shadow-sm">
+<div class="flex items-center justify-between mb-6">
+<h2 class="font-headline-md text-headline-md">Education</h2>
+<button class="text-primary flex items-center gap-1 font-label-sm">
+<span class="material-symbols-outlined text-sm">edit</span> Edit
+                        </button>
+</div>
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex-shrink-0 flex items-center justify-center p-2">
+<span class="material-symbols-outlined text-primary text-2xl">school</span>
+</div>
+<div>
+<h3 class="font-label-md text-headline-md text-on-surface">University of Pennsylvania</h3>
+<p class="text-body-md text-on-surface-variant">Bachelor Degree of Computer Science • Jun 2016 - Jul 2020</p>
+<p class="text-body-sm text-on-surface-variant mt-2">
+                                I am a proud graduate of the University of Pennsylvania, where I obtained a rigorous and comprehensive education in design and computer science. The academic environment provided me with the foundational skills to excel in product design.
+                            </p>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Sidebar -->
+<aside class="md:col-span-4 space-y-gutter">
+<!-- People you may know -->
+<section class="bg-surface border border-border-subtle rounded-xl p-6 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-label-md text-on-surface font-bold uppercase tracking-wider">People you may know</h3>
+<button class="material-symbols-outlined text-on-surface-variant text-xl">more_horiz</button>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Close-up headshot of Christoper Nolan, a young professional male in a sleek grey blazer. He exudes a calm, friendly confidence. The photo style is consistent with high-end corporate photography, utilizing soft key lighting and a minimalist, slightly out-of-focus modern office background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCXnNW0ikcT286gXouzeoVqYKCkbrlf1ncYfiDeaA1HqRTMoc9M5R84iNrorH9Bbpnj7wVSW_l5AEhZFuOWK9i2uc74eXH0HWmJp3QJ5wKL1OsLlcOXZm4VnrfQPpxwSUiR4BUqR_LAWNg8WzuJrmawL2eQ3CCL1mb0uqNob8xTSviuW-vf7egv0GEL6u6bMcFwucWQP4XQ4uRwz_lne5SYXH9tU1Xr4VWd8eqTPzUbX575DcxIdB1rw"/>
+<div class="flex-1">
+<p class="text-label-md font-bold">Christoper Nolan <span class="bg-primary/10 text-primary text-[10px] px-1 rounded ml-1">Premium</span></p>
+<p class="text-label-sm text-on-surface-variant">Ally Van, Jennifer Chan and 23 mutual connections</p>
+</div>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">bookmark</button>
+</div>
+<div class="flex items-center gap-3">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Portrait of Jessica Milla, a creative professional woman with a bright smile. She is wearing a modern mustard-colored top that contrasts beautifully with a clean studio background. The lighting is soft and airy, conveying a sense of optimism and approachability appropriate for a professional network like Talent RDC." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSllYMd3joTRkH5zATbEXT161rvjat699kGMQfgMCMht7WzhhbeSCYQfatDxFQfqN_AcP4XwoYUmMgI6di-WicYmTTnujvlwHqHcj7riaPLJG9F9rqW_SFN7rDTLCi4ctpYgdPMiakVf5xLLJIH3t3bBPLgAEuQGnFv6OWXRSwNbpWJz1n2KtsP1PdMppHQrEFH_gh04bviF9dimtkZxUY1pNuiFyje5RCEheKDJr5mf_OXqeVANuMQg"/>
+<div class="flex-1">
+<p class="text-label-md font-bold">Jessica Milla</p>
+<p class="text-label-sm text-on-surface-variant">Mutual connections: 12</p>
+</div>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">bookmark</button>
+</div>
+</div>
+<button class="w-full mt-6 text-primary font-label-md py-2 border border-primary/20 rounded-lg hover:bg-primary/5 transition-colors">See more people</button>
+</section>
+<!-- Open Job Positions -->
+<section class="bg-surface border border-border-subtle rounded-xl p-6 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-label-md text-on-surface font-bold uppercase tracking-wider">Opening positions</h3>
+<button class="material-symbols-outlined text-on-surface-variant text-xl">more_horiz</button>
+</div>
+<div class="space-y-4">
+<div class="p-3 border border-border-subtle rounded-lg hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-md bg-secondary-container flex items-center justify-center group-hover:bg-white transition-colors">
+<span class="material-symbols-outlined text-primary">draw</span>
+</div>
+<div class="flex-1">
+<h4 class="text-label-md font-bold">Product Designer <span class="material-symbols-outlined text-primary text-xs fill-icon" style="font-variation-settings: 'FILL' 1;">verified</span></h4>
+<p class="text-label-sm text-on-surface-variant">Airbnb • 23 Applicants</p>
+</div>
+</div>
+<div class="mt-2 flex items-center justify-between text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs fill-icon" style="font-variation-settings: 'FILL' 1; color: #EAB308;">star</span> 4.3 Company ratings</span>
+</div>
+</div>
+<div class="p-3 border border-border-subtle rounded-lg hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-md bg-secondary-container flex items-center justify-center group-hover:bg-white transition-colors">
+<span class="material-symbols-outlined text-primary">touch_app</span>
+</div>
+<div class="flex-1">
+<h4 class="text-label-md font-bold">Interactions Designer <span class="material-symbols-outlined text-primary text-xs fill-icon" style="font-variation-settings: 'FILL' 1;">verified</span></h4>
+<p class="text-label-sm text-on-surface-variant">Amplitude • 12 Applicants</p>
+</div>
+</div>
+<div class="mt-2 flex items-center justify-between text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs fill-icon" style="font-variation-settings: 'FILL' 1; color: #EAB308;">star</span> 4.2 Company ratings</span>
+</div>
+</div>
+</div>
+<button class="w-full mt-6 text-primary font-label-md py-2 border border-primary/20 rounded-lg hover:bg-primary/5 transition-colors">See more opening jobs</button>
+</section>
+<!-- Static Advertisement / Info Card -->
+<div class="relative overflow-hidden rounded-xl h-64 bg-primary flex flex-col items-center justify-center text-center p-6">
+<div class="absolute inset-0 opacity-20">
+
+</div>
+<div class="relative z-10">
+<div class="flex -space-x-3 mb-4 justify-center">
+<img class="w-12 h-12 rounded-full border-2 border-primary" data-alt="Circular professional headshot 1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDtrXpPneQPmw_VxeeDHLXeD_-7Ia4HH9PgO2hpa0tmbxYvZMhyPACTnrWT9BkzbNHspajWbeswIurv5Z7WvaFHlz8FS3UXdHxxEg96p7oziWWTXOZ3Tam1VN-caQXx8mbkSgbByFnsuu35LcDW-vkcPNI2uWBl4lyOISlfcQVkb8IVmSk-g_rUS-uqwmfsk1i0QBt5x-ZKClmrFmlCneG2AYgY3oiSv23mWFgAE6rLnJCEEGIyfG_cA"/>
+<img class="w-12 h-12 rounded-full border-2 border-primary" data-alt="Circular professional headshot 2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf_6nkUQ9vqlmw_XSjAFioC4ootNM6YemnLJBRKWZ3w3Gv4Bu6atY2pvq_5El_hj0WpTVNbHTybLOv7OikdWAG7TnFl6uyQj3ZI3fIRBGLvKRnm3obQUXvm24mpxgINEmLcEIPvfcXG2ISOFyUeOzOHByM_eMgMb65oLeXjKZU0WvVe4LEBbDOHdLdqBfOpNPZ0gXJQT1ZzNk9AiXSE6YrihYRFaKtWZ22Gf37AV4fmCAArkBs4caQew"/>
+<div class="w-12 h-12 rounded-full bg-surface text-primary flex items-center justify-center font-bold border-2 border-primary">+</div>
+</div>
+<h4 class="text-on-primary font-headline-md mb-2">Unlock Premium Career Features</h4>
+<p class="text-on-primary/80 text-body-sm mb-4">Mekari is Indonesia's no.1 Software-as-a-Service (SaaS) company. Join us to empower more businesses.</p>
+<button class="bg-surface text-primary px-6 py-2 rounded-lg font-label-md hover:shadow-lg active:scale-95 transition-all">Go Premium</button>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer Section -->
+<footer class="bg-surface-container border-t border-border-subtle mt-12">
+<div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop py-12">
+<div class="flex flex-col md:flex-row justify-between items-start gap-12">
+<div class="max-w-xs">
+<span class="font-headline-md text-headline-md font-black text-primary">Talent RDC Express</span>
+<p class="text-body-sm text-on-surface-variant mt-4 leading-relaxed">
+                        The ultimate destination for talent and recruiters. Find your dream job or the perfect candidate with our high-trust recruitment ecosystem.
+                    </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+<div>
+<h5 class="font-label-md text-on-surface mb-4">Company</h5>
+<ul class="space-y-2 text-body-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-all" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-all" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-all" href="#">Press</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-md text-on-surface mb-4">Support</h5>
+<ul class="space-y-2 text-body-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-all" href="#">Help Center</a></li>
+<li><a class="hover:text-primary transition-all" href="#">Contact</a></li>
+<li><a class="hover:text-primary transition-all" href="#">Terms</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-md text-on-surface mb-4">Legal</h5>
+<ul class="space-y-2 text-body-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-all" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-all" href="#">Cookies</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="border-t border-border-subtle mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-body-sm text-on-surface-variant opacity-80">© 2024 Talent RDC Express. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">qr_code_2</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Mobile Bottom Nav -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 glass-effect border-t border-border-subtle h-16 flex items-center justify-around z-50">
+<a class="flex flex-col items-center text-on-surface-variant gap-1" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-label-sm">Home</span>
+</a>
+<a class="flex flex-col items-center text-on-surface-variant gap-1" href="#">
+<span class="material-symbols-outlined">work</span>
+<span class="text-[10px] font-label-sm">Jobs</span>
+</a>
+<a class="flex flex-col items-center text-primary gap-1" href="#">
+<span class="material-symbols-outlined fill-icon" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="text-[10px] font-label-sm font-bold">Profile</span>
+</a>
+<a class="flex flex-col items-center text-on-surface-variant gap-1" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-label-sm">Settings</span>
+</a>
+</nav>
+<script>
+        // Simple micro-interaction for experience items
+        document.querySelectorAll('.group').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.classList.add('translate-x-1');
+                item.style.transition = 'all 0.3s ease';
+            });
+            item.addEventListener('mouseleave', () => {
+                item.classList.remove('translate-x-1');
+            });
+        });
+    </script>
+</body></html>

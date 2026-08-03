@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Talent RDC Express - Job Listings</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#dae2fd",
+                    "on-tertiary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "error-container": "#ffdad6",
+                    "surface-bright": "#f8f9ff",
+                    "secondary-fixed": "#dae2fd",
+                    "surface": "#f8f9ff",
+                    "on-tertiary-container": "#eff1f3",
+                    "on-surface": "#0b1c30",
+                    "error": "#ba1a1a",
+                    "surface-variant": "#d3e4fe",
+                    "secondary": "#565e74",
+                    "surface-container-high": "#dce9ff",
+                    "inverse-on-surface": "#eaf1ff",
+                    "surface-container-low": "#eff4ff",
+                    "on-tertiary-fixed-variant": "#444749",
+                    "primary-container": "#2563eb",
+                    "on-surface-variant": "#434655",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "tertiary-container": "#6b6e70",
+                    "surface-container": "#e5eeff",
+                    "inverse-primary": "#b4c5ff",
+                    "surface-dim": "#cbdbf5",
+                    "primary-fixed": "#dbe1ff",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "tertiary": "#525657",
+                    "outline-variant": "#c3c6d7",
+                    "primary": "#004ac6",
+                    "tertiary-fixed-dim": "#c4c7c9",
+                    "on-primary-container": "#eeefff",
+                    "on-secondary-fixed": "#131b2e",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed": "#e0e3e5",
+                    "outline": "#737686",
+                    "on-primary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-background": "#0b1c30",
+                    "inverse-surface": "#213145",
+                    "on-tertiary-fixed": "#191c1e",
+                    "surface-tint": "#0053db",
+                    "background": "#f8f9ff",
+                    "on-secondary-container": "#5c647a",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "on-primary-fixed": "#00174b",
+                    "surface-container-highest": "#d3e4fe",
+                    "on-primary-fixed-variant": "#003ea8"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "margin-desktop": "40px",
+                    "gutter": "24px",
+                    "base": "8px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "body-md": ["Hanken Grotesk"],
+                    "label-sm": ["Hanken Grotesk"],
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "display-lg": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "label-md": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Hanken Grotesk', sans-serif;
+            background-color: #f8f9ff;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-filter {
+            background-color: #004ac6;
+            color: #ffffff;
+        }
+        /* Custom card interaction */
+        .job-card:active {
+            transform: scale(0.98);
+            transition: transform 0.1s ease-out;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="text-on-background antialiased pb-24">
+<!-- TopAppBar -->
+<header class="bg-surface docked full-width top-0 shadow-sm sticky z-40 flex justify-between items-center w-full px-margin-mobile h-16 border-b border-outline-variant">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-variant flex items-center justify-center border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a young Congolese executive in a modern tech office environment. He is wearing a crisp white shirt and stylish glasses, radiating confidence and innovation. The background is softly blurred, showing a high-tech workspace with vibrant blue accents, aligning with a premium professional networking platform's aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmlZuY4TXlU6v5Z-Q44oZ_hfDoaGUffFJymDAPV1yhgcH8LjqF6EyyVwXgeCrzwvTVptvocF1w129-xxgBxOuBus-ow-03hYS-r9CtaMmqfNsqCxZ1RN0QPjJhm4Rqx3bTWXg_54obJxoYskjaBpheKAUv0dhKI6-geQ76lWgs6c1NFRO6YkeXDkAzNPcn5-kpXdY_Xwr6LllF1QIhSKjja1T0X_gNQctGTV7ZUqoFx6hfXxgPZS3MWQ"/>
+</div>
+<span class="text-headline-md font-headline-md font-bold text-primary">Talent RDC Express</span>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-variant transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile pt-6">
+<!-- Search & Filter Section -->
+<section class="space-y-4 mb-8">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-xl py-3 pl-12 pr-4 focus:ring-2 focus:ring-primary focus:border-primary transition-all text-body-md shadow-sm" placeholder="Search for jobs, skills, or companies" type="text"/>
+</div>
+<div class="flex gap-2 overflow-x-auto pb-2 no-scrollbar">
+<button class="active-filter px-5 py-2 rounded-full text-label-md whitespace-nowrap shadow-sm transition-all">All Jobs</button>
+<button class="bg-surface-container px-5 py-2 rounded-full text-label-md text-on-surface-variant whitespace-nowrap hover:bg-surface-variant transition-all">Remote</button>
+<button class="bg-surface-container px-5 py-2 rounded-full text-label-md text-on-surface-variant whitespace-nowrap hover:bg-surface-variant transition-all">Engineering</button>
+<button class="bg-surface-container px-5 py-2 rounded-full text-label-md text-on-surface-variant whitespace-nowrap hover:bg-surface-variant transition-all">Design</button>
+<button class="bg-surface-container px-5 py-2 rounded-full text-label-md text-on-surface-variant whitespace-nowrap hover:bg-surface-variant transition-all">Marketing</button>
+</div>
+</section>
+<!-- Jobs List -->
+<div class="space-y-4">
+<h2 class="text-headline-md font-headline-md text-on-background mb-4">Recommended for you</h2>
+<!-- Job Card 1: Senior Product Designer -->
+<div class="job-card bg-surface-container-lowest border border-outline-variant rounded-xl p-5 shadow-[0px_4px_20px_rgba(15,23,42,0.05)] flex flex-col gap-4">
+<div class="flex items-start justify-between">
+<div class="flex gap-4">
+<div class="w-14 h-14 rounded-xl bg-surface-container-high flex items-center justify-center p-2 border border-outline-variant">
+<img class="w-full h-full object-contain" data-alt="A clean, minimalist vector logo for a technology startup named 'Nexus DRC'. The logo features geometric blue lines forming a stylized 'N' inside a rounded square, representing connectivity and high-end professional services. The aesthetic is modern, corporate, and uses a vibrant primary blue color against a white background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjztCqokf8XGH744t18EeXAYX2kRC6MwUKTe3tzX0REKYH64vPp48Owd2G4HWhGkoftvmYimS0Bz15ejcCnbhEF0zlExABA6M6NvKfQPHXM9FEwbQ0TlvIK1Ad5z7S4BPNhzBE1wstF_15RAlsBO60E79fEiPztirCQPSuIhOrLSoKltU4R9pbaZaTHAh0C5IotE7twNDEpiit76klw0d0gx4m04BkF87R14rkPx-Uf1bs1SwjXxQC6A"/>
+</div>
+<div>
+<h3 class="text-label-md font-bold text-on-surface leading-tight mb-1">Senior Product Designer</h3>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Nexus DRC • Kinshasa</p>
+</div>
+</div>
+<button class="text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm">Full-time</span>
+<span class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded-full text-label-sm">$3,500 - $5,000</span>
+<span class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded-full text-label-sm">On-site</span>
+</div>
+<div class="flex gap-3 pt-2">
+<button class="flex-1 bg-primary text-on-primary py-2.5 rounded-lg text-label-md font-bold hover:opacity-90 active:scale-95 transition-all">Apply Now</button>
+<button class="px-3 bg-surface-container text-on-surface-variant py-2.5 rounded-lg border border-outline-variant hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="share">share</span>
+</button>
+</div>
+</div>
+<!-- Job Card 2: Backend Engineer -->
+<div class="job-card bg-surface-container-lowest border border-outline-variant rounded-xl p-5 shadow-[0px_4px_20px_rgba(15,23,42,0.05)] flex flex-col gap-4">
+<div class="flex items-start justify-between">
+<div class="flex gap-4">
+<div class="w-14 h-14 rounded-xl bg-surface-container-high flex items-center justify-center p-2 border border-outline-variant">
+<img class="w-full h-full object-contain" data-alt="Logo for 'CloudLink Solutions', a sleek corporate brand. The visual consists of two interlocking rings in varying shades of corporate blue and slate gray, symbolizing infrastructure and stability. The design is crisp, professional, and fits perfectly in a premium job board for high-growth tech firms." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHAHjoYZ4xBgqvboY-aA4HbzW4ORHhdf8l0mRYzh_HSth1AuI-SuJ57AuszGgrK71c5iOpKBIsa8q3w9ZrgxVgTqHY5IRbWK6Jccdvr8zIFps0r0i0-usEKxzCfnREm38CmVj0XeeM-3Fp51Ghgdaf65DaPYJp7hZSzL1EbcdMxlO95f0hYMivLHSxxAWCRN3cwu8hg9_srboY5PublhaGJV0g79dmu3U34ZMZnoD47xk0WZGiOJpdrA"/>
+</div>
+<div>
+<h3 class="text-label-md font-bold text-on-surface leading-tight mb-1">Lead Backend Engineer (Go)</h3>
+<p class="text-label-sm font-label-sm text-on-surface-variant">CloudLink Solutions • Remote</p>
+</div>
+</div>
+<button class="text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="bookmark" data-weight="fill">bookmark</span>
+</button>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm">Full-time</span>
+<span class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded-full text-label-sm">$4,000 - $6,500</span>
+<span class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded-full text-label-sm">Go, AWS, K8s</span>
+</div>
+<div class="flex gap-3 pt-2">
+<button class="flex-1 bg-primary text-on-primary py-2.5 rounded-lg text-label-md font-bold hover:opacity-90 active:scale-95 transition-all">Apply Now</button>
+<button class="px-3 bg-surface-container text-on-surface-variant py-2.5 rounded-lg border border-outline-variant hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="share">share</span>
+</button>
+</div>
+</div>
+<!-- Job Card 3: Content Strategist -->
+<div class="job-card bg-surface-container-lowest border border-outline-variant rounded-xl p-5 shadow-[0px_4px_20px_rgba(15,23,42,0.05)] flex flex-col gap-4">
+<div class="flex items-start justify-between">
+<div class="flex gap-4">
+<div class="w-14 h-14 rounded-xl bg-surface-container-high flex items-center justify-center p-2 border border-outline-variant">
+<img class="w-full h-full object-contain" data-alt="A modern brand mark for 'Vibe Media', a creative agency. The icon is a vibrant gradient circle using shades of deep blue and energetic light blue, with a minimalist 'V' cut out from the center. It looks innovative and appeals to creative professionals in a high-growth SaaS environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtJoM4kTX0xybxUGuTQWuRvxYVu8OrZQymMQgTF_HVC3Zo9KDmzx2z0mKs1Ug6UbrK5SY5CAvf360BX1O1aUZwWKgPC2CDD3hzX40PCor5Ri6R7n14bl591LOxh5XRXBZnAi4y753f8ZvUKP5MN70IGyJnjr13ww0DZi7gyVfcK1JqnNDHmFio29jhaXYzflQqRvbNZdbN17QMy6mCttTauNVRGb74yV7rW0bPJZVRfEPIhaFpdadvGg"/>
+</div>
+<div>
+<h3 class="text-label-md font-bold text-on-surface leading-tight mb-1">Senior Content Strategist</h3>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Vibe Media • Lubumbashi</p>
+</div>
+</div>
+<button class="text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm">Contract</span>
+<span class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded-full text-label-sm">$2,800/mo</span>
+<span class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded-full text-label-sm">Hybrid</span>
+</div>
+<div class="flex gap-3 pt-2">
+<button class="flex-1 bg-primary text-on-primary py-2.5 rounded-lg text-label-md font-bold hover:opacity-90 active:scale-95 transition-all">Apply Now</button>
+<button class="px-3 bg-surface-container text-on-surface-variant py-2.5 rounded-lg border border-outline-variant hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="share">share</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Featured Section with animated background -->
+<section class="mt-8 relative overflow-hidden rounded-2xl h-48 flex items-center justify-center px-6 text-center border border-outline-variant">
+
+<div class="relative z-10 space-y-2">
+<h2 class="text-headline-md font-headline-md text-primary drop-shadow-sm">Fast-Track Your Career</h2>
+<p class="text-body-md text-on-surface-variant max-w-xs mx-auto">Get exclusive alerts for premium jobs before they go public.</p>
+<button class="mt-2 text-primary font-bold text-label-md flex items-center gap-1 mx-auto hover:underline">
+                    Upgrade to Pro <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-2 bg-surface border-t border-outline-variant shadow-[0_-4px_20px_rgba(15,23,42,0.05)] rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-label-sm font-label-sm">Home</span>
+</a>
+<!-- Active Item: Jobs -->
+<a class="flex flex-col items-center justify-center text-primary bg-secondary-container rounded-full px-4 py-1 scale-95 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="work" data-weight="fill">work</span>
+<span class="text-label-sm font-label-sm">Jobs</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+<span class="text-label-sm font-label-sm">Messages</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-label-sm font-label-sm">Profile</span>
+</a>
+</nav>
+<script>
+        // Simple micro-interaction for filter chips
+        const filterButtons = document.querySelectorAll('button.rounded-full');
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => {
+                    b.classList.remove('active-filter', 'shadow-sm');
+                    b.classList.add('bg-surface-container', 'text-on-surface-variant');
+                });
+                btn.classList.add('active-filter', 'shadow-sm');
+                btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+            });
+        });
+
+        // Add subtle parallax-ish tilt effect on cards for some juice (mobile touch-friendly)
+        const cards = document.querySelectorAll('.job-card');
+        cards.forEach(card => {
+            card.addEventListener('touchstart', () => {
+                card.style.borderColor = '#004ac6';
+            });
+            card.addEventListener('touchend', () => {
+                card.style.borderColor = '#c3c6d7';
+            });
+        });
+    </script>
+</body></html>

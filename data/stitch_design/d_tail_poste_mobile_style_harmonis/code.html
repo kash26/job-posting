@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html class="light scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Job Details | Talent RDC Express</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#dae2fd",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "on-surface": "#0b1c30",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "inverse-on-surface": "#eaf1ff",
+                        "tertiary-container": "#6b6e70",
+                        "tertiary": "#525657",
+                        "surface-dim": "#cbdbf5",
+                        "on-tertiary-container": "#eff1f3",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed": "#191c1e",
+                        "surface-bright": "#f8f9ff",
+                        "on-secondary-fixed": "#131b2e",
+                        "secondary-container": "#dae2fd",
+                        "secondary": "#565e74",
+                        "surface-variant": "#d3e4fe",
+                        "on-primary-container": "#eeefff",
+                        "primary": "#004ac6",
+                        "primary-container": "#2563eb",
+                        "primary-fixed": "#dbe1ff",
+                        "on-secondary-container": "#5c647a",
+                        "on-primary-fixed": "#00174b",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#3f465c",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed-dim": "#bec6e0",
+                        "inverse-surface": "#213145",
+                        "outline": "#737686",
+                        "tertiary-fixed": "#e0e3e5",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#434655",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#eff4ff",
+                        "inverse-primary": "#b4c5ff",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "background": "#f8f9ff",
+                        "outline-variant": "#c3c6d7",
+                        "surface-container": "#e5eeff",
+                        "surface-tint": "#0053db",
+                        "surface-container-high": "#dce9ff",
+                        "on-background": "#0b1c30",
+                        "surface": "#f8f9ff",
+                        "surface-container-highest": "#d3e4fe",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "32px",
+                        "base": "8px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "container-max-width": "1200px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "body-sm": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "label-sm": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "label-md": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #f8f9ff;
+            color: #0b1c30;
+            -webkit-font-smoothing: antialiased;
+            font-family: 'Hanken Grotesk', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .geometric-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232563eb' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .custom-shadow {
+            box-shadow: 0px 4px 20px rgba(15, 23, 42, 0.05);
+        }
+        .sticky-action-blur {
+            backdrop-filter: blur(12px);
+            background: rgba(248, 249, 255, 0.9);
+        }
+        .button-bounce:active {
+            transform: scale(0.96);
+            transition: transform 0.1s ease;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-md px-margin-mobile h-16 flex items-center justify-between border-b border-outline-variant/30">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container-low transition-all button-bounce" onclick="history.back()">
+<span class="material-symbols-outlined text-primary">arrow_back</span>
+</button>
+<div class="flex gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container-low button-bounce">
+<span class="material-symbols-outlined text-on-surface-variant">share</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container-low button-bounce">
+<span class="material-symbols-outlined text-on-surface-variant">bookmark</span>
+</button>
+</div>
+</header>
+<main class="pb-32 pt-20">
+<!-- Hero Section -->
+<section class="px-margin-mobile relative geometric-pattern pt-6 pb-8">
+<div class="relative w-20 h-20 bg-white rounded-2xl flex items-center justify-center custom-shadow mb-6 overflow-hidden border border-outline-variant/30">
+<img class="w-12 h-12 object-contain" data-alt="Senior UX Designer role at TechFlow Systems" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvrvW7p5EvA8Y9rKM3Irxqk7Bbe8AQ3GyiJ1TfpCl3pskiC5_Xat28IX89kjNxcIh4rIV-M_PYB2ULqJKsNeVx45gKJeu0ZWz9R_McWdp9u5UcplkW59hp2StrPcsRGzZp8TxfKTTOVpsUmn5isPiwqVbVlTOSV5WKJ4gjcRT8pS07gUMY9JSqa2e0kPruzgYcVRc4bYllO2vL3SKHPMtNWLh3c1mnrHPjaSK12JX_iMDZAdCGAEacyw"/>
+</div>
+<div class="space-y-2">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Senior UX Designer</h1>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-on-surface-variant font-label-md text-label-md">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">apartment</span> TechFlow Systems
+                </span>
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">location_on</span> Kinshasa, RDC
+                </span>
+</div>
+</div>
+<!-- Quick Stats -->
+<div class="mt-8 grid grid-cols-2 gap-4">
+<div class="p-5 bg-white rounded-2xl custom-shadow border border-outline-variant/30">
+<p class="text-label-sm font-label-sm text-secondary uppercase tracking-widest mb-1">Salary Range</p>
+<p class="text-headline-md font-headline-md text-primary">$4.5k - $6.5k</p>
+</div>
+<div class="p-5 bg-white rounded-2xl custom-shadow border border-outline-variant/30">
+<p class="text-label-sm font-label-sm text-secondary uppercase tracking-widest mb-1">Job Type</p>
+<p class="text-headline-md font-headline-md text-primary">Full-time</p>
+</div>
+</div>
+</section>
+<div class="mt-4 space-y-8">
+<!-- Overview Section -->
+<section class="px-margin-mobile">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-4">Overview</h2>
+<div class="p-6 bg-white rounded-3xl custom-shadow border border-outline-variant/20 space-y-6">
+<p class="text-on-surface-variant leading-relaxed font-body-md">
+                    Join our dynamic design team at TechFlow Systems. We are looking for a visionary Senior UX Designer to lead the transformation of our recruitment ecosystem. You will be responsible for defining user-centric strategies that connect thousands of professionals with their dream careers across the Democratic Republic of Congo.
+                </p>
+<div class="flex flex-wrap gap-2.5">
+<span class="px-4 py-1.5 bg-primary/5 text-primary text-label-sm font-bold rounded-lg border border-primary/10">Remote Friendly</span>
+<span class="px-4 py-1.5 bg-primary/5 text-primary text-label-sm font-bold rounded-lg border border-primary/10">Urgent Hiring</span>
+<span class="px-4 py-1.5 bg-primary/5 text-primary text-label-sm font-bold rounded-lg border border-primary/10">Top 10% Employer</span>
+</div>
+</div>
+</section>
+<!-- Requirements Section -->
+<section class="px-margin-mobile">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-4">Requirements</h2>
+<div class="p-6 bg-white rounded-3xl custom-shadow border border-outline-variant/20">
+<ul class="space-y-5">
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface-variant">Minimum 5 years of experience in digital product design.</span>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface-variant">Expert proficiency in Figma, Adobe XD, and interactive prototyping.</span>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface-variant">Proven track record of shipping complex enterprise-level platforms.</span>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface-variant">Strong understanding of accessibility standards (WCAG 2.1).</span>
+</li>
+</ul>
+</div>
+</section>
+<!-- About Company Section -->
+<section class="px-margin-mobile">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-4">About TechFlow Systems</h2>
+<div class="rounded-3xl overflow-hidden border border-outline-variant/20 custom-shadow bg-white">
+<div class="h-40 bg-surface-container relative">
+<img class="w-full h-full object-cover" data-alt="TechFlow Systems Office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVLkt4x48VWc8wVa5InXC-HkaRtbJ6CCSroQ8yfj8FqfQFTK-cAFc7g4seEMV2MbS-Qv_UGZiZzE_YRwj8DBOvvMvNnYaPCaipuQmNF2uldgGDllN3C7MG_BNvrpoEiMt18d_7iop0jIdggniTLeKyy6F6UfNmghgRNkna-qGXu1TV-DbLE2VDN9mUtvKsWd3wLK6nbaVr0oZH30lz8ILlGbQ4I__E7Dgxci_sabQhCP-OSySYngHTfQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+</div>
+<div class="p-6 space-y-4">
+<p class="text-on-surface-variant leading-relaxed font-body-md">
+                        TechFlow Systems is the DRC's fastest-growing technology infrastructure provider. We specialize in building the backbone for digital services that empower local businesses to compete on a global stage.
+                    </p>
+<a class="inline-flex items-center text-primary font-label-md text-label-md hover:underline gap-1.5 py-1" href="#">
+                        View Company Profile <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</a>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Sticky Apply Button -->
+<div class="fixed bottom-0 left-0 right-0 p-margin-mobile sticky-action-blur border-t border-outline-variant/20 z-50">
+<div class="max-w-container-max-width mx-auto flex items-center gap-4">
+<button class="flex-grow bg-primary text-on-primary font-label-md text-label-md py-4.5 px-6 rounded-2xl shadow-xl shadow-primary/20 transition-all button-bounce flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">send</span>
+            Apply Now
+        </button>
+<button class="w-14 h-14 bg-surface-container-lowest border border-outline-variant/30 text-primary rounded-2xl flex items-center justify-center transition-all button-bounce custom-shadow">
+<span class="material-symbols-outlined">message</span>
+</button>
+</div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-4');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-4');
+            observer.observe(section);
+        });
+
+        // Immediate show for hero
+        const hero = document.querySelector('section');
+        if(hero) {
+            hero.classList.remove('opacity-0', 'translate-y-4');
+            hero.classList.add('opacity-100', 'translate-y-0');
+        }
+    });
+
+    // Simple application toggle simulation
+    const applyBtn = document.querySelector('.bg-primary');
+    applyBtn.addEventListener('click', () => {
+        const originalContent = applyBtn.innerHTML;
+        applyBtn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span> Sending...';
+        setTimeout(() => {
+            applyBtn.classList.remove('bg-primary');
+            applyBtn.classList.add('bg-success-accent', 'bg-green-600'); // Using a success color consistent with system
+            applyBtn.innerHTML = '<span class="material-symbols-outlined">check</span> Applied Successfully';
+        }, 1500);
+    });
+</script>
+</body></html>

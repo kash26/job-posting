@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Talent RDC - Mobile Job Details</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "on-tertiary-container": "#bce0ff",
+                  "inverse-on-surface": "#f2f0f0",
+                  "on-surface": "#1b1c1c",
+                  "on-error": "#ffffff",
+                  "on-primary-container": "#bfe0ff",
+                  "on-secondary-container": "#5c666a",
+                  "on-tertiary-fixed-variant": "#004b70",
+                  "background-surface": "#F8FAFB",
+                  "on-primary-fixed-variant": "#004b72",
+                  "secondary-fixed": "#dae4e9",
+                  "on-secondary-fixed-variant": "#3f484c",
+                  "secondary-fixed-dim": "#bec8cd",
+                  "on-primary": "#ffffff",
+                  "on-secondary-fixed": "#141d21",
+                  "on-background": "#1b1c1c",
+                  "tertiary-container": "#29658c",
+                  "surface-bright": "#fbf9f8",
+                  "tertiary": "#004d73",
+                  "success-accent": "#28A745",
+                  "on-tertiary": "#ffffff",
+                  "surface-container-highest": "#e4e2e2",
+                  "border-subtle": "#E1E8ED",
+                  "surface-dim": "#dbdad9",
+                  "surface-container-lowest": "#ffffff",
+                  "primary-container": "#006699",
+                  "inverse-primary": "#90cdff",
+                  "primary-fixed-dim": "#90cdff",
+                  "surface-container-low": "#f5f3f3",
+                  "surface-tint": "#006496",
+                  "outline-variant": "#c0c7d0",
+                  "surface": "#fbf9f8",
+                  "on-primary-fixed": "#001e31",
+                  "surface-variant": "#e4e2e2",
+                  "error-container": "#ffdad6",
+                  "tertiary-fixed-dim": "#96ccf9",
+                  "tertiary-fixed": "#cae6ff",
+                  "primary-fixed": "#cce5ff",
+                  "primary": "#004d75",
+                  "surface-container-high": "#e9e8e7",
+                  "error": "#ba1a1a",
+                  "secondary-container": "#dae4e9",
+                  "on-error-container": "#93000a",
+                  "on-secondary": "#ffffff",
+                  "surface-container": "#efeded",
+                  "secondary": "#566064",
+                  "outline": "#707880",
+                  "inverse-surface": "#303031",
+                  "background": "#fbf9f8",
+                  "on-surface-variant": "#40484f",
+                  "on-tertiary-fixed": "#001e30",
+                  "text-heading": "#1A1A1A"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.25rem",
+                  "lg": "0.5rem",
+                  "xl": "0.75rem",
+                  "full": "9999px"
+          },
+          "spacing": {
+                  "gutter": "24px",
+                  "base": "8px",
+                  "margin-desktop": "32px",
+                  "container-max-width": "1200px",
+                  "margin-mobile": "16px"
+          },
+          "fontFamily": {
+                  "headline-md": ["Hanken Grotesk"],
+                  "label-md": ["Inter"],
+                  "headline-lg": ["Hanken Grotesk"],
+                  "body-sm": ["Inter"],
+                  "headline-xl": ["Hanken Grotesk"],
+                  "body-md": ["Inter"],
+                  "label-sm": ["Inter"],
+                  "body-lg": ["Inter"],
+                  "headline-lg-mobile": ["Hanken Grotesk"]
+          },
+          "fontSize": {
+                  "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                  "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                  "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                  "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                  "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                  "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                  "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                  "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                  "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #E1E8ED;
+      border-radius: 10px;
+    }
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+    .accordion-active .accordion-content {
+      max-height: 1000px;
+    }
+    .accordion-active .accordion-icon {
+      transform: rotate(180deg);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-surface font-body-md text-on-surface">
+<!-- Mobile Top Bar -->
+<header class="sticky top-0 z-50 bg-surface h-16 flex items-center justify-between px-margin-mobile border-b border-border-subtle">
+<button aria-label="Go back" class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-headline-md text-primary">Talent RDC</h1>
+<div class="flex gap-2">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">share</span>
+</button>
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</header>
+<main class="pb-32">
+<!-- Hero Header -->
+<div class="bg-white p-margin-mobile shadow-sm">
+<div class="flex items-start justify-between mb-4">
+<div class="w-16 h-16 bg-secondary-container rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl text-primary" data-weight="fill">work</span>
+</div>
+<span class="inline-flex items-center px-3 py-1 bg-tertiary-container/10 text-tertiary text-label-sm font-label-sm rounded-full">
+          Full-time
+        </span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile mb-1">Product Designer</h2>
+<p class="text-on-surface-variant font-body-sm text-body-sm flex items-center gap-2 mb-4">
+<span>Airbnb</span>
+<span class="w-1 h-1 bg-outline rounded-full"></span>
+<span>San Francisco, CA</span>
+</p>
+<div class="flex gap-base flex-wrap">
+<span class="px-3 py-1 bg-surface-container-low border border-border-subtle text-on-surface-variant font-label-sm text-label-sm rounded-lg">Design</span>
+<span class="px-3 py-1 bg-surface-container-low border border-border-subtle text-on-surface-variant font-label-sm text-label-sm rounded-lg">Mobile App</span>
+<span class="px-3 py-1 bg-surface-container-low border border-border-subtle text-on-surface-variant font-label-sm text-label-sm rounded-lg">Figma</span>
+</div>
+</div>
+<!-- Quick Stats -->
+<div class="grid grid-cols-3 gap-px bg-border-subtle mt-2 shadow-sm">
+<div class="bg-white p-4 flex flex-col items-center">
+<span class="text-on-surface-variant font-label-sm text-label-sm mb-1">Experience</span>
+<span class="font-headline-md text-headline-md text-primary">3+ Yrs</span>
+</div>
+<div class="bg-white p-4 flex flex-col items-center">
+<span class="text-on-surface-variant font-label-sm text-label-sm mb-1">Applicants</span>
+<span class="font-headline-md text-headline-md text-primary">23</span>
+</div>
+<div class="bg-white p-4 flex flex-col items-center">
+<span class="text-on-surface-variant font-label-sm text-label-sm mb-1">Salary</span>
+<span class="font-headline-md text-headline-md text-primary">$120k</span>
+</div>
+</div>
+<!-- Accordion Sections -->
+<div class="mt-2 space-y-px">
+<!-- Section: Job Overview -->
+<div class="bg-white accordion-item accordion-active" id="overview-section">
+<button class="w-full flex justify-between items-center p-margin-mobile focus:outline-none" onclick="toggleAccordion('overview-section')">
+<span class="font-headline-md text-headline-md text-primary">Job Overview</span>
+<span class="material-symbols-outlined accordion-icon transition-transform duration-300">expand_more</span>
+</button>
+<div class="accordion-content">
+<div class="px-margin-mobile pb-margin-mobile">
+<p class="text-on-surface-variant font-body-md text-body-md leading-relaxed">
+              Airbnb is looking for a passionate Product Designer to join our Core Experience team. You will be responsible for creating intuitive, visually stunning interfaces that help millions of travelers find their home away from home. 
+              <br/><br/>
+              In this role, you will collaborate closely with engineering and product management to define the future of travel and hospitality through design excellence.
+            </p>
+</div>
+</div>
+</div>
+<!-- Section: Responsibilities -->
+<div class="bg-white accordion-item" id="responsibilities-section">
+<button class="w-full flex justify-between items-center p-margin-mobile focus:outline-none" onclick="toggleAccordion('responsibilities-section')">
+<span class="font-headline-md text-headline-md text-primary">Responsibilities</span>
+<span class="material-symbols-outlined accordion-icon transition-transform duration-300">expand_more</span>
+</button>
+<div class="accordion-content">
+<div class="px-margin-mobile pb-margin-mobile">
+<ul class="space-y-3">
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-success-accent text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface-variant font-body-md text-body-md">Lead the end-to-end design process from research to high-fidelity prototyping.</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-success-accent text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface-variant font-body-md text-body-md">Collaborate with cross-functional partners to drive product strategy.</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-success-accent text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface-variant font-body-md text-body-md">Maintain and evolve our design system (DLS).</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-success-accent text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface-variant font-body-md text-body-md">Advocate for user-centric design within the organization.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Section: Requirements -->
+<div class="bg-white accordion-item" id="requirements-section">
+<button class="w-full flex justify-between items-center p-margin-mobile focus:outline-none" onclick="toggleAccordion('requirements-section')">
+<span class="font-headline-md text-headline-md text-primary">Requirements</span>
+<span class="material-symbols-outlined accordion-icon transition-transform duration-300">expand_more</span>
+</button>
+<div class="accordion-content">
+<div class="px-margin-mobile pb-margin-mobile">
+<ul class="space-y-3">
+<li class="flex gap-3">
+<span class="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"></span>
+<span class="text-on-surface-variant font-body-md text-body-md">3+ years of experience in product design for consumer-facing apps.</span>
+</li>
+<li class="flex gap-3">
+<span class="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"></span>
+<span class="text-on-surface-variant font-body-md text-body-md">Proficiency in Figma, ProtoPie, or similar design tools.</span>
+</li>
+<li class="flex gap-3">
+<span class="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"></span>
+<span class="text-on-surface-variant font-body-md text-body-md">Strong portfolio demonstrating interaction design and visual craft.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Section: About Company -->
+<div class="bg-white accordion-item" id="company-section">
+<button class="w-full flex justify-between items-center p-margin-mobile focus:outline-none" onclick="toggleAccordion('company-section')">
+<span class="font-headline-md text-headline-md text-primary">About Airbnb</span>
+<span class="material-symbols-outlined accordion-icon transition-transform duration-300">expand_more</span>
+</button>
+<div class="accordion-content">
+<div class="px-margin-mobile pb-margin-mobile">
+<div class="rounded-xl overflow-hidden mb-4 h-48 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A modern office space for a tech company, featuring bright windows, minimalist white desks, lush indoor plants, and a vibrant mural in brand colors. The setting is clean, professional, and inspiring with high-key lighting consistent with a premium corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8i0_dHUiFPNdvnqVkzCZBf55aZgNAZayR5ws8pDm-zM4kzxHkIVGwU7urF66fgeEdmfxVGKRgZNhLUv-xlNZlbGTB5SZRk_rimINsAAhMARne0LnIWQilxh0hwQMkNitcgMwE40v099gNcmsjqu-Y1DFIo0vsorKZDZBt3jOxmhmxhP8Za6Ynb0vsLtXOFJ7N1kQNtxGS7UHY4mhQtZobdua6o5OI3dddMWOwhaxXAJ1BDj7S7AavfA"/>
+</div>
+<p class="text-on-surface-variant font-body-md text-body-md leading-relaxed">
+              Founded in 2008, Airbnb is a global community based on connection and belonging—a community that was born when two hosts welcomed three guests to their San Francisco home, and has since grown to 4 million hosts who have welcomed over 800 million guest arrivals in approximately 100,000 cities.
+            </p>
+<button class="mt-4 w-full py-3 px-4 border border-primary text-primary font-label-md text-label-md rounded-lg hover:bg-primary/5 transition-colors">
+              View Company Profile
+            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Related Jobs Carousel -->
+<div class="mt-8 px-margin-mobile">
+<div class="flex justify-between items-center mb-4">
+<h3 class="font-headline-md text-headline-md text-primary">Similar Openings</h3>
+<button class="text-primary font-label-sm text-label-sm">View All</button>
+</div>
+<div class="flex overflow-x-auto gap-4 pb-4 custom-scrollbar">
+<!-- Card 1 -->
+<div class="min-w-[280px] bg-white p-4 rounded-xl border border-border-subtle shadow-sm">
+<div class="flex justify-between items-start mb-3">
+<div class="w-10 h-10 bg-secondary-container rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">language</span>
+</div>
+<button class="material-symbols-outlined text-outline">bookmark</button>
+</div>
+<h4 class="font-headline-md text-headline-md mb-1">UI Designer</h4>
+<p class="text-on-surface-variant font-body-sm text-body-sm mb-4">Google • Remote</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-label-md text-label-md">$115k - $140k</span>
+<span class="text-on-surface-variant text-[10px] uppercase font-bold tracking-wider">2 days ago</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="min-w-[280px] bg-white p-4 rounded-xl border border-border-subtle shadow-sm">
+<div class="flex justify-between items-start mb-3">
+<div class="w-10 h-10 bg-secondary-container rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">design_services</span>
+</div>
+<button class="material-symbols-outlined text-outline">bookmark</button>
+</div>
+<h4 class="font-headline-md text-headline-md mb-1">UX Researcher</h4>
+<p class="text-on-surface-variant font-body-sm text-body-sm mb-4">Meta • NYC</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-label-md text-label-md">$130k - $160k</span>
+<span class="text-on-surface-variant text-[10px] uppercase font-bold tracking-wider">5 days ago</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Sticky Apply Footer -->
+<footer class="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-border-subtle px-margin-mobile py-4 flex items-center gap-4">
+<button aria-label="Save for later" class="w-14 h-14 border border-border-subtle rounded-xl flex items-center justify-center text-outline hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+<button class="flex-1 h-14 bg-primary text-on-primary font-headline-md text-headline-md rounded-xl shadow-lg shadow-primary/20 active:scale-[0.98] transition-transform">
+      Apply Now
+    </button>
+</footer>
+<script>
+    function toggleAccordion(id) {
+      const item = document.getElementById(id);
+      const isActive = item.classList.contains('accordion-active');
+      
+      // Close all accordions (optional - for single open behavior)
+      // document.querySelectorAll('.accordion-item').forEach(el => el.classList.remove('accordion-active'));
+
+      if (isActive) {
+        item.classList.remove('accordion-active');
+      } else {
+        item.classList.add('accordion-active');
+      }
+    }
+
+    // Micro-interaction for primary button
+    const applyBtn = document.querySelector('footer button.flex-1');
+    applyBtn.addEventListener('click', function() {
+      this.textContent = 'Applying...';
+      setTimeout(() => {
+        this.textContent = 'Application Sent!';
+        this.classList.remove('bg-primary');
+        this.classList.add('bg-success-accent');
+      }, 1500);
+    });
+  </script>
+</body></html>

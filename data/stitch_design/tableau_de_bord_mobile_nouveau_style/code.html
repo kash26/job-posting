@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Talent RDC - Candidate Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(225, 232, 237, 0.5);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#004b70",
+                        "tertiary-container": "#29658c",
+                        "surface-tint": "#006496",
+                        "text-heading": "#1A1A1A",
+                        "inverse-on-surface": "#f2f0f0",
+                        "outline-variant": "#c0c7d0",
+                        "surface-variant": "#e4e2e2",
+                        "on-tertiary-container": "#bce0ff",
+                        "surface-dim": "#dbdad9",
+                        "error": "#ba1a1a",
+                        "background-surface": "#F8FAFB",
+                        "primary-fixed": "#cce5ff",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#dae4e9",
+                        "on-secondary-fixed": "#141d21",
+                        "on-tertiary-fixed": "#001e30",
+                        "on-surface-variant": "#40484f",
+                        "tertiary-fixed-dim": "#96ccf9",
+                        "on-primary-fixed": "#001e31",
+                        "success-accent": "#28A745",
+                        "primary-container": "#006699",
+                        "primary": "#004d75",
+                        "secondary-container": "#dae4e9",
+                        "on-primary-fixed-variant": "#004b72",
+                        "surface-container-high": "#e9e8e7",
+                        "inverse-primary": "#90cdff",
+                        "background": "#fbf9f8",
+                        "outline": "#707880",
+                        "surface-bright": "#fbf9f8",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#004d73",
+                        "on-secondary-container": "#5c666a",
+                        "error-container": "#ffdad6",
+                        "surface-container": "#efeded",
+                        "border-subtle": "#E1E8ED",
+                        "on-primary-container": "#bfe0ff",
+                        "surface": "#fbf9f8",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#3f484c",
+                        "tertiary-fixed": "#cae6ff",
+                        "secondary": "#566064",
+                        "surface-container-low": "#f5f3f3",
+                        "surface-container-highest": "#e4e2e2",
+                        "inverse-surface": "#303031",
+                        "on-background": "#1b1c1c",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#bec8cd",
+                        "primary-fixed-dim": "#90cdff",
+                        "on-surface": "#1b1c1c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "32px",
+                        "base": "8px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "container-max-width": "1200px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "body-sm": ["Inter"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-surface font-body-md text-on-surface">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-surface border-b border-border-subtle h-16 w-full px-margin-mobile flex justify-between items-center max-w-container-max-width mx-auto">
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md font-bold text-primary">Talent RDC</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container-low p-2 rounded-full transition-colors">search</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container-low p-2 rounded-full transition-colors">notifications</button>
+<div class="w-8 h-8 rounded-full bg-cover bg-center border border-border-subtle" data-alt="A high-quality professional portrait of a woman with a confident smile, set against a blurred modern office background with soft blue tones. The lighting is bright and natural, emphasizing her friendly and ambitious personality in a corporate recruitment platform context." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDEzVz5MR_sKR9wSdXzcSobBg1ucPbMAZ6HzuCG86ATBR3E9YT8f8EdacTYXAgv134f1pAwPsc_Vqfrg7Rvl3QCEtZbSF3m-0RUVzsG9VceWxNcAiv5R9YOsPqHBnRX-bRHC10KQwWnkJp00AM7BiLrQQuWEyMr5BPxVXhFkRtTytM2zw3lSzMAd5NB4ceEKSBu6RtFA4VZ84IzvJafGV0g2D5s0JwFEkUZHqHSn7a7vlYo-rBl0dwE_w')"></div>
+</div>
+</header>
+<main class="pb-24">
+<!-- Profile Header Section -->
+<section class="px-margin-mobile pt-6 pb-4">
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_4px_10px_rgba(0,77,117,0.05)] border border-border-subtle">
+<div class="flex justify-between items-start mb-4">
+<div class="w-20 h-20 rounded-full border-4 border-primary/10 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A close-up headshot of a young professional woman with a warm, approachable expression. She has short dark hair and is wearing a sophisticated navy blazer. The background is a soft, out-of-focus city skyline at dusk, blending blues and warm amber lights to match the corporate yet modern design aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKj8UKFatz7-4CmW5ILgRRGdXdpXDEBsmo_gqLavtcFA_SuSkWj_z7zldpKqSfcgV88Da5RdUcCGCEfusOuBJQcnuXy5rPdrsB4zcGCx7fCl2xvk3EAnMuCV5XzxQbVaSrl_dMnQPFyIzSzIz8c13KxmtFZUuHTFDCh8mpXGTqkwt-NjqXRa073lbyVx9E9O1z7YxVuVkWp1Yc9DL2Zncpsxwq7Q7kzhVcBMCU8rp8vsdljQSYvqsKKg"/>
+</div>
+<button class="flex items-center gap-2 px-4 py-2 border border-primary text-primary rounded-lg font-label-md text-label-md hover:bg-primary-fixed-dim transition-all active:scale-95">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+                        Edit
+                    </button>
+</div>
+<div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-text-heading">Freya Katherina</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Senior UX Designer • Kinshasa, DRC</p>
+<div class="mt-4 flex flex-wrap gap-2">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm font-label-sm">Product Design</span>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm font-label-sm">Figma</span>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm font-label-sm">User Research</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Stats Horizontal Scrolling -->
+<section class="px-margin-mobile mb-8">
+<div class="flex overflow-x-auto gap-4 hide-scrollbar py-2 -mx-2 px-2">
+<!-- Stat Card 1 -->
+<div class="flex-shrink-0 w-36 bg-surface-container-lowest p-4 rounded-xl border border-border-subtle shadow-sm">
+<span class="material-symbols-outlined text-primary mb-2" style="font-variation-settings: 'FILL' 1;">description</span>
+<div class="font-headline-md text-headline-md text-text-heading">12</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Applications</div>
+</div>
+<!-- Stat Card 2 -->
+<div class="flex-shrink-0 w-36 bg-surface-container-lowest p-4 rounded-xl border border-border-subtle shadow-sm">
+<span class="material-symbols-outlined text-success-accent mb-2" style="font-variation-settings: 'FILL' 1;">visibility</span>
+<div class="font-headline-md text-headline-md text-text-heading">482</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Profile Views</div>
+</div>
+<!-- Stat Card 3 -->
+<div class="flex-shrink-0 w-36 bg-surface-container-lowest p-4 rounded-xl border border-border-subtle shadow-sm">
+<span class="material-symbols-outlined text-tertiary mb-2" style="font-variation-settings: 'FILL' 1;">mail</span>
+<div class="font-headline-md text-headline-md text-text-heading">4</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Interviews</div>
+</div>
+<!-- Stat Card 4 -->
+<div class="flex-shrink-0 w-36 bg-surface-container-lowest p-4 rounded-xl border border-border-subtle shadow-sm">
+<span class="material-symbols-outlined text-primary mb-2" style="font-variation-settings: 'FILL' 1;">star</span>
+<div class="font-headline-md text-headline-md text-text-heading">8</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Saved Jobs</div>
+</div>
+</div>
+</section>
+<!-- Work Experience Stacked List -->
+<section class="px-margin-mobile mb-8">
+<div class="flex items-center justify-between mb-4">
+<h2 class="font-headline-md text-headline-md text-text-heading">Work Experience</h2>
+<button class="text-primary font-label-md text-label-md">See All</button>
+</div>
+<div class="space-y-4">
+<!-- Experience Item 1 -->
+<div class="flex gap-4 p-4 bg-surface-container-lowest rounded-xl border border-border-subtle">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary-container">corporate_fare</span>
+</div>
+<div class="flex-1">
+<h3 class="font-body-lg font-semibold text-on-surface">Senior UX Designer</h3>
+<p class="font-body-sm text-on-surface-variant">VodaCom DRC • Full-time</p>
+<p class="font-label-sm text-label-sm text-outline mt-1">Jan 2021 - Present • 3 yrs 4 mos</p>
+</div>
+</div>
+<!-- Experience Item 2 -->
+<div class="flex gap-4 p-4 bg-surface-container-lowest rounded-xl border border-border-subtle">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary-container">storefront</span>
+</div>
+<div class="flex-1">
+<h3 class="font-body-lg font-semibold text-on-surface">Product Designer</h3>
+<p class="font-body-sm text-on-surface-variant">Jumia • Contract</p>
+<p class="font-label-sm text-label-sm text-outline mt-1">May 2018 - Dec 2020 • 2 yrs 8 mos</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Recommended Jobs Stacked List -->
+<section class="px-margin-mobile">
+<div class="flex items-center justify-between mb-4">
+<h2 class="font-headline-md text-headline-md text-text-heading">Recommended Jobs</h2>
+<button class="text-primary font-label-md text-label-md">Explore</button>
+</div>
+<div class="space-y-4">
+<!-- Job Card 1 -->
+<div class="p-5 bg-surface-container-lowest rounded-xl border border-border-subtle shadow-sm hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-primary/5 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[20px]">hub</span>
+</div>
+<div>
+<h4 class="font-body-lg font-bold text-on-surface leading-tight">Lead UI Artist</h4>
+<p class="font-body-sm text-on-surface-variant">Ubisoft Africa</p>
+</div>
+</div>
+<button class="material-symbols-outlined text-outline hover:text-primary">bookmark</button>
+</div>
+<div class="flex items-center gap-4 mb-4">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                            Remote
+                        </div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm">
+<span class="material-symbols-outlined text-[16px]">payments</span>
+                            $4k - $6k
+                        </div>
+</div>
+<div class="flex gap-2">
+<span class="bg-surface-container text-on-surface-variant px-2 py-1 rounded text-label-sm">Gaming</span>
+<span class="bg-surface-container text-on-surface-variant px-2 py-1 rounded text-label-sm">Unity</span>
+</div>
+</div>
+<!-- Job Card 2 -->
+<div class="p-5 bg-surface-container-lowest rounded-xl border border-border-subtle shadow-sm hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-primary/5 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[20px]">account_balance</span>
+</div>
+<div>
+<h4 class="font-body-lg font-bold text-on-surface leading-tight">Product Strategy Lead</h4>
+<p class="font-body-sm text-on-surface-variant">Equity Bank</p>
+</div>
+</div>
+<button class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">bookmark</button>
+</div>
+<div class="flex items-center gap-4 mb-4">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                            Kinshasa
+                        </div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm">
+<span class="material-symbols-outlined text-[16px]">payments</span>
+                            $5k - $8k
+                        </div>
+</div>
+<div class="flex gap-2">
+<span class="bg-surface-container text-on-surface-variant px-2 py-1 rounded text-label-sm">Fintech</span>
+<span class="bg-surface-container text-on-surface-variant px-2 py-1 rounded text-label-sm">Leadership</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar (Floating-style Mobile Nav) -->
+<nav class="fixed bottom-0 left-0 right-0 bg-surface border-t border-border-subtle md:hidden z-50">
+<div class="flex justify-around items-center h-16 max-w-container-max-width mx-auto px-4">
+<button class="flex flex-col items-center justify-center gap-1 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-label-sm">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">work</span>
+<span class="text-[10px] font-label-sm">Jobs</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="text-[10px] font-label-sm">Messages</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 text-primary font-bold transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="text-[10px] font-label-sm">Profile</span>
+</button>
+</div>
+</nav>
+<!-- Micro-interaction Script -->
+<script>
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('touchstart', function() {
+                this.classList.add('scale-95');
+            });
+            button.addEventListener('touchend', function() {
+                this.classList.remove('scale-95');
+            });
+        });
+    </script>
+</body></html>
