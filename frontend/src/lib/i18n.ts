@@ -314,7 +314,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       about: {
         title: "A propos de Talent RDC Express",
         description:
-          "Nous construisons une plateforme de recrutement moderne, inclusive et orientee impact pour la RDC.",
+          "Talent RDC Express est une plateforme digitale de recrutement et de developpement de carriere qui relie les talents aux opportunites d'emploi, de stage, de formation et de reseautage en RDC, en Afrique et a l'international. Notre objectif est de mettre la technologie au service d'un recrutement plus simple, plus rapide et plus transparent, tout en accompagnant les candidats dans la valorisation de leurs competences.",
       },
       careers: {
         title: "Carrieres",
@@ -515,7 +515,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       about: {
         title: "About Talent RDC Express",
         description:
-          "We are building a modern, inclusive, and impact-driven recruitment platform for the DRC.",
+          "Talent RDC Express is a digital recruitment and career development platform connecting talent with jobs, internships, training, and networking opportunities in the DRC, across Africa, and internationally. Our goal is to make hiring simpler, faster, and more transparent while helping candidates better showcase their skills.",
       },
       careers: {
         title: "Careers",

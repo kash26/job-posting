@@ -22,20 +22,20 @@ export default async function AboutPage({ params }: AboutPageProps) {
     {
       title: isFr ? "Confiance" : "Trust",
       text: isFr
-        ? "Chaque offre est verifiee pour limiter les fraudes et accelerer les decisions de candidature."
-        : "Every listing is verified to reduce fraud and accelerate candidate decisions.",
+        ? "Nous placons la fiabilite et la transparence au coeur de notre demarche. Chaque opportunite publiee est verifiee afin de garantir un environnement sur pour les candidats et de renforcer la confiance entre talents et recruteurs. Cette approche permet de batir des relations professionnelles solides et durables."
+        : "We place reliability and transparency at the core of our approach. Each published opportunity is verified to provide a safe environment for candidates and strengthen trust between talent and recruiters. This approach helps build strong and lasting professional relationships.",
     },
     {
       title: isFr ? "Performance" : "Performance",
       text: isFr
-        ? "Nous reduisons le temps de recrutement grace a des outils de matching et de suivi en temps reel."
-        : "We reduce hiring time with matching tools and real-time tracking.",
+        ? "Grace a des outils intelligents de mise en relation et de suivi des candidatures, nous facilitons et accelerons le processus de recrutement. Les candidats beneficient d'une optimisation de leurs profils, tandis que les entreprises identifient plus rapidement les talents qui correspondent a leurs besoins."
+        : "With intelligent matching tools and application tracking, we simplify and accelerate the recruitment process. Candidates benefit from profile optimization while companies identify talent that matches their needs more quickly.",
     },
     {
       title: isFr ? "Impact local" : "Local impact",
       text: isFr
-        ? "Notre mission est de connecter les talents d'Afrique centrale a des opportunites ambitieuses."
-        : "Our mission is to connect Central African talent with ambitious opportunities.",
+        ? "Nous contribuons au developpement de l'emploi en connectant les talents de la RDC et de l'Afrique centrale a des opportunites locales, regionales et internationales, tout en renforcant leur employabilite."
+        : "We contribute to job growth by connecting talent from the DRC and Central Africa to local, regional, and international opportunities while strengthening employability.",
     },
   ];
 
@@ -73,8 +73,25 @@ export default async function AboutPage({ params }: AboutPageProps) {
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
             {isFr
-              ? "La plateforme combine la puissance d'un job board moderne et les standards de confiance attendus par les entreprises. Nous aidons les candidats a progresser plus vite avec une experience claire, mobile-first et orientee resultats."
-              : "The platform combines modern job board capabilities with enterprise-level trust standards. We help candidates move faster through a clear, mobile-first, outcome-driven experience."}
+              ? "Nous combinons la puissance d'une plateforme moderne de recrutement avec des services d'accompagnement de carriere."
+              : "We combine the power of a modern recruitment platform with career support services."}
+          </p>
+          <ul className="mt-4 space-y-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
+            <li>
+              {isFr
+                ? "Pour les candidats : un espace fiable pour valoriser leurs competences et acceder a des opportunites pertinentes."
+                : "For candidates: a trusted space to showcase their skills and access relevant opportunities."}
+            </li>
+            <li>
+              {isFr
+                ? "Pour les entreprises : un outil efficace pour identifier et recruter les meilleurs profils."
+                : "For companies: an efficient tool to identify and recruit top profiles."}
+            </li>
+          </ul>
+          <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
+            {isFr
+              ? "Notre approche est simple, fiable et orientee resultats."
+              : "Our approach is simple, reliable, and results-driven."}
           </p>
           <div className="mt-5 flex flex-wrap gap-2">
             <Link
@@ -90,6 +107,47 @@ export default async function AboutPage({ params }: AboutPageProps) {
               {isFr ? "Espace entreprise" : "Employer space"}
             </Link>
           </div>
+        </section>
+
+        <section className="grid gap-4 sm:grid-cols-2">
+          <article className="rounded-2xl border border-outline/40 bg-surface p-6">
+            <h2 className="text-xl font-bold text-foreground">
+              {isFr ? "Notre vision" : "Our vision"}
+            </h2>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
+              {isFr
+                ? "Devenir la plateforme de reference en Afrique pour le recrutement, le developpement des talents et les opportunites professionnelles, en connectant les candidats, les entreprises et les partenaires au-dela des frontieres afin de construire un marche de l'emploi plus accessible, plus transparent et plus innovant."
+                : "To become Africa's leading platform for recruitment, talent development, and professional opportunities by connecting candidates, companies, and partners beyond borders to build a more accessible, transparent, and innovative job market."}
+            </p>
+          </article>
+
+          <article className="rounded-2xl border border-outline/40 bg-surface p-6">
+            <h2 className="text-xl font-bold text-foreground">
+              {isFr ? "Notre mission" : "Our mission"}
+            </h2>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
+              {isFr
+                ? "Faciliter la rencontre entre talents et recruteurs grace a une plateforme innovante qui :"
+                : "To facilitate the connection between talent and recruiters through an innovative platform that:"}
+            </p>
+            <ul className="mt-3 space-y-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
+              <li>
+                {isFr
+                  ? "Offre des opportunites fiables et verifiees."
+                  : "Offers reliable and verified opportunities."}
+              </li>
+              <li>
+                {isFr
+                  ? "Accompagne le developpement professionnel des candidats."
+                  : "Supports candidates' professional development."}
+              </li>
+              <li>
+                {isFr
+                  ? "Aide les entreprises a recruter les meilleurs profils plus rapidement."
+                  : "Helps companies recruit the best profiles faster."}
+              </li>
+            </ul>
+          </article>
         </section>
       </div>
     </section>
